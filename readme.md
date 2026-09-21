@@ -1,8 +1,6 @@
 # Closed-loop evaluation — scenario catalogue
 
-Companion to the paper (RQ on closed-loop behaviour under variability). Suggested location in the repo:
-`evaluation/SCENARIOS.md`, with one folder per scenario under `evaluation/scenarios/<id>/` holding the model
-versions (Studio JSON export), the rule/KPI files if any, the oracle and the collected evidence.
+Companion to the paper (RQ on closed-loop behaviour under variability).
 
 ## Set-up
 
