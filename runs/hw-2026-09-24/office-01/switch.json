@@ -1,0 +1,28 @@
+{
+  "fleet": {
+    "enabled": true,
+    "version": 1,
+    "modelId": "1ef0a715-e42a-4863-86d6-e32b4f12dadc",
+    "modelName": "eval-office-01",
+    "source": "supabase",
+    "lastSyncOk": "2026-09-24T12:47:50.134987137Z",
+    "lastAttempt": "2026-09-24T12:47:50.134987137Z",
+    "stale": false,
+    "lastError": null,
+    "failures": 0,
+    "nextAttemptAt": null,
+    "users": 8,
+    "spaces": 6,
+    "policies": 5,
+    "warnings": [],
+    "modelSource": "runtime",
+    "appliedAt": "2026-09-24T12:47:50.134987137Z"
+  },
+  "appliedAt": 1790254070134,
+  "fetched": {
+    "acs1": 1790254075342,
+    "acs2": 1790254076338
+  },
+  "m1": 7499,
+  "m1a": 1295
+}

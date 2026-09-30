@@ -1,0 +1,81 @@
+{
+  "step": 5,
+  "change": "unplug dev2 soundPressure (one of two inputs of decibel.max)",
+  "runtime": {
+    "pass": true,
+    "observed": {
+      "disabled": {
+        "id": "decibel.max",
+        "label": "decibel.max",
+        "aggregation": "max",
+        "inputs": [
+          "decibel"
+        ],
+        "source": "model",
+        "sensors": [
+          {
+            "fleetId": "acs1",
+            "device": "dev1",
+            "sensor": "dev1_decibel",
+            "key": "decibel",
+            "online": true
+          },
+          {
+            "fleetId": "acs2",
+            "device": "dev2",
+            "sensor": "dev2_decibel",
+            "key": "decibel",
+            "online": false
+          }
+        ],
+        "disabled": true,
+        "disabledReason": "dev2_decibel offline",
+        "sampleCount": 0,
+        "unit": "dB",
+        "value": null,
+        "missing": true
+      },
+      "afterDelete": {
+        "id": "decibel.max",
+        "label": "decibel.max",
+        "aggregation": "max",
+        "inputs": [
+          "decibel"
+        ],
+        "source": "model",
+        "sensors": [
+          {
+            "fleetId": "acs1",
+            "device": "dev1",
+            "sensor": "dev1_decibel",
+            "key": "decibel",
+            "online": true
+          }
+        ],
+        "disabled": false,
+        "sampleCount": 1,
+        "unit": "dB",
+        "value": 47.3,
+        "missing": false
+      }
+    }
+  },
+  "proposal": {
+    "pass": true,
+    "observed": [],
+    "expected": []
+  },
+  "commit": {
+    "pass": true,
+    "observed": {
+      "deleteInput": 200,
+      "conformance": {
+        "errors": [],
+        "warnings": [],
+        "projects": true
+      }
+    }
+  },
+  "m4": 2654,
+  "notes": []
+}

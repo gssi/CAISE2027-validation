@@ -1,0 +1,293 @@
+{
+  "id": "home-02",
+  "domain": "home",
+  "row": 2,
+  "origin": "generated",
+  "hardware": false,
+  "model": "eval-home-02",
+  "roles": [
+    {
+      "id": "owner",
+      "type": "Owner"
+    },
+    {
+      "id": "cleaner",
+      "type": "Cleaner"
+    },
+    {
+      "id": "visitor",
+      "type": "Visitor"
+    }
+  ],
+  "principals": [
+    {
+      "id": "p1_ada",
+      "type": "Service",
+      "name": "Ada",
+      "roles": [
+        "owner"
+      ],
+      "credential": {
+        "type": "Fob",
+        "tag": "EVAL-TAG-1"
+      },
+      "validity": "VALID",
+      "revoked": false
+    },
+    {
+      "id": "p2_bruno",
+      "type": "Service",
+      "name": "Bruno",
+      "roles": [
+        "cleaner"
+      ],
+      "credential": {
+        "type": "Fob",
+        "tag": "EVAL-TAG-2"
+      },
+      "validity": "VALID",
+      "revoked": false
+    },
+    {
+      "id": "p3_chiara",
+      "type": "Family",
+      "name": "Chiara",
+      "roles": [
+        "owner",
+        "cleaner"
+      ],
+      "credential": {
+        "type": "Fob",
+        "tag": "EVAL-TAG-3"
+      },
+      "validity": "EXPIRED",
+      "revoked": false
+    },
+    {
+      "id": "p4_outsider",
+      "type": "Family",
+      "name": "Outsider",
+      "roles": [
+        "visitor"
+      ],
+      "credential": {
+        "type": "Fob",
+        "tag": "EVAL-TAG-4"
+      },
+      "validity": "VALID",
+      "revoked": false
+    }
+  ],
+  "spaces": [
+    {
+      "id": "zone_a",
+      "type": "House",
+      "name": "Zone A",
+      "parent": null,
+      "staleness": {
+        "maxAgeMs": 7200000,
+        "whenExceeded": "allow-cached"
+      }
+    },
+    {
+      "id": "room_1",
+      "type": "Gate",
+      "name": "Room 1",
+      "parent": "zone_a",
+      "capacity": 17,
+      "staleness": {
+        "maxAgeMs": 86400000,
+        "whenExceeded": "deny"
+      }
+    },
+    {
+      "id": "room_2",
+      "type": "Door",
+      "name": "Room 2",
+      "parent": "zone_a",
+      "capacity": 24
+    },
+    {
+      "id": "room_3",
+      "type": "Door",
+      "name": "Room 3",
+      "parent": "zone_a"
+    }
+  ],
+  "windows": [
+    {
+      "id": "win_1",
+      "type": "AllDay",
+      "when": "ALWAYS"
+    },
+    {
+      "id": "win_2",
+      "type": "Daytime",
+      "when": "NOT_NOW"
+    }
+  ],
+  "policies": [
+    {
+      "id": "permit_1",
+      "type": "CleanerWeekday",
+      "effect": "permit",
+      "roles": [
+        "owner"
+      ],
+      "spaces": [
+        "room_1"
+      ],
+      "windows": [
+        "win_2"
+      ],
+      "priority": 10
+    },
+    {
+      "id": "permit_2",
+      "type": "VisitorDaytime",
+      "effect": "permit",
+      "roles": [
+        "owner"
+      ],
+      "spaces": [
+        "room_3"
+      ],
+      "windows": [
+        "win_2"
+      ],
+      "priority": 20
+    },
+    {
+      "id": "permit_3",
+      "type": "CleanerWeekday",
+      "effect": "permit",
+      "roles": [
+        "owner"
+      ],
+      "spaces": [
+        "room_2"
+      ],
+      "windows": [],
+      "priority": 30
+    },
+    {
+      "id": "permit_4",
+      "type": "CleanerWeekday",
+      "effect": "permit",
+      "roles": [
+        "owner"
+      ],
+      "spaces": [
+        "room_3"
+      ],
+      "windows": [
+        "win_2"
+      ],
+      "priority": 40
+    },
+    {
+      "id": "permit_offhours",
+      "type": "VisitorDaytime",
+      "effect": "permit",
+      "roles": [
+        "cleaner"
+      ],
+      "spaces": [
+        "room_1"
+      ],
+      "windows": [
+        "win_2"
+      ],
+      "priority": 80
+    },
+    {
+      "id": "permit_dev1",
+      "type": "OwnerRule",
+      "effect": "permit",
+      "roles": [
+        "owner"
+      ],
+      "spaces": [
+        "room_3"
+      ],
+      "windows": [
+        "win_1"
+      ],
+      "priority": 91
+    },
+    {
+      "id": "permit_dev2",
+      "type": "CleanerWeekday",
+      "effect": "permit",
+      "roles": [
+        "owner"
+      ],
+      "spaces": [
+        "room_1"
+      ],
+      "windows": [
+        "win_1"
+      ],
+      "priority": 92
+    },
+    {
+      "id": "deny_zone",
+      "type": "CellarLock",
+      "effect": "deny",
+      "roles": [
+        "owner"
+      ],
+      "spaces": [
+        "zone_a"
+      ],
+      "windows": [],
+      "priority": 100
+    },
+    {
+      "id": "permit_dev1_b",
+      "type": "VisitorDaytime",
+      "effect": "permit",
+      "roles": [
+        "cleaner"
+      ],
+      "spaces": [
+        "room_3"
+      ],
+      "windows": [],
+      "priority": 95
+    },
+    {
+      "id": "permit_dev2_b",
+      "type": "CleanerWeekday",
+      "effect": "permit",
+      "roles": [
+        "cleaner"
+      ],
+      "spaces": [
+        "room_1"
+      ],
+      "windows": [],
+      "priority": 96
+    }
+  ],
+  "devices": [
+    {
+      "id": "dev1",
+      "type": "DoorReader",
+      "deviceId": "EVAL-ACS-1",
+      "label": "Reader 1",
+      "space": "room_3",
+      "sensors": []
+    },
+    {
+      "id": "dev2",
+      "type": "DoorReader",
+      "deviceId": "EVAL-ACS-2",
+      "label": "Reader 2",
+      "space": "room_1",
+      "sensors": []
+    }
+  ],
+  "kpis": [],
+  "goals": []
+}

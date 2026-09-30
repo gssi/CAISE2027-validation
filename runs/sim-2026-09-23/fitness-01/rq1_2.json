@@ -1,0 +1,780 @@
+{
+  "status": {
+    "sync": {
+      "enabled": true,
+      "version": 1,
+      "modelId": "e57c99e6-8897-40e5-8643-aa25dcf40fec",
+      "modelName": "eval-fitness-01",
+      "source": "supabase",
+      "lastSyncOk": "2026-09-23T07:51:15.254781750Z",
+      "lastAttempt": "2026-09-23T07:51:14.979153750Z",
+      "stale": false,
+      "lastError": null,
+      "failures": 0,
+      "nextAttemptAt": null,
+      "users": 8,
+      "spaces": 5,
+      "policies": 5,
+      "warnings": [],
+      "modelSource": "runtime",
+      "appliedAt": "2026-09-23T07:51:10.322704387Z"
+    },
+    "url": "https://tmqzzxrkvogfyilmkaok.supabase.co",
+    "studioUrl": "http://127.0.0.1:5173",
+    "studioModelUrl": "http://127.0.0.1:5173/?model=e57c99e6-8897-40e5-8643-aa25dcf40fec",
+    "pollMs": 5000,
+    "zone": "Europe/Rome",
+    "devices": [
+      {
+        "id": "acs1",
+        "name": "ACS 1",
+        "inFleet": true,
+        "deviceId": "EVAL-ACS-1",
+        "deviceIdSource": "engine",
+        "spaceId": "gym_floor",
+        "spaceSource": "model",
+        "modelDevice": {
+          "label": "Main turnstile",
+          "sensors": [],
+          "id": "mainTurnstile"
+        },
+        "spaceName": "Gym floor",
+        "allowedRoles": [
+          "member",
+          "staff",
+          "trainer"
+        ],
+        "hours": [
+          {
+            "days": "wed",
+            "from": "08:00",
+            "to": "13:00"
+          }
+        ],
+        "staleness": {
+          "maxAgeMs": 3600000,
+          "whenExceeded": "deny"
+        },
+        "restrictions": []
+      },
+      {
+        "id": "acs2",
+        "name": "ACS 2",
+        "inFleet": true,
+        "deviceId": "EVAL-ACS-2",
+        "deviceIdSource": "engine",
+        "spaceId": "spinning_1",
+        "spaceSource": "model",
+        "modelDevice": {
+          "label": "Spinning room turnstile",
+          "sensors": [],
+          "id": "spinningTurnstile"
+        },
+        "spaceName": "Spinning room 1",
+        "allowedRoles": [
+          "member",
+          "staff",
+          "trainer"
+        ],
+        "hours": [
+          {
+            "days": "wed",
+            "from": "08:00",
+            "to": "13:00"
+          }
+        ],
+        "staleness": {
+          "maxAgeMs": 3600000,
+          "whenExceeded": "deny"
+        },
+        "restrictions": []
+      }
+    ]
+  },
+  "kpis": [
+    {
+      "id": "comfort-level",
+      "label": "Comfort level",
+      "inputs": [
+        "illuminance",
+        "temperature",
+        "decibel"
+      ],
+      "aggregation": "avg",
+      "source": "local",
+      "disabled": false
+    }
+  ],
+  "sensors": {
+    "publisher": {
+      "enabled": true,
+      "lastPublishedAt": "2026-09-23T07:50:10.588359387Z",
+      "rowsPublished": 1094,
+      "lastError": null
+    },
+    "observations": {
+      "enabled": true,
+      "lastPublishedAt": "2026-09-23T07:51:11.492051596Z",
+      "rowsPublished": 68,
+      "lastError": null
+    },
+    "sensors": []
+  },
+  "projection": {
+    "schema": "pip-projection/1",
+    "modelId": "e57c99e6-8897-40e5-8643-aa25dcf40fec",
+    "modelName": "eval-fitness-01",
+    "version": 1,
+    "users": [
+      {
+        "id": "alice",
+        "displayName": "Alice",
+        "roles": [
+          "full",
+          "member"
+        ],
+        "credentials": [
+          {
+            "kind": "nfc",
+            "id": "EVAL-TAG-1"
+          }
+        ],
+        "validFrom": "2026-08-24",
+        "revoked": false
+      },
+      {
+        "id": "bruno",
+        "displayName": "Bruno",
+        "roles": [
+          "member"
+        ],
+        "credentials": [
+          {
+            "kind": "nfc",
+            "id": "EVAL-TAG-2"
+          }
+        ],
+        "validFrom": "2026-08-24",
+        "revoked": false
+      },
+      {
+        "id": "carla",
+        "displayName": "Carla",
+        "roles": [
+          "full",
+          "member"
+        ],
+        "credentials": [
+          {
+            "kind": "nfc",
+            "id": "EVAL-TAG-5"
+          }
+        ],
+        "validFrom": "2026-08-24",
+        "revoked": false
+      },
+      {
+        "id": "dario",
+        "displayName": "Dario",
+        "roles": [
+          "member"
+        ],
+        "credentials": [
+          {
+            "kind": "nfc",
+            "id": "EVAL-TAG-3"
+          }
+        ],
+        "validTo": "2026-09-22",
+        "revoked": false
+      },
+      {
+        "id": "erika",
+        "displayName": "Erika",
+        "roles": [
+          "full",
+          "member"
+        ],
+        "credentials": [
+          {
+            "kind": "nfc",
+            "id": "EVAL-TAG-4"
+          }
+        ],
+        "validTo": "2026-10-23",
+        "revoked": true
+      },
+      {
+        "id": "fabio",
+        "displayName": "Fabio",
+        "roles": [
+          "member"
+        ],
+        "credentials": [
+          {
+            "kind": "nfc",
+            "id": "EVAL-TAG-6"
+          }
+        ],
+        "validFrom": "2026-09-24",
+        "revoked": false
+      },
+      {
+        "id": "gianni",
+        "displayName": "Gianni",
+        "roles": [
+          "trainer"
+        ],
+        "credentials": [
+          {
+            "kind": "nfc",
+            "id": "EVAL-TAG-7"
+          }
+        ],
+        "revoked": false
+      },
+      {
+        "id": "helga",
+        "displayName": "Helga",
+        "roles": [
+          "staff"
+        ],
+        "credentials": [
+          {
+            "kind": "nfc",
+            "id": "EVAL-TAG-8"
+          }
+        ],
+        "revoked": false
+      }
+    ],
+    "spaces": [
+      {
+        "id": "gym_floor",
+        "name": "Gym floor",
+        "kind": "zone",
+        "capacity": 80,
+        "parent": null
+      },
+      {
+        "id": "lockers",
+        "name": "Lockers",
+        "kind": "room",
+        "parent": "gym_floor"
+      },
+      {
+        "id": "reception",
+        "name": "Reception",
+        "kind": "zone",
+        "parent": null
+      },
+      {
+        "id": "spa",
+        "name": "Spa",
+        "kind": "room",
+        "capacity": 10,
+        "parent": "gym_floor",
+        "staleness": {
+          "maxAgeMs": 600000,
+          "whenExceeded": "deny"
+        }
+      },
+      {
+        "id": "spinning_1",
+        "name": "Spinning room 1",
+        "kind": "room",
+        "capacity": 20,
+        "parent": "gym_floor"
+      }
+    ],
+    "policies": [
+      {
+        "id": "memberAccess",
+        "effect": "permit",
+        "priority": 10,
+        "roles": [
+          "member"
+        ],
+        "spaces": [
+          "gym_floor"
+        ],
+        "windows": [
+          {
+            "days": "wed",
+            "from": "08:00",
+            "to": "13:00"
+          }
+        ]
+      },
+      {
+        "id": "spaBasicLock",
+        "effect": "deny",
+        "priority": 100,
+        "roles": [
+          "member"
+        ],
+        "spaces": [
+          "spa"
+        ],
+        "windows": []
+      },
+      {
+        "id": "spaFullAccess",
+        "effect": "permit",
+        "priority": 20,
+        "roles": [
+          "full"
+        ],
+        "spaces": [
+          "spa"
+        ],
+        "windows": [
+          {
+            "days": "wed",
+            "from": "08:00",
+            "to": "13:00"
+          }
+        ]
+      },
+      {
+        "id": "staffAccess",
+        "effect": "permit",
+        "priority": 40,
+        "roles": [
+          "staff"
+        ],
+        "spaces": [
+          "gym_floor",
+          "reception"
+        ],
+        "windows": [
+          {
+            "days": "wed",
+            "from": "08:00",
+            "to": "13:00"
+          }
+        ]
+      },
+      {
+        "id": "trainerAllAccess",
+        "effect": "permit",
+        "priority": 30,
+        "roles": [
+          "trainer"
+        ],
+        "spaces": [
+          "gym_floor",
+          "reception"
+        ],
+        "windows": [
+          {
+            "days": "wed",
+            "from": "08:00",
+            "to": "13:00"
+          }
+        ]
+      }
+    ],
+    "goals": [
+      {
+        "id": "gymCapacity",
+        "space": "gym_floor",
+        "expression": "presence.member <= capacity(gym_floor)"
+      }
+    ],
+    "devices": [
+      {
+        "id": "mainTurnstile",
+        "deviceId": "EVAL-ACS-1",
+        "space": "gym_floor",
+        "label": "Main turnstile"
+      },
+      {
+        "id": "spinningTurnstile",
+        "deviceId": "EVAL-ACS-2",
+        "space": "spinning_1",
+        "label": "Spinning room turnstile"
+      }
+    ]
+  },
+  "bundles": {
+    "acs1": {
+      "schema": "pip-device-bundle/1",
+      "version": 1,
+      "generatedAt": "2026-09-23T07:51:17.578689710Z",
+      "stale": false,
+      "space": {
+        "id": "gym_floor",
+        "name": "Gym floor",
+        "kind": "zone"
+      },
+      "roomPolicy": {
+        "schema": "pip-room-policy/1",
+        "modelId": "e57c99e6-8897-40e5-8643-aa25dcf40fec",
+        "version": 1,
+        "space": "gym_floor",
+        "allowedRoles": [
+          "member",
+          "staff",
+          "trainer"
+        ],
+        "hours": [
+          {
+            "days": "wed",
+            "from": "08:00",
+            "to": "13:00"
+          }
+        ],
+        "rules": [
+          {
+            "role": "member",
+            "windows": [
+              {
+                "days": "wed",
+                "from": "08:00",
+                "to": "13:00"
+              }
+            ]
+          },
+          {
+            "role": "staff",
+            "windows": [
+              {
+                "days": "wed",
+                "from": "08:00",
+                "to": "13:00"
+              }
+            ]
+          },
+          {
+            "role": "trainer",
+            "windows": [
+              {
+                "days": "wed",
+                "from": "08:00",
+                "to": "13:00"
+              }
+            ]
+          }
+        ],
+        "staleness": {
+          "maxAgeMs": 3600000,
+          "whenExceeded": "deny"
+        }
+      },
+      "users": [
+        {
+          "id": "alice",
+          "displayName": "Alice",
+          "roles": [
+            "full",
+            "member"
+          ],
+          "credentials": [
+            {
+              "kind": "nfc",
+              "id": "EVAL-TAG-1"
+            }
+          ],
+          "validFrom": "2026-08-24",
+          "revoked": false
+        },
+        {
+          "id": "bruno",
+          "displayName": "Bruno",
+          "roles": [
+            "member"
+          ],
+          "credentials": [
+            {
+              "kind": "nfc",
+              "id": "EVAL-TAG-2"
+            }
+          ],
+          "validFrom": "2026-08-24",
+          "revoked": false
+        },
+        {
+          "id": "carla",
+          "displayName": "Carla",
+          "roles": [
+            "full",
+            "member"
+          ],
+          "credentials": [
+            {
+              "kind": "nfc",
+              "id": "EVAL-TAG-5"
+            }
+          ],
+          "validFrom": "2026-08-24",
+          "revoked": false
+        },
+        {
+          "id": "dario",
+          "displayName": "Dario",
+          "roles": [
+            "member"
+          ],
+          "credentials": [
+            {
+              "kind": "nfc",
+              "id": "EVAL-TAG-3"
+            }
+          ],
+          "validTo": "2026-09-22",
+          "revoked": false
+        },
+        {
+          "id": "erika",
+          "displayName": "Erika",
+          "roles": [
+            "full",
+            "member"
+          ],
+          "credentials": [
+            {
+              "kind": "nfc",
+              "id": "EVAL-TAG-4"
+            }
+          ],
+          "validTo": "2026-10-23",
+          "revoked": true
+        },
+        {
+          "id": "fabio",
+          "displayName": "Fabio",
+          "roles": [
+            "member"
+          ],
+          "credentials": [
+            {
+              "kind": "nfc",
+              "id": "EVAL-TAG-6"
+            }
+          ],
+          "validFrom": "2026-09-24",
+          "revoked": false
+        },
+        {
+          "id": "gianni",
+          "displayName": "Gianni",
+          "roles": [
+            "trainer"
+          ],
+          "credentials": [
+            {
+              "kind": "nfc",
+              "id": "EVAL-TAG-7"
+            }
+          ],
+          "revoked": false
+        },
+        {
+          "id": "helga",
+          "displayName": "Helga",
+          "roles": [
+            "staff"
+          ],
+          "credentials": [
+            {
+              "kind": "nfc",
+              "id": "EVAL-TAG-8"
+            }
+          ],
+          "revoked": false
+        }
+      ],
+      "syncedAt": "2026-09-23T07:51:15.254781750Z"
+    },
+    "acs2": {
+      "schema": "pip-device-bundle/1",
+      "version": 1,
+      "generatedAt": "2026-09-23T07:51:17.581663710Z",
+      "stale": false,
+      "space": {
+        "id": "spinning_1",
+        "name": "Spinning room 1",
+        "kind": "room"
+      },
+      "roomPolicy": {
+        "schema": "pip-room-policy/1",
+        "modelId": "e57c99e6-8897-40e5-8643-aa25dcf40fec",
+        "version": 1,
+        "space": "spinning_1",
+        "allowedRoles": [
+          "member",
+          "staff",
+          "trainer"
+        ],
+        "hours": [
+          {
+            "days": "wed",
+            "from": "08:00",
+            "to": "13:00"
+          }
+        ],
+        "rules": [
+          {
+            "role": "member",
+            "windows": [
+              {
+                "days": "wed",
+                "from": "08:00",
+                "to": "13:00"
+              }
+            ]
+          },
+          {
+            "role": "staff",
+            "windows": [
+              {
+                "days": "wed",
+                "from": "08:00",
+                "to": "13:00"
+              }
+            ]
+          },
+          {
+            "role": "trainer",
+            "windows": [
+              {
+                "days": "wed",
+                "from": "08:00",
+                "to": "13:00"
+              }
+            ]
+          }
+        ],
+        "staleness": {
+          "maxAgeMs": 3600000,
+          "whenExceeded": "deny"
+        }
+      },
+      "users": [
+        {
+          "id": "alice",
+          "displayName": "Alice",
+          "roles": [
+            "full",
+            "member"
+          ],
+          "credentials": [
+            {
+              "kind": "nfc",
+              "id": "EVAL-TAG-1"
+            }
+          ],
+          "validFrom": "2026-08-24",
+          "revoked": false
+        },
+        {
+          "id": "bruno",
+          "displayName": "Bruno",
+          "roles": [
+            "member"
+          ],
+          "credentials": [
+            {
+              "kind": "nfc",
+              "id": "EVAL-TAG-2"
+            }
+          ],
+          "validFrom": "2026-08-24",
+          "revoked": false
+        },
+        {
+          "id": "carla",
+          "displayName": "Carla",
+          "roles": [
+            "full",
+            "member"
+          ],
+          "credentials": [
+            {
+              "kind": "nfc",
+              "id": "EVAL-TAG-5"
+            }
+          ],
+          "validFrom": "2026-08-24",
+          "revoked": false
+        },
+        {
+          "id": "dario",
+          "displayName": "Dario",
+          "roles": [
+            "member"
+          ],
+          "credentials": [
+            {
+              "kind": "nfc",
+              "id": "EVAL-TAG-3"
+            }
+          ],
+          "validTo": "2026-09-22",
+          "revoked": false
+        },
+        {
+          "id": "erika",
+          "displayName": "Erika",
+          "roles": [
+            "full",
+            "member"
+          ],
+          "credentials": [
+            {
+              "kind": "nfc",
+              "id": "EVAL-TAG-4"
+            }
+          ],
+          "validTo": "2026-10-23",
+          "revoked": true
+        },
+        {
+          "id": "fabio",
+          "displayName": "Fabio",
+          "roles": [
+            "member"
+          ],
+          "credentials": [
+            {
+              "kind": "nfc",
+              "id": "EVAL-TAG-6"
+            }
+          ],
+          "validFrom": "2026-09-24",
+          "revoked": false
+        },
+        {
+          "id": "gianni",
+          "displayName": "Gianni",
+          "roles": [
+            "trainer"
+          ],
+          "credentials": [
+            {
+              "kind": "nfc",
+              "id": "EVAL-TAG-7"
+            }
+          ],
+          "revoked": false
+        },
+        {
+          "id": "helga",
+          "displayName": "Helga",
+          "roles": [
+            "staff"
+          ],
+          "credentials": [
+            {
+              "kind": "nfc",
+              "id": "EVAL-TAG-8"
+            }
+          ],
+          "revoked": false
+        }
+      ],
+      "syncedAt": "2026-09-23T07:51:15.254781750Z"
+    }
+  }
+}

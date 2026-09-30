@@ -1,0 +1,320 @@
+{
+  "id": "office-10",
+  "domain": "office",
+  "row": 10,
+  "origin": "generated",
+  "hardware": false,
+  "model": "eval-office-10",
+  "roles": [
+    {
+      "id": "staff",
+      "type": "Staff"
+    },
+    {
+      "id": "facility",
+      "type": "Facility"
+    },
+    {
+      "id": "researcher",
+      "type": "Researcher"
+    },
+    {
+      "id": "guest",
+      "type": "Guest"
+    }
+  ],
+  "principals": [
+    {
+      "id": "p1_ada",
+      "type": "Employee",
+      "name": "Ada",
+      "roles": [
+        "staff"
+      ],
+      "credential": {
+        "type": "NfcTag",
+        "tag": "EVAL-TAG-1"
+      },
+      "validity": "VALID",
+      "revoked": false
+    },
+    {
+      "id": "p2_bruno",
+      "type": "Employee",
+      "name": "Bruno",
+      "roles": [
+        "facility"
+      ],
+      "credential": {
+        "type": "NfcTag",
+        "tag": "EVAL-TAG-2"
+      },
+      "validity": "VALID",
+      "revoked": false
+    },
+    {
+      "id": "p3_chiara",
+      "type": "Employee",
+      "name": "Chiara",
+      "roles": [
+        "researcher"
+      ],
+      "credential": {
+        "type": "NfcTag",
+        "tag": "EVAL-TAG-3"
+      },
+      "validity": "VALID",
+      "revoked": false
+    },
+    {
+      "id": "p4_dario",
+      "type": "Visitor",
+      "name": "Dario",
+      "roles": [
+        "facility"
+      ],
+      "credential": {
+        "type": "NfcTag",
+        "tag": "EVAL-TAG-4"
+      },
+      "validity": "VALID_PAST",
+      "revoked": false
+    },
+    {
+      "id": "p5_elena",
+      "type": "Contractor",
+      "name": "Elena",
+      "roles": [
+        "researcher",
+        "staff"
+      ],
+      "credential": {
+        "type": "NfcTag",
+        "tag": "EVAL-TAG-5"
+      },
+      "validity": "VALID",
+      "revoked": false
+    },
+    {
+      "id": "p6_outsider",
+      "type": "Contractor",
+      "name": "Outsider",
+      "roles": [
+        "guest"
+      ],
+      "credential": {
+        "type": "NfcTag",
+        "tag": "EVAL-TAG-6"
+      },
+      "validity": "VALID",
+      "revoked": false
+    }
+  ],
+  "spaces": [
+    {
+      "id": "zone_a",
+      "type": "Floor",
+      "name": "Zone A",
+      "parent": null
+    },
+    {
+      "id": "room_1",
+      "type": "ServerRoom",
+      "name": "Room 1",
+      "parent": "zone_a",
+      "staleness": {
+        "maxAgeMs": 86400000,
+        "whenExceeded": "deny"
+      }
+    },
+    {
+      "id": "room_2",
+      "type": "Office",
+      "name": "Room 2",
+      "parent": "zone_a",
+      "capacity": 24
+    },
+    {
+      "id": "room_3",
+      "type": "Lab",
+      "name": "Room 3",
+      "parent": "zone_a",
+      "capacity": 25
+    }
+  ],
+  "windows": [
+    {
+      "id": "win_1",
+      "type": "OfficeHours",
+      "when": "NOW"
+    },
+    {
+      "id": "win_2",
+      "type": "ExtendedHours",
+      "when": "NOT_NOW"
+    },
+    {
+      "id": "win_3",
+      "type": "Always",
+      "when": "NOW"
+    }
+  ],
+  "policies": [
+    {
+      "id": "permit_1",
+      "type": "VisitorEscort",
+      "effect": "permit",
+      "roles": [
+        "facility"
+      ],
+      "spaces": [
+        "room_2"
+      ],
+      "windows": [
+        "win_2"
+      ],
+      "priority": 10
+    },
+    {
+      "id": "permit_2",
+      "type": "LabResearchers",
+      "effect": "permit",
+      "roles": [
+        "staff",
+        "facility"
+      ],
+      "spaces": [
+        "room_3"
+      ],
+      "windows": [],
+      "priority": 20
+    },
+    {
+      "id": "permit_3",
+      "type": "FacilityAllHours",
+      "effect": "permit",
+      "roles": [
+        "staff"
+      ],
+      "spaces": [
+        "room_2"
+      ],
+      "windows": [],
+      "priority": 30
+    },
+    {
+      "id": "permit_offhours",
+      "type": "FacilityAllHours",
+      "effect": "permit",
+      "roles": [
+        "researcher"
+      ],
+      "spaces": [
+        "room_1"
+      ],
+      "windows": [
+        "win_2"
+      ],
+      "priority": 80
+    },
+    {
+      "id": "permit_dev2",
+      "type": "VisitorEscort",
+      "effect": "permit",
+      "roles": [
+        "staff"
+      ],
+      "spaces": [
+        "room_1"
+      ],
+      "windows": [
+        "win_1"
+      ],
+      "priority": 92
+    },
+    {
+      "id": "deny_zone",
+      "type": "ServerRoomLock",
+      "effect": "deny",
+      "roles": [
+        "staff"
+      ],
+      "spaces": [
+        "zone_a"
+      ],
+      "windows": [],
+      "priority": 100
+    },
+    {
+      "id": "permit_dev2_b",
+      "type": "FacilityAllHours",
+      "effect": "permit",
+      "roles": [
+        "facility"
+      ],
+      "spaces": [
+        "room_1"
+      ],
+      "windows": [],
+      "priority": 96
+    }
+  ],
+  "devices": [
+    {
+      "id": "dev1",
+      "type": "AccessPoint",
+      "deviceId": "EVAL-ACS-1",
+      "label": "Reader 1",
+      "space": "room_3",
+      "sensors": [
+        {
+          "id": "dev1_co2",
+          "type": "Co2Sensor",
+          "key": "co2"
+        },
+        {
+          "id": "dev1_humidity",
+          "type": "HumiditySensor",
+          "key": "humidity"
+        }
+      ]
+    },
+    {
+      "id": "dev2",
+      "type": "AccessPoint",
+      "deviceId": "EVAL-ACS-2",
+      "label": "Reader 2",
+      "space": "room_1",
+      "sensors": [
+        {
+          "id": "dev2_humidity",
+          "type": "HumiditySensor",
+          "key": "humidity"
+        }
+      ]
+    }
+  ],
+  "kpis": [
+    {
+      "id": "humidity.avg",
+      "type": "FleetKpi",
+      "label": "humidity (avg)",
+      "aggregation": "avg",
+      "unit": "%RH",
+      "inputs": [
+        "dev1_humidity",
+        "dev2_humidity"
+      ]
+    }
+  ],
+  "goals": [
+    {
+      "id": "goal_1",
+      "type": "AirQualityGoal",
+      "space": "room_3",
+      "kpi": "humidity.avg",
+      "op": "<=",
+      "value": 1200
+    }
+  ]
+}

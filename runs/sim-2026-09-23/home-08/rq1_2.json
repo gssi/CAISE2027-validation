@@ -1,0 +1,629 @@
+{
+  "status": {
+    "sync": {
+      "enabled": true,
+      "version": 1,
+      "modelId": "5f2d144b-7c36-494d-8d24-8e0f53bd3806",
+      "modelName": "eval-home-08",
+      "source": "supabase",
+      "lastSyncOk": "2026-09-23T09:07:53.699953928Z",
+      "lastAttempt": "2026-09-23T09:07:53.380477719Z",
+      "stale": false,
+      "lastError": null,
+      "failures": 0,
+      "nextAttemptAt": null,
+      "users": 9,
+      "spaces": 6,
+      "policies": 5,
+      "warnings": [],
+      "modelSource": "runtime",
+      "appliedAt": "2026-09-23T09:07:48.380041508Z"
+    },
+    "url": "https://tmqzzxrkvogfyilmkaok.supabase.co",
+    "studioUrl": "http://127.0.0.1:5173",
+    "studioModelUrl": "http://127.0.0.1:5173/?model=5f2d144b-7c36-494d-8d24-8e0f53bd3806",
+    "pollMs": 5000,
+    "zone": "Europe/Rome",
+    "devices": [
+      {
+        "id": "acs1",
+        "name": "ACS 1",
+        "inFleet": true,
+        "deviceId": "EVAL-ACS-1",
+        "deviceIdSource": "engine",
+        "spaceId": "room_4",
+        "spaceSource": "model",
+        "modelDevice": {
+          "label": "Reader 1",
+          "sensors": [],
+          "id": "dev1"
+        },
+        "spaceName": "Room 4",
+        "allowedRoles": [
+          "cleaner"
+        ],
+        "hours": null,
+        "staleness": {
+          "maxAgeMs": 7200000,
+          "whenExceeded": "deny"
+        },
+        "restrictions": []
+      },
+      {
+        "id": "acs2",
+        "name": "ACS 2",
+        "inFleet": true,
+        "deviceId": "EVAL-ACS-2",
+        "deviceIdSource": "engine",
+        "spaceId": "room_2",
+        "spaceSource": "model",
+        "modelDevice": {
+          "label": "Reader 2",
+          "sensors": [],
+          "id": "dev2"
+        },
+        "spaceName": "Room 2",
+        "allowedRoles": [
+          "cleaner",
+          "owner"
+        ],
+        "hours": null,
+        "staleness": {
+          "maxAgeMs": 86400000,
+          "whenExceeded": "deny"
+        },
+        "restrictions": []
+      }
+    ]
+  },
+  "kpis": [
+    {
+      "id": "comfort-level",
+      "label": "Comfort level",
+      "inputs": [
+        "illuminance",
+        "temperature",
+        "decibel"
+      ],
+      "aggregation": "avg",
+      "source": "local",
+      "disabled": false
+    }
+  ],
+  "sensors": {
+    "publisher": {
+      "enabled": true,
+      "lastPublishedAt": "2026-09-23T08:35:44.462135971Z",
+      "rowsPublished": 2416,
+      "lastError": null
+    },
+    "observations": {
+      "enabled": true,
+      "lastPublishedAt": "2026-09-23T09:07:49.883442384Z",
+      "rowsPublished": 304,
+      "lastError": null
+    },
+    "sensors": []
+  },
+  "projection": {
+    "schema": "pip-projection/1",
+    "modelId": "5f2d144b-7c36-494d-8d24-8e0f53bd3806",
+    "modelName": "eval-home-08",
+    "version": 1,
+    "users": [
+      {
+        "id": "p1_ada",
+        "displayName": "Ada",
+        "roles": [
+          "owner"
+        ],
+        "credentials": [
+          {
+            "kind": "nfc",
+            "id": "EVAL-TAG-1"
+          }
+        ],
+        "revoked": false
+      },
+      {
+        "id": "p2_bruno",
+        "displayName": "Bruno",
+        "roles": [
+          "cleaner"
+        ],
+        "credentials": [
+          {
+            "kind": "nfc",
+            "id": "EVAL-TAG-2"
+          }
+        ],
+        "revoked": false
+      },
+      {
+        "id": "p3_chiara",
+        "displayName": "Chiara",
+        "roles": [
+          "owner"
+        ],
+        "credentials": [
+          {
+            "kind": "nfc",
+            "id": "EVAL-TAG-3"
+          }
+        ],
+        "validFrom": "2026-08-24",
+        "revoked": false
+      },
+      {
+        "id": "p4_dario",
+        "displayName": "Dario",
+        "roles": [
+          "owner"
+        ],
+        "credentials": [
+          {
+            "kind": "nfc",
+            "id": "EVAL-TAG-4"
+          }
+        ],
+        "validFrom": "2026-09-24",
+        "revoked": false
+      },
+      {
+        "id": "p5_elena",
+        "displayName": "Elena",
+        "roles": [
+          "owner"
+        ],
+        "credentials": [
+          {
+            "kind": "nfc",
+            "id": "EVAL-TAG-5"
+          }
+        ],
+        "validTo": "2026-09-22",
+        "revoked": false
+      },
+      {
+        "id": "p6_fabio",
+        "displayName": "Fabio",
+        "roles": [
+          "owner"
+        ],
+        "credentials": [
+          {
+            "kind": "nfc",
+            "id": "EVAL-TAG-6"
+          }
+        ],
+        "revoked": false
+      },
+      {
+        "id": "p7_giulia",
+        "displayName": "Giulia",
+        "roles": [
+          "cleaner",
+          "owner"
+        ],
+        "credentials": [
+          {
+            "kind": "nfc",
+            "id": "EVAL-TAG-7"
+          }
+        ],
+        "validTo": "2026-10-23",
+        "revoked": false
+      },
+      {
+        "id": "p8_hakim",
+        "displayName": "Hakim",
+        "roles": [
+          "cleaner",
+          "owner"
+        ],
+        "credentials": [
+          {
+            "kind": "nfc",
+            "id": "EVAL-TAG-8"
+          }
+        ],
+        "validTo": "2026-09-22",
+        "revoked": false
+      },
+      {
+        "id": "p9_outsider",
+        "displayName": "Outsider",
+        "roles": [
+          "visitor"
+        ],
+        "credentials": [
+          {
+            "kind": "nfc",
+            "id": "EVAL-TAG-9"
+          }
+        ],
+        "revoked": false
+      }
+    ],
+    "spaces": [
+      {
+        "id": "room_1",
+        "name": "Room 1",
+        "kind": "gate",
+        "capacity": 25,
+        "parent": "zone_b"
+      },
+      {
+        "id": "room_2",
+        "name": "Room 2",
+        "kind": "door",
+        "parent": "zone_a",
+        "staleness": {
+          "maxAgeMs": 86400000,
+          "whenExceeded": "deny"
+        }
+      },
+      {
+        "id": "room_3",
+        "name": "Room 3",
+        "kind": "door",
+        "capacity": 27,
+        "parent": "zone_a"
+      },
+      {
+        "id": "room_4",
+        "name": "Room 4",
+        "kind": "door",
+        "capacity": 20,
+        "parent": "zone_b"
+      },
+      {
+        "id": "zone_a",
+        "name": "Zone A",
+        "kind": "zone",
+        "parent": null,
+        "staleness": {
+          "maxAgeMs": 7200000,
+          "whenExceeded": "deny"
+        }
+      },
+      {
+        "id": "zone_b",
+        "name": "Zone B",
+        "kind": "zone",
+        "parent": "zone_a"
+      }
+    ],
+    "policies": [
+      {
+        "id": "deny_zone",
+        "effect": "deny",
+        "priority": 100,
+        "roles": [
+          "owner"
+        ],
+        "spaces": [
+          "zone_b"
+        ],
+        "windows": []
+      },
+      {
+        "id": "permit_1",
+        "effect": "permit",
+        "priority": 10,
+        "roles": [
+          "cleaner",
+          "owner"
+        ],
+        "spaces": [
+          "room_4"
+        ],
+        "windows": [
+          {
+            "days": "wed",
+            "from": "10:00",
+            "to": "15:00"
+          }
+        ]
+      },
+      {
+        "id": "permit_2",
+        "effect": "permit",
+        "priority": 20,
+        "roles": [
+          "cleaner"
+        ],
+        "spaces": [
+          "zone_a"
+        ],
+        "windows": []
+      },
+      {
+        "id": "permit_3",
+        "effect": "permit",
+        "priority": 30,
+        "roles": [
+          "cleaner",
+          "owner"
+        ],
+        "spaces": [
+          "zone_a"
+        ],
+        "windows": [
+          {
+            "days": "wed",
+            "from": "10:00",
+            "to": "15:00"
+          }
+        ]
+      },
+      {
+        "id": "permit_4",
+        "effect": "permit",
+        "priority": 40,
+        "roles": [
+          "cleaner",
+          "owner"
+        ],
+        "spaces": [
+          "room_2"
+        ],
+        "windows": []
+      }
+    ],
+    "devices": [
+      {
+        "id": "dev1",
+        "deviceId": "EVAL-ACS-1",
+        "space": "room_4",
+        "label": "Reader 1"
+      },
+      {
+        "id": "dev2",
+        "deviceId": "EVAL-ACS-2",
+        "space": "room_2",
+        "label": "Reader 2"
+      }
+    ]
+  },
+  "bundles": {
+    "acs1": {
+      "schema": "pip-device-bundle/1",
+      "version": 1,
+      "generatedAt": "2026-09-23T09:07:55.663838178Z",
+      "stale": false,
+      "space": {
+        "id": "room_4",
+        "name": "Room 4",
+        "kind": "door"
+      },
+      "roomPolicy": {
+        "schema": "pip-room-policy/1",
+        "modelId": "5f2d144b-7c36-494d-8d24-8e0f53bd3806",
+        "version": 1,
+        "space": "room_4",
+        "allowedRoles": [
+          "cleaner"
+        ],
+        "hours": null,
+        "rules": [
+          {
+            "role": "cleaner",
+            "windows": null
+          }
+        ],
+        "staleness": {
+          "maxAgeMs": 7200000,
+          "whenExceeded": "deny"
+        }
+      },
+      "users": [
+        {
+          "id": "p2_bruno",
+          "displayName": "Bruno",
+          "roles": [
+            "cleaner"
+          ],
+          "credentials": [
+            {
+              "kind": "nfc",
+              "id": "EVAL-TAG-2"
+            }
+          ],
+          "revoked": false
+        },
+        {
+          "id": "p7_giulia",
+          "displayName": "Giulia",
+          "roles": [
+            "cleaner",
+            "owner"
+          ],
+          "credentials": [
+            {
+              "kind": "nfc",
+              "id": "EVAL-TAG-7"
+            }
+          ],
+          "validTo": "2026-10-23",
+          "revoked": false
+        },
+        {
+          "id": "p8_hakim",
+          "displayName": "Hakim",
+          "roles": [
+            "cleaner",
+            "owner"
+          ],
+          "credentials": [
+            {
+              "kind": "nfc",
+              "id": "EVAL-TAG-8"
+            }
+          ],
+          "validTo": "2026-09-22",
+          "revoked": false
+        }
+      ],
+      "syncedAt": "2026-09-23T09:07:53.699953928Z"
+    },
+    "acs2": {
+      "schema": "pip-device-bundle/1",
+      "version": 1,
+      "generatedAt": "2026-09-23T09:07:55.670160637Z",
+      "stale": false,
+      "space": {
+        "id": "room_2",
+        "name": "Room 2",
+        "kind": "door"
+      },
+      "roomPolicy": {
+        "schema": "pip-room-policy/1",
+        "modelId": "5f2d144b-7c36-494d-8d24-8e0f53bd3806",
+        "version": 1,
+        "space": "room_2",
+        "allowedRoles": [
+          "cleaner",
+          "owner"
+        ],
+        "hours": null,
+        "rules": [
+          {
+            "role": "cleaner",
+            "windows": null
+          },
+          {
+            "role": "owner",
+            "windows": null
+          }
+        ],
+        "staleness": {
+          "maxAgeMs": 86400000,
+          "whenExceeded": "deny"
+        }
+      },
+      "users": [
+        {
+          "id": "p1_ada",
+          "displayName": "Ada",
+          "roles": [
+            "owner"
+          ],
+          "credentials": [
+            {
+              "kind": "nfc",
+              "id": "EVAL-TAG-1"
+            }
+          ],
+          "revoked": false
+        },
+        {
+          "id": "p2_bruno",
+          "displayName": "Bruno",
+          "roles": [
+            "cleaner"
+          ],
+          "credentials": [
+            {
+              "kind": "nfc",
+              "id": "EVAL-TAG-2"
+            }
+          ],
+          "revoked": false
+        },
+        {
+          "id": "p3_chiara",
+          "displayName": "Chiara",
+          "roles": [
+            "owner"
+          ],
+          "credentials": [
+            {
+              "kind": "nfc",
+              "id": "EVAL-TAG-3"
+            }
+          ],
+          "validFrom": "2026-08-24",
+          "revoked": false
+        },
+        {
+          "id": "p4_dario",
+          "displayName": "Dario",
+          "roles": [
+            "owner"
+          ],
+          "credentials": [
+            {
+              "kind": "nfc",
+              "id": "EVAL-TAG-4"
+            }
+          ],
+          "validFrom": "2026-09-24",
+          "revoked": false
+        },
+        {
+          "id": "p5_elena",
+          "displayName": "Elena",
+          "roles": [
+            "owner"
+          ],
+          "credentials": [
+            {
+              "kind": "nfc",
+              "id": "EVAL-TAG-5"
+            }
+          ],
+          "validTo": "2026-09-22",
+          "revoked": false
+        },
+        {
+          "id": "p6_fabio",
+          "displayName": "Fabio",
+          "roles": [
+            "owner"
+          ],
+          "credentials": [
+            {
+              "kind": "nfc",
+              "id": "EVAL-TAG-6"
+            }
+          ],
+          "revoked": false
+        },
+        {
+          "id": "p7_giulia",
+          "displayName": "Giulia",
+          "roles": [
+            "cleaner",
+            "owner"
+          ],
+          "credentials": [
+            {
+              "kind": "nfc",
+              "id": "EVAL-TAG-7"
+            }
+          ],
+          "validTo": "2026-10-23",
+          "revoked": false
+        },
+        {
+          "id": "p8_hakim",
+          "displayName": "Hakim",
+          "roles": [
+            "cleaner",
+            "owner"
+          ],
+          "credentials": [
+            {
+              "kind": "nfc",
+              "id": "EVAL-TAG-8"
+            }
+          ],
+          "validTo": "2026-09-22",
+          "revoked": false
+        }
+      ],
+      "syncedAt": "2026-09-23T09:07:53.699953928Z"
+    }
+  }
+}

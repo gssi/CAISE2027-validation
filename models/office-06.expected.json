@@ -1,0 +1,187 @@
+{
+  "id": "office-06",
+  "model": "eval-office-06",
+  "probes": [
+    {
+      "device": "dev1",
+      "tag": "EVAL-TAG-1",
+      "principal": "p1_ada",
+      "reason": "unknown_credential",
+      "allowed": false,
+      "hardware": false
+    },
+    {
+      "device": "dev1",
+      "tag": "EVAL-TAG-2",
+      "principal": "p2_bruno",
+      "reason": "ok",
+      "allowed": true,
+      "hardware": false
+    },
+    {
+      "device": "dev1",
+      "tag": "EVAL-TAG-3",
+      "principal": "p3_chiara",
+      "reason": "ok",
+      "allowed": true,
+      "hardware": false
+    },
+    {
+      "device": "dev1",
+      "tag": "EVAL-TAG-4",
+      "principal": "p4_dario",
+      "reason": "ok",
+      "allowed": true,
+      "hardware": false
+    },
+    {
+      "device": "dev1",
+      "tag": "EVAL-TAG-5",
+      "principal": "p5_elena",
+      "reason": "ok",
+      "allowed": true,
+      "hardware": false
+    },
+    {
+      "device": "dev1",
+      "tag": "EVAL-TAG-6",
+      "principal": "p6_fabio",
+      "reason": "unknown_credential",
+      "allowed": false,
+      "hardware": false
+    },
+    {
+      "device": "dev1",
+      "tag": "EVAL-TAG-7",
+      "principal": "p7_outsider",
+      "reason": "unknown_credential",
+      "allowed": false,
+      "hardware": false
+    },
+    {
+      "device": "dev1",
+      "tag": "EVAL-TAG-UNKNOWN",
+      "principal": null,
+      "reason": "unknown_credential",
+      "allowed": false,
+      "hardware": false
+    },
+    {
+      "device": "dev2",
+      "tag": "EVAL-TAG-1",
+      "principal": "p1_ada",
+      "reason": "ok",
+      "allowed": true,
+      "hardware": false
+    },
+    {
+      "device": "dev2",
+      "tag": "EVAL-TAG-2",
+      "principal": "p2_bruno",
+      "reason": "ok",
+      "allowed": true,
+      "hardware": false
+    },
+    {
+      "device": "dev2",
+      "tag": "EVAL-TAG-3",
+      "principal": "p3_chiara",
+      "reason": "ok",
+      "allowed": true,
+      "hardware": false
+    },
+    {
+      "device": "dev2",
+      "tag": "EVAL-TAG-4",
+      "principal": "p4_dario",
+      "reason": "ok",
+      "allowed": true,
+      "hardware": false
+    },
+    {
+      "device": "dev2",
+      "tag": "EVAL-TAG-5",
+      "principal": "p5_elena",
+      "reason": "ok",
+      "allowed": true,
+      "hardware": false
+    },
+    {
+      "device": "dev2",
+      "tag": "EVAL-TAG-6",
+      "principal": "p6_fabio",
+      "reason": "ok",
+      "allowed": true,
+      "hardware": false
+    },
+    {
+      "device": "dev2",
+      "tag": "EVAL-TAG-7",
+      "principal": "p7_outsider",
+      "reason": "unknown_credential",
+      "allowed": false,
+      "hardware": false
+    },
+    {
+      "device": "dev2",
+      "tag": "EVAL-TAG-UNKNOWN",
+      "principal": null,
+      "reason": "unknown_credential",
+      "allowed": false,
+      "hardware": false
+    }
+  ],
+  "bundles": [
+    {
+      "device": "dev1",
+      "space": "room_1",
+      "users": [
+        "p2_bruno",
+        "p3_chiara",
+        "p4_dario",
+        "p5_elena"
+      ],
+      "allowedRoles": [
+        "facility"
+      ],
+      "staleness": {
+        "maxAgeMs": 3600000,
+        "whenExceeded": "deny"
+      }
+    },
+    {
+      "device": "dev2",
+      "space": "room_2",
+      "users": [
+        "p1_ada",
+        "p2_bruno",
+        "p3_chiara",
+        "p4_dario",
+        "p5_elena",
+        "p6_fabio"
+      ],
+      "allowedRoles": [
+        "facility",
+        "staff"
+      ],
+      "staleness": {
+        "maxAgeMs": 3600000,
+        "whenExceeded": "deny"
+      }
+    }
+  ],
+  "sensors": {
+    "dev1": [
+      "dev1_co2",
+      "dev1_humidity",
+      "dev1_illuminance"
+    ],
+    "dev2": [
+      "dev2_decibel",
+      "dev2_humidity",
+      "dev2_temperature"
+    ]
+  },
+  "kpis": [],
+  "goals": []
+}

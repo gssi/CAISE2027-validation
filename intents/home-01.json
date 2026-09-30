@@ -1,0 +1,223 @@
+{
+  "id": "home-01",
+  "domain": "home",
+  "row": 1,
+  "origin": "seed",
+  "hardware": true,
+  "model": "eval-home-01",
+  "roles": [
+    {
+      "id": "owner",
+      "type": "Owner"
+    },
+    {
+      "id": "visitor",
+      "type": "Visitor"
+    },
+    {
+      "id": "cleaner",
+      "type": "Cleaner"
+    }
+  ],
+  "principals": [
+    {
+      "id": "marco",
+      "type": "Family",
+      "name": "Marco Rossi",
+      "roles": [
+        "owner"
+      ],
+      "credential": {
+        "type": "Fob",
+        "tag": "EVAL-TAG-1"
+      },
+      "validity": "VALID",
+      "revoked": false
+    },
+    {
+      "id": "grandma",
+      "type": "Family",
+      "name": "Grandma Rosa",
+      "roles": [
+        "visitor"
+      ],
+      "credential": {
+        "type": "Fob",
+        "tag": "EVAL-TAG-2"
+      },
+      "validity": "VALID",
+      "revoked": false
+    },
+    {
+      "id": "elena",
+      "type": "Service",
+      "name": "Elena (cleaning)",
+      "roles": [
+        "cleaner"
+      ],
+      "credential": {
+        "type": "Fob",
+        "tag": "EVAL-TAG-3"
+      },
+      "validity": "VALID",
+      "revoked": false
+    },
+    {
+      "id": "septemberGuest",
+      "type": "Guest",
+      "name": "September guest",
+      "roles": [
+        "visitor"
+      ],
+      "credential": {
+        "type": "Fob",
+        "tag": "EVAL-TAG-4"
+      },
+      "validity": "EXPIRED",
+      "revoked": false
+    },
+    {
+      "id": "laura",
+      "type": "Family",
+      "name": "Laura Rossi",
+      "roles": [
+        "owner"
+      ],
+      "credential": {
+        "type": "Fob",
+        "tag": "EVAL-TAG-5"
+      },
+      "validity": "VALID",
+      "revoked": false
+    }
+  ],
+  "spaces": [
+    {
+      "id": "house",
+      "type": "House",
+      "name": "Rossi home",
+      "parent": null
+    },
+    {
+      "id": "entrance",
+      "type": "Door",
+      "name": "Front door",
+      "parent": "house",
+      "staleness": {
+        "maxAgeMs": 86400000,
+        "whenExceeded": "allow-cached"
+      }
+    },
+    {
+      "id": "garage",
+      "type": "Gate",
+      "name": "Garage gate",
+      "parent": "house"
+    },
+    {
+      "id": "cellar",
+      "type": "Door",
+      "name": "Cellar",
+      "parent": "house"
+    }
+  ],
+  "windows": [
+    {
+      "id": "allDay",
+      "type": "AllDay",
+      "when": "ALWAYS"
+    },
+    {
+      "id": "daytime",
+      "type": "Daytime",
+      "when": "NOW"
+    },
+    {
+      "id": "weekday",
+      "type": "Weekday",
+      "when": "NOT_NOW"
+    }
+  ],
+  "policies": [
+    {
+      "id": "ownerRule",
+      "type": "OwnerRule",
+      "effect": "permit",
+      "roles": [
+        "owner"
+      ],
+      "spaces": [
+        "house"
+      ],
+      "windows": [
+        "allDay"
+      ],
+      "priority": 10
+    },
+    {
+      "id": "visitorDaytime",
+      "type": "VisitorDaytime",
+      "effect": "permit",
+      "roles": [
+        "visitor"
+      ],
+      "spaces": [
+        "entrance"
+      ],
+      "windows": [
+        "daytime"
+      ],
+      "priority": 20
+    },
+    {
+      "id": "cleanerWeekday",
+      "type": "CleanerWeekday",
+      "effect": "permit",
+      "roles": [
+        "cleaner"
+      ],
+      "spaces": [
+        "entrance",
+        "garage"
+      ],
+      "windows": [
+        "weekday"
+      ],
+      "priority": 30
+    },
+    {
+      "id": "cellarLock",
+      "type": "CellarLock",
+      "effect": "deny",
+      "roles": [
+        "visitor",
+        "cleaner"
+      ],
+      "spaces": [
+        "cellar"
+      ],
+      "windows": [],
+      "priority": 100
+    }
+  ],
+  "devices": [
+    {
+      "id": "frontDoorReader",
+      "type": "DoorReader",
+      "deviceId": "EVAL-ACS-1",
+      "label": "Front door reader",
+      "space": "entrance",
+      "sensors": []
+    },
+    {
+      "id": "garageReader",
+      "type": "DoorReader",
+      "deviceId": "EVAL-ACS-2",
+      "label": "Garage gate reader",
+      "space": "garage",
+      "sensors": []
+    }
+  ],
+  "kpis": [],
+  "goals": []
+}

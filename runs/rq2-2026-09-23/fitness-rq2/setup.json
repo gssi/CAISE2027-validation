@@ -1,0 +1,269 @@
+{
+  "copy": {
+    "id": "45686595-75dc-48f9-8ff2-f55251873fac",
+    "name": "EvalFitnessCentre"
+  },
+  "model": {
+    "version": 1,
+    "clabjects": [
+      {
+        "id": "dd64b0c4-b013-4ee1-8566-ae39a4f338d4",
+        "modelId": "501bbfb8-d6db-4953-8dc4-e2552f437618",
+        "name": "staff",
+        "potency": 0,
+        "tags": [],
+        "x": 680,
+        "y": 40,
+        "typeId": "59e489e9-acc9-458a-8cbc-52f5d70af2dd"
+      },
+      {
+        "id": "fd059bb7-20d8-4c2e-815f-fb427341168f",
+        "modelId": "501bbfb8-d6db-4953-8dc4-e2552f437618",
+        "name": "helga",
+        "potency": 0,
+        "tags": [],
+        "x": 40,
+        "y": 40,
+        "typeId": "a078bf12-b4a5-4a86-80d8-95081d8cc601"
+      },
+      {
+        "id": "7ba002dd-02d9-4fdb-8619-6125db22aeac",
+        "modelId": "501bbfb8-d6db-4953-8dc4-e2552f437618",
+        "name": "cred_helga",
+        "potency": 0,
+        "tags": [],
+        "x": 360,
+        "y": 40,
+        "typeId": "daaa3a9e-e551-4621-8b77-7c4e6ffc178e"
+      },
+      {
+        "id": "bcff9af5-aec0-45f5-80ea-63ee8410a864",
+        "modelId": "501bbfb8-d6db-4953-8dc4-e2552f437618",
+        "name": "gym_floor",
+        "potency": 0,
+        "tags": [],
+        "x": 1000,
+        "y": 40,
+        "typeId": "da393bda-b693-49df-84d2-66c91cc73fe4"
+      },
+      {
+        "id": "3cdbda0a-29ae-49ea-879b-38dfe8b2adbd",
+        "modelId": "501bbfb8-d6db-4953-8dc4-e2552f437618",
+        "name": "room_a",
+        "potency": 0,
+        "tags": [],
+        "x": 1000,
+        "y": 196,
+        "typeId": "16626963-0c59-4059-8c85-704daa56cc6a"
+      },
+      {
+        "id": "3cdbd90a-29ae-4837-879b-35dfe8b2a8a4",
+        "modelId": "501bbfb8-d6db-4953-8dc4-e2552f437618",
+        "name": "room_b",
+        "potency": 0,
+        "tags": [],
+        "x": 1000,
+        "y": 352,
+        "typeId": "27e305c2-89b0-40aa-841e-0d6af67b0fd9"
+      },
+      {
+        "id": "0cd87e8a-1949-47c8-8c63-593f0865fafb",
+        "modelId": "501bbfb8-d6db-4953-8dc4-e2552f437618",
+        "name": "staffHours",
+        "potency": 0,
+        "tags": [],
+        "x": 1320,
+        "y": 40,
+        "typeId": "10900be5-7638-4b27-8482-6d51939f547c"
+      },
+      {
+        "id": "32fefce2-a48e-49cf-8649-52d28cda526e",
+        "modelId": "501bbfb8-d6db-4953-8dc4-e2552f437618",
+        "name": "staffAccess",
+        "potency": 0,
+        "tags": [],
+        "x": 1640,
+        "y": 40,
+        "typeId": "ce68a34c-1862-4b88-8490-53383ce45aab"
+      },
+      {
+        "id": "4d652f46-2c6d-42c7-8639-b1b16de35c8c",
+        "modelId": "501bbfb8-d6db-4953-8dc4-e2552f437618",
+        "name": "dev1",
+        "potency": 0,
+        "tags": [],
+        "x": 1960,
+        "y": 40,
+        "typeId": "22e57026-dc42-4cb5-8019-d8cf4cda166e"
+      },
+      {
+        "id": "4d653046-2c6d-447a-8639-b4b16de361a5",
+        "modelId": "501bbfb8-d6db-4953-8dc4-e2552f437618",
+        "name": "dev2",
+        "potency": 0,
+        "tags": [],
+        "x": 1960,
+        "y": 352,
+        "typeId": "22e57026-dc42-4cb5-8019-d8cf4cda166e"
+      }
+    ],
+    "attributes": [],
+    "slots": [
+      {
+        "id": "66dc7fed-a156-4392-8782-a2ae348b132f",
+        "ownerId": "fd059bb7-20d8-4c2e-815f-fb427341168f",
+        "attributeId": "8539ad47-9c6f-4439-85ba-5646f56162c0",
+        "value": "Helga"
+      },
+      {
+        "id": "2c63e065-97c7-4861-81a6-e76bb34cb2ec",
+        "ownerId": "7ba002dd-02d9-4fdb-8619-6125db22aeac",
+        "attributeId": "0a5566fd-125e-40f0-8e7c-9c1add8f1a55",
+        "value": "EVAL-TAG-1"
+      },
+      {
+        "id": "7d3b3dc7-fcd6-48d3-8ab2-d1a13b614038",
+        "ownerId": "bcff9af5-aec0-45f5-80ea-63ee8410a864",
+        "attributeId": "bb198e48-5390-4967-8ecc-4586d7064e44",
+        "value": "Gym floor"
+      },
+      {
+        "id": "58654ff5-dbb5-4fb6-8f2d-bbf593afe1af",
+        "ownerId": "3cdbda0a-29ae-49ea-879b-38dfe8b2adbd",
+        "attributeId": "bb198e48-5390-4967-8ecc-4586d7064e44",
+        "value": "Spinning"
+      },
+      {
+        "id": "5e955f1c-d45c-4ea1-8849-f8c3081d8050",
+        "ownerId": "3cdbd90a-29ae-4837-879b-35dfe8b2a8a4",
+        "attributeId": "bb198e48-5390-4967-8ecc-4586d7064e44",
+        "value": "Lockers"
+      },
+      {
+        "id": "08850bcb-b39c-4e1c-8741-ba7250804219",
+        "ownerId": "0cd87e8a-1949-47c8-8c63-593f0865fafb",
+        "attributeId": "a9aa9fd0-0f27-4010-8f58-dcd75c49445d",
+        "value": "*"
+      },
+      {
+        "id": "207078ba-170e-4557-8e53-8560bbe9a6a6",
+        "ownerId": "0cd87e8a-1949-47c8-8c63-593f0865fafb",
+        "attributeId": "559014c2-bd52-437b-83ac-6fc52cc5d50a",
+        "value": "00:00"
+      },
+      {
+        "id": "63b42adc-657c-4a16-846d-f2996d9b77b7",
+        "ownerId": "0cd87e8a-1949-47c8-8c63-593f0865fafb",
+        "attributeId": "64203336-920c-4272-83d5-42e1f2335a13",
+        "value": "23:59"
+      },
+      {
+        "id": "b5ee6c8a-5fb9-4f22-8694-503962039d75",
+        "ownerId": "32fefce2-a48e-49cf-8649-52d28cda526e",
+        "attributeId": "de316a17-12b0-46ce-8aff-39e3f359c393",
+        "value": 10
+      },
+      {
+        "id": "f420186a-c8f2-48c1-899a-9eef738e78bc",
+        "ownerId": "4d652f46-2c6d-42c7-8639-b1b16de35c8c",
+        "attributeId": "bff5c698-244e-4aad-8ed3-98c8c866bff4",
+        "value": "EVAL-ACS-1"
+      },
+      {
+        "id": "73d65180-3363-4f40-8f6e-a4087ab6113b",
+        "ownerId": "4d652f46-2c6d-42c7-8639-b1b16de35c8c",
+        "attributeId": "b65befc7-8e17-4844-83e0-3e828862cd03",
+        "value": "Reader 1"
+      },
+      {
+        "id": "dc1400a3-d1cd-440e-8be0-0ef333b0248b",
+        "ownerId": "4d653046-2c6d-447a-8639-b4b16de361a5",
+        "attributeId": "bff5c698-244e-4aad-8ed3-98c8c866bff4",
+        "value": "EVAL-ACS-2"
+      },
+      {
+        "id": "10cdba15-a6c7-4ded-8286-1dc495e11cea",
+        "ownerId": "4d653046-2c6d-447a-8639-b4b16de361a5",
+        "attributeId": "b65befc7-8e17-4844-83e0-3e828862cd03",
+        "value": "Reader 2"
+      }
+    ],
+    "associations": [],
+    "links": [
+      {
+        "id": "e31da8a0-8272-4450-8a4c-adf0f4978d9f",
+        "modelId": "501bbfb8-d6db-4953-8dc4-e2552f437618",
+        "associationId": "adb317ae-44d1-4d08-84f1-883950172289",
+        "sourceId": "fd059bb7-20d8-4c2e-815f-fb427341168f",
+        "targetId": "7ba002dd-02d9-4fdb-8619-6125db22aeac"
+      },
+      {
+        "id": "336ff53a-ef16-49e6-825d-5e88f0305e8b",
+        "modelId": "501bbfb8-d6db-4953-8dc4-e2552f437618",
+        "associationId": "45ea559d-e0c4-4c2a-82ef-b5760680605b",
+        "sourceId": "fd059bb7-20d8-4c2e-815f-fb427341168f",
+        "targetId": "dd64b0c4-b013-4ee1-8566-ae39a4f338d4"
+      },
+      {
+        "id": "bc957ba6-2c29-4dbf-859e-37ce1cdbddfe",
+        "modelId": "501bbfb8-d6db-4953-8dc4-e2552f437618",
+        "associationId": "3bcf9104-cc94-44ef-85f3-1c145b19d6d0",
+        "sourceId": "bcff9af5-aec0-45f5-80ea-63ee8410a864",
+        "targetId": "3cdbda0a-29ae-49ea-879b-38dfe8b2adbd"
+      },
+      {
+        "id": "bc957ca6-2c29-4f72-859e-36ce1cdbdc4b",
+        "modelId": "501bbfb8-d6db-4953-8dc4-e2552f437618",
+        "associationId": "3bcf9104-cc94-44ef-85f3-1c145b19d6d0",
+        "sourceId": "bcff9af5-aec0-45f5-80ea-63ee8410a864",
+        "targetId": "3cdbd90a-29ae-4837-879b-35dfe8b2a8a4"
+      },
+      {
+        "id": "5e24e8af-4525-4daa-82b6-c2f903f04915",
+        "modelId": "501bbfb8-d6db-4953-8dc4-e2552f437618",
+        "associationId": "318a0e18-9f07-4189-819b-97d396094102",
+        "sourceId": "32fefce2-a48e-49cf-8649-52d28cda526e",
+        "targetId": "dd64b0c4-b013-4ee1-8566-ae39a4f338d4"
+      },
+      {
+        "id": "39594431-d1d7-4b90-8102-7a0bacb3d20f",
+        "modelId": "501bbfb8-d6db-4953-8dc4-e2552f437618",
+        "associationId": "1efc1ea3-f7b8-48cb-8eab-22a5a42d0b28",
+        "sourceId": "32fefce2-a48e-49cf-8649-52d28cda526e",
+        "targetId": "bcff9af5-aec0-45f5-80ea-63ee8410a864"
+      },
+      {
+        "id": "4cde2627-9d0e-472b-8dfe-4761a7a0ad7a",
+        "modelId": "501bbfb8-d6db-4953-8dc4-e2552f437618",
+        "associationId": "d8df5449-a5f8-473b-8774-58cf6105e5a0",
+        "sourceId": "32fefce2-a48e-49cf-8649-52d28cda526e",
+        "targetId": "0cd87e8a-1949-47c8-8c63-593f0865fafb"
+      },
+      {
+        "id": "1bccc43a-5019-4576-8fc2-01e61d3abf11",
+        "modelId": "501bbfb8-d6db-4953-8dc4-e2552f437618",
+        "associationId": "f98cf0c2-9960-4eb8-8224-445ad45d575f",
+        "sourceId": "4d652f46-2c6d-42c7-8639-b1b16de35c8c",
+        "targetId": "3cdbda0a-29ae-49ea-879b-38dfe8b2adbd"
+      },
+      {
+        "id": "f35c7909-ed1e-483c-81ff-733e64bdb8ff",
+        "modelId": "501bbfb8-d6db-4953-8dc4-e2552f437618",
+        "associationId": "f98cf0c2-9960-4eb8-8224-445ad45d575f",
+        "sourceId": "4d653046-2c6d-447a-8639-b4b16de361a5",
+        "targetId": "3cdbd90a-29ae-4837-879b-35dfe8b2a8a4"
+      }
+    ],
+    "id": "501bbfb8-d6db-4953-8dc4-e2552f437618",
+    "projectId": "00000000-0000-4000-8000-000000000004",
+    "name": "eval-fitness-rq2",
+    "level": 0,
+    "typeModelId": "45686595-75dc-48f9-8ff2-f55251873fac"
+  },
+  "loaded": {
+    "modelId": "501bbfb8-d6db-4953-8dc4-e2552f437618",
+    "version": 1,
+    "committedAt": "2026-09-23T19:48:12.035Z",
+    "clockOffsetMs": 379
+  }
+}

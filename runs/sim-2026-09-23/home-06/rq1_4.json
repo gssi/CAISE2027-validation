@@ -1,0 +1,51 @@
+{
+  "forked": {
+    "f1": 1777,
+    "f2": 1999,
+    "inh": {
+      "fleetActive": "eval-signature",
+      "devices": [
+        {
+          "id": "acs1",
+          "name": "ACS 1",
+          "online": true,
+          "status": "inheriting",
+          "activeMachine": "fleet-eval-signature",
+          "fleetMachine": "eval-signature"
+        },
+        {
+          "id": "acs2",
+          "name": "ACS 2",
+          "online": true,
+          "status": "overriding",
+          "activeMachine": "local-eval-signature",
+          "fleetMachine": null
+        }
+      ]
+    }
+  },
+  "back": {
+    "fb": 1777,
+    "inh2": {
+      "fleetActive": "eval-signature",
+      "devices": [
+        {
+          "id": "acs1",
+          "name": "ACS 1",
+          "online": true,
+          "status": "inheriting",
+          "activeMachine": "fleet-eval-signature",
+          "fleetMachine": "eval-signature"
+        },
+        {
+          "id": "acs2",
+          "name": "ACS 2",
+          "online": true,
+          "status": "inheriting",
+          "activeMachine": "fleet-eval-signature",
+          "fleetMachine": "eval-signature"
+        }
+      ]
+    }
+  }
+}

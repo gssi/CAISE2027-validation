@@ -1,0 +1,323 @@
+{
+  "id": "office-09",
+  "domain": "office",
+  "row": 9,
+  "origin": "generated",
+  "hardware": false,
+  "model": "eval-office-09",
+  "roles": [
+    {
+      "id": "guest",
+      "type": "Guest"
+    },
+    {
+      "id": "researcher",
+      "type": "Researcher"
+    },
+    {
+      "id": "staff",
+      "type": "Staff"
+    },
+    {
+      "id": "facility",
+      "type": "Facility"
+    }
+  ],
+  "principals": [
+    {
+      "id": "p1_ada",
+      "type": "Contractor",
+      "name": "Ada",
+      "roles": [
+        "guest"
+      ],
+      "credential": {
+        "type": "NfcTag",
+        "tag": "EVAL-TAG-1"
+      },
+      "validity": "VALID",
+      "revoked": false
+    },
+    {
+      "id": "p2_bruno",
+      "type": "Employee",
+      "name": "Bruno",
+      "roles": [
+        "researcher"
+      ],
+      "credential": {
+        "type": "NfcTag",
+        "tag": "EVAL-TAG-2"
+      },
+      "validity": "VALID",
+      "revoked": false
+    },
+    {
+      "id": "p3_chiara",
+      "type": "Contractor",
+      "name": "Chiara",
+      "roles": [
+        "staff"
+      ],
+      "credential": {
+        "type": "NfcTag",
+        "tag": "EVAL-TAG-3"
+      },
+      "validity": "VALID",
+      "revoked": false
+    },
+    {
+      "id": "p4_dario",
+      "type": "Visitor",
+      "name": "Dario",
+      "roles": [
+        "staff"
+      ],
+      "credential": {
+        "type": "NfcTag",
+        "tag": "EVAL-TAG-4"
+      },
+      "validity": "VALID_FUTURE",
+      "revoked": false
+    },
+    {
+      "id": "p5_elena",
+      "type": "Contractor",
+      "name": "Elena",
+      "roles": [
+        "researcher",
+        "guest"
+      ],
+      "credential": {
+        "type": "NfcTag",
+        "tag": "EVAL-TAG-5"
+      },
+      "validity": "VALID_FUTURE",
+      "revoked": false
+    },
+    {
+      "id": "p6_revoked",
+      "type": "Employee",
+      "name": "Revoked",
+      "roles": [
+        "guest"
+      ],
+      "credential": {
+        "type": "NfcTag",
+        "tag": "EVAL-TAG-6"
+      },
+      "validity": "VALID",
+      "revoked": true
+    },
+    {
+      "id": "p7_outsider",
+      "type": "Visitor",
+      "name": "Outsider",
+      "roles": [
+        "facility"
+      ],
+      "credential": {
+        "type": "NfcTag",
+        "tag": "EVAL-TAG-7"
+      },
+      "validity": "VALID",
+      "revoked": false
+    }
+  ],
+  "spaces": [
+    {
+      "id": "zone_a",
+      "type": "Floor",
+      "name": "Zone A",
+      "parent": null
+    },
+    {
+      "id": "room_1",
+      "type": "Office",
+      "name": "Room 1",
+      "parent": "zone_a"
+    },
+    {
+      "id": "room_2",
+      "type": "MeetingRoom",
+      "name": "Room 2",
+      "parent": "zone_a",
+      "staleness": {
+        "maxAgeMs": 86400000,
+        "whenExceeded": "deny"
+      }
+    }
+  ],
+  "windows": [
+    {
+      "id": "win_1",
+      "type": "OfficeHours",
+      "when": "ALWAYS"
+    },
+    {
+      "id": "win_2",
+      "type": "ExtendedHours",
+      "when": "NOW"
+    },
+    {
+      "id": "win_3",
+      "type": "Always",
+      "when": "NOT_NOW"
+    }
+  ],
+  "policies": [
+    {
+      "id": "permit_1",
+      "type": "LabResearchers",
+      "effect": "permit",
+      "roles": [
+        "guest"
+      ],
+      "spaces": [
+        "room_1"
+      ],
+      "windows": [
+        "win_2"
+      ],
+      "priority": 10
+    },
+    {
+      "id": "permit_2",
+      "type": "VisitorEscort",
+      "effect": "permit",
+      "roles": [
+        "researcher"
+      ],
+      "spaces": [
+        "room_1"
+      ],
+      "windows": [
+        "win_2"
+      ],
+      "priority": 20
+    },
+    {
+      "id": "permit_offhours",
+      "type": "LabResearchers",
+      "effect": "permit",
+      "roles": [
+        "staff"
+      ],
+      "spaces": [
+        "room_1"
+      ],
+      "windows": [
+        "win_3"
+      ],
+      "priority": 80
+    },
+    {
+      "id": "permit_dev1",
+      "type": "VisitorEscort",
+      "effect": "permit",
+      "roles": [
+        "guest"
+      ],
+      "spaces": [
+        "room_2"
+      ],
+      "windows": [
+        "win_1"
+      ],
+      "priority": 91
+    }
+  ],
+  "devices": [
+    {
+      "id": "dev1",
+      "type": "AccessPoint",
+      "deviceId": "EVAL-ACS-1",
+      "label": "Reader 1",
+      "space": "room_2",
+      "sensors": [
+        {
+          "id": "dev1_co2",
+          "type": "Co2Sensor",
+          "key": "co2"
+        },
+        {
+          "id": "dev1_decibel",
+          "type": "SoundLevelSensor",
+          "key": "decibel"
+        },
+        {
+          "id": "dev1_humidity",
+          "type": "HumiditySensor",
+          "key": "humidity"
+        },
+        {
+          "id": "dev1_illuminance",
+          "type": "IlluminanceSensor",
+          "key": "illuminance"
+        },
+        {
+          "id": "dev1_temperature",
+          "type": "TemperatureSensor",
+          "key": "temperature"
+        }
+      ]
+    },
+    {
+      "id": "dev2",
+      "type": "AccessPoint",
+      "deviceId": "EVAL-ACS-2",
+      "label": "Reader 2",
+      "space": "room_1",
+      "sensors": [
+        {
+          "id": "dev2_co2",
+          "type": "Co2Sensor",
+          "key": "co2"
+        },
+        {
+          "id": "dev2_decibel",
+          "type": "SoundLevelSensor",
+          "key": "decibel"
+        },
+        {
+          "id": "dev2_humidity",
+          "type": "HumiditySensor",
+          "key": "humidity"
+        },
+        {
+          "id": "dev2_illuminance",
+          "type": "IlluminanceSensor",
+          "key": "illuminance"
+        },
+        {
+          "id": "dev2_temperature",
+          "type": "TemperatureSensor",
+          "key": "temperature"
+        }
+      ]
+    }
+  ],
+  "kpis": [
+    {
+      "id": "temperature.avg",
+      "type": "FleetKpi",
+      "label": "temperature (avg)",
+      "aggregation": "avg",
+      "unit": "°C",
+      "inputs": [
+        "dev1_temperature",
+        "dev2_temperature"
+      ]
+    }
+  ],
+  "goals": [
+    {
+      "id": "goal_1",
+      "type": "AirQualityGoal",
+      "space": "zone_a",
+      "kpi": "temperature.avg",
+      "op": ">=",
+      "value": 1200
+    }
+  ]
+}

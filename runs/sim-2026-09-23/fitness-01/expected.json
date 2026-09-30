@@ -1,0 +1,209 @@
+{
+  "id": "fitness-01",
+  "model": "eval-fitness-01",
+  "probes": [
+    {
+      "device": "mainTurnstile",
+      "tag": "EVAL-TAG-1",
+      "principal": "alice",
+      "reason": "ok",
+      "allowed": true,
+      "hardware": true
+    },
+    {
+      "device": "mainTurnstile",
+      "tag": "EVAL-TAG-2",
+      "principal": "bruno",
+      "reason": "ok",
+      "allowed": true,
+      "hardware": true
+    },
+    {
+      "device": "mainTurnstile",
+      "tag": "EVAL-TAG-3",
+      "principal": "dario",
+      "reason": "expired",
+      "allowed": false,
+      "hardware": true
+    },
+    {
+      "device": "mainTurnstile",
+      "tag": "EVAL-TAG-4",
+      "principal": "erika",
+      "reason": "revoked",
+      "allowed": false,
+      "hardware": true
+    },
+    {
+      "device": "mainTurnstile",
+      "tag": "EVAL-TAG-5",
+      "principal": "carla",
+      "reason": "ok",
+      "allowed": true,
+      "hardware": false
+    },
+    {
+      "device": "mainTurnstile",
+      "tag": "EVAL-TAG-6",
+      "principal": "fabio",
+      "reason": "not_yet_valid",
+      "allowed": false,
+      "hardware": false
+    },
+    {
+      "device": "mainTurnstile",
+      "tag": "EVAL-TAG-7",
+      "principal": "gianni",
+      "reason": "ok",
+      "allowed": true,
+      "hardware": false
+    },
+    {
+      "device": "mainTurnstile",
+      "tag": "EVAL-TAG-8",
+      "principal": "helga",
+      "reason": "ok",
+      "allowed": true,
+      "hardware": false
+    },
+    {
+      "device": "mainTurnstile",
+      "tag": "EVAL-TAG-UNKNOWN",
+      "principal": null,
+      "reason": "unknown_credential",
+      "allowed": false,
+      "hardware": false
+    },
+    {
+      "device": "spinningTurnstile",
+      "tag": "EVAL-TAG-1",
+      "principal": "alice",
+      "reason": "ok",
+      "allowed": true,
+      "hardware": true
+    },
+    {
+      "device": "spinningTurnstile",
+      "tag": "EVAL-TAG-2",
+      "principal": "bruno",
+      "reason": "ok",
+      "allowed": true,
+      "hardware": true
+    },
+    {
+      "device": "spinningTurnstile",
+      "tag": "EVAL-TAG-3",
+      "principal": "dario",
+      "reason": "expired",
+      "allowed": false,
+      "hardware": true
+    },
+    {
+      "device": "spinningTurnstile",
+      "tag": "EVAL-TAG-4",
+      "principal": "erika",
+      "reason": "revoked",
+      "allowed": false,
+      "hardware": true
+    },
+    {
+      "device": "spinningTurnstile",
+      "tag": "EVAL-TAG-5",
+      "principal": "carla",
+      "reason": "ok",
+      "allowed": true,
+      "hardware": false
+    },
+    {
+      "device": "spinningTurnstile",
+      "tag": "EVAL-TAG-6",
+      "principal": "fabio",
+      "reason": "not_yet_valid",
+      "allowed": false,
+      "hardware": false
+    },
+    {
+      "device": "spinningTurnstile",
+      "tag": "EVAL-TAG-7",
+      "principal": "gianni",
+      "reason": "ok",
+      "allowed": true,
+      "hardware": false
+    },
+    {
+      "device": "spinningTurnstile",
+      "tag": "EVAL-TAG-8",
+      "principal": "helga",
+      "reason": "ok",
+      "allowed": true,
+      "hardware": false
+    },
+    {
+      "device": "spinningTurnstile",
+      "tag": "EVAL-TAG-UNKNOWN",
+      "principal": null,
+      "reason": "unknown_credential",
+      "allowed": false,
+      "hardware": false
+    }
+  ],
+  "bundles": [
+    {
+      "device": "mainTurnstile",
+      "space": "gym_floor",
+      "users": [
+        "alice",
+        "bruno",
+        "carla",
+        "dario",
+        "erika",
+        "fabio",
+        "gianni",
+        "helga"
+      ],
+      "allowedRoles": [
+        "member",
+        "staff",
+        "trainer"
+      ],
+      "staleness": {
+        "maxAgeMs": 3600000,
+        "whenExceeded": "deny"
+      }
+    },
+    {
+      "device": "spinningTurnstile",
+      "space": "spinning_1",
+      "users": [
+        "alice",
+        "bruno",
+        "carla",
+        "dario",
+        "erika",
+        "fabio",
+        "gianni",
+        "helga"
+      ],
+      "allowedRoles": [
+        "member",
+        "staff",
+        "trainer"
+      ],
+      "staleness": {
+        "maxAgeMs": 3600000,
+        "whenExceeded": "deny"
+      }
+    }
+  ],
+  "sensors": {
+    "mainTurnstile": [],
+    "spinningTurnstile": []
+  },
+  "kpis": [],
+  "goals": [
+    {
+      "id": "gymCapacity",
+      "space": "gym_floor"
+    }
+  ]
+}

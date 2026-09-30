@@ -1,0 +1,10 @@
+2026-09-24T13:46:08.367Z ── home-rq2 (hw)
+2026-09-24T13:46:53.042Z   PASS step 1 plug ambient (illuminance) on dev1: runtime ok, proposal ok [A4:TYPES_MISSING_ABOVE, B2:SENSOR_TYPE_MISSING[co2], B2:SENSOR_TYPE_MISSING[temperature], B2:SENSOR_TYPE_MISSING[humidity], B2:SENSOR_TYPE_MISSING[illuminance], B3:KPI_TYPE_MISSING], commit ok, M4 5712 ms
+2026-09-24T13:48:05.257Z   PASS step 2 plug soundPressure (decibel, untyped) on dev1; then both bricklets on dev2: runtime ok, proposal ok [A4:TYPES_MISSING_ABOVE, B2:SENSOR_TYPE_MISSING[decibel], B3:KPI_TYPE_MISSING, A2:SENSOR_UNMODELLED (2 sensors on dev2)], commit ok, M4 3837 ms
+2026-09-24T13:48:17.406Z   PASS step 3 model decibel.max (dev1+dev2), illuminance.avg (dev1) and the goal roomLight: runtime ok, proposal ok [B3:KPI_TYPE_MISSING], commit ok
+2026-09-24T13:48:29.685Z   PASS step 4 unplug dev2 ambient (used by nothing): runtime ok, proposal ok [], commit ok, M4 2341 ms
+2026-09-24T13:48:49.247Z   PASS step 5 unplug dev2 soundPressure (one of two inputs of decibel.max): runtime ok, proposal ok [], commit ok, M4 3071 ms
+2026-09-24T13:49:15.811Z   PASS step 6 unplug dev1 ambient (only input of illuminance.avg, measured by the goal): runtime ok, proposal ok [], commit ok, M4 6180 ms
+2026-09-24T13:49:47.488Z   PASS step 7 replace the controller of dev2 (new X-Device-Id): runtime ok, proposal ok [A1:DEVICE_UNMODELLED], commit ok, M4 14681 ms
+2026-09-24T13:51:09.931Z   PASS step 8 re-plug dev2 ambient, then unplug it before accepting the proposal: runtime ok, proposal ok [A2:SENSOR_UNMODELLED, →], M4 25066 ms
+2026-09-24T13:51:29.895Z   RQ2 PASS home

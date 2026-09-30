@@ -1,0 +1,325 @@
+{
+  "id": "office-07",
+  "domain": "office",
+  "row": 7,
+  "origin": "generated",
+  "hardware": false,
+  "model": "eval-office-07",
+  "roles": [
+    {
+      "id": "staff",
+      "type": "Staff"
+    },
+    {
+      "id": "guest",
+      "type": "Guest"
+    },
+    {
+      "id": "facility",
+      "type": "Facility"
+    },
+    {
+      "id": "researcher",
+      "type": "Researcher"
+    }
+  ],
+  "principals": [
+    {
+      "id": "p1_ada",
+      "type": "Employee",
+      "name": "Ada",
+      "roles": [
+        "staff"
+      ],
+      "credential": {
+        "type": "NfcTag",
+        "tag": "EVAL-TAG-1"
+      },
+      "validity": "VALID",
+      "revoked": false
+    },
+    {
+      "id": "p2_bruno",
+      "type": "Employee",
+      "name": "Bruno",
+      "roles": [
+        "guest"
+      ],
+      "credential": {
+        "type": "NfcTag",
+        "tag": "EVAL-TAG-2"
+      },
+      "validity": "VALID",
+      "revoked": false
+    },
+    {
+      "id": "p3_chiara",
+      "type": "Visitor",
+      "name": "Chiara",
+      "roles": [
+        "facility"
+      ],
+      "credential": {
+        "type": "NfcTag",
+        "tag": "EVAL-TAG-3"
+      },
+      "validity": "VALID",
+      "revoked": false
+    },
+    {
+      "id": "p4_dario",
+      "type": "Visitor",
+      "name": "Dario",
+      "roles": [
+        "guest",
+        "facility"
+      ],
+      "credential": {
+        "type": "NfcTag",
+        "tag": "EVAL-TAG-4"
+      },
+      "validity": "VALID",
+      "revoked": false
+    },
+    {
+      "id": "p5_elena",
+      "type": "Visitor",
+      "name": "Elena",
+      "roles": [
+        "facility",
+        "guest"
+      ],
+      "credential": {
+        "type": "NfcTag",
+        "tag": "EVAL-TAG-5"
+      },
+      "validity": "VALID",
+      "revoked": false
+    },
+    {
+      "id": "p6_fabio",
+      "type": "Contractor",
+      "name": "Fabio",
+      "roles": [
+        "guest"
+      ],
+      "credential": {
+        "type": "NfcTag",
+        "tag": "EVAL-TAG-6"
+      },
+      "validity": "EXPIRED",
+      "revoked": false
+    },
+    {
+      "id": "p7_giulia",
+      "type": "Contractor",
+      "name": "Giulia",
+      "roles": [
+        "staff",
+        "facility"
+      ],
+      "credential": {
+        "type": "NfcTag",
+        "tag": "EVAL-TAG-7"
+      },
+      "validity": "EXPIRED",
+      "revoked": false
+    },
+    {
+      "id": "p8_hakim",
+      "type": "Employee",
+      "name": "Hakim",
+      "roles": [
+        "staff"
+      ],
+      "credential": {
+        "type": "NfcTag",
+        "tag": "EVAL-TAG-8"
+      },
+      "validity": "VALID",
+      "revoked": false
+    },
+    {
+      "id": "p9_revoked",
+      "type": "Employee",
+      "name": "Revoked",
+      "roles": [
+        "staff"
+      ],
+      "credential": {
+        "type": "NfcTag",
+        "tag": "EVAL-TAG-9"
+      },
+      "validity": "VALID",
+      "revoked": true
+    },
+    {
+      "id": "p10_outsider",
+      "type": "Contractor",
+      "name": "Outsider",
+      "roles": [
+        "researcher"
+      ],
+      "credential": {
+        "type": "NfcTag",
+        "tag": "EVAL-TAG-10"
+      },
+      "validity": "VALID",
+      "revoked": false
+    }
+  ],
+  "spaces": [
+    {
+      "id": "zone_a",
+      "type": "Floor",
+      "name": "Zone A",
+      "parent": null
+    },
+    {
+      "id": "zone_b",
+      "type": "Floor",
+      "name": "Zone B",
+      "parent": "zone_a"
+    },
+    {
+      "id": "zone_c",
+      "type": "Floor",
+      "name": "Zone C",
+      "parent": "zone_b"
+    },
+    {
+      "id": "room_1",
+      "type": "MeetingRoom",
+      "name": "Room 1",
+      "parent": "zone_c",
+      "staleness": {
+        "maxAgeMs": 3600000,
+        "whenExceeded": "allow-cached"
+      }
+    },
+    {
+      "id": "room_2",
+      "type": "MeetingRoom",
+      "name": "Room 2",
+      "parent": "zone_b",
+      "capacity": 27
+    },
+    {
+      "id": "room_3",
+      "type": "ServerRoom",
+      "name": "Room 3",
+      "parent": "zone_a",
+      "staleness": {
+        "maxAgeMs": 3600000,
+        "whenExceeded": "allow-cached"
+      }
+    }
+  ],
+  "windows": [
+    {
+      "id": "win_1",
+      "type": "OfficeHours",
+      "when": "NOW"
+    },
+    {
+      "id": "win_2",
+      "type": "ExtendedHours",
+      "when": "NOT_NOW"
+    },
+    {
+      "id": "win_3",
+      "type": "Always",
+      "when": "ALWAYS"
+    }
+  ],
+  "policies": [
+    {
+      "id": "permit_1",
+      "type": "VisitorEscort",
+      "effect": "permit",
+      "roles": [
+        "guest",
+        "staff"
+      ],
+      "spaces": [
+        "zone_a"
+      ],
+      "windows": [
+        "win_2"
+      ],
+      "priority": 10
+    },
+    {
+      "id": "permit_2",
+      "type": "FacilityAllHours",
+      "effect": "permit",
+      "roles": [
+        "staff"
+      ],
+      "spaces": [
+        "zone_a"
+      ],
+      "windows": [
+        "win_1"
+      ],
+      "priority": 20
+    },
+    {
+      "id": "permit_offhours",
+      "type": "LabResearchers",
+      "effect": "permit",
+      "roles": [
+        "facility"
+      ],
+      "spaces": [
+        "room_3"
+      ],
+      "windows": [
+        "win_2"
+      ],
+      "priority": 80
+    }
+  ],
+  "devices": [
+    {
+      "id": "dev1",
+      "type": "AccessPoint",
+      "deviceId": "EVAL-ACS-1",
+      "label": "Reader 1",
+      "space": "room_1",
+      "sensors": [
+        {
+          "id": "dev1_co2",
+          "type": "Co2Sensor",
+          "key": "co2"
+        },
+        {
+          "id": "dev1_decibel",
+          "type": "SoundLevelSensor",
+          "key": "decibel"
+        },
+        {
+          "id": "dev1_temperature",
+          "type": "TemperatureSensor",
+          "key": "temperature"
+        }
+      ]
+    },
+    {
+      "id": "dev2",
+      "type": "AccessPoint",
+      "deviceId": "EVAL-ACS-2",
+      "label": "Reader 2",
+      "space": "room_3",
+      "sensors": [
+        {
+          "id": "dev2_illuminance",
+          "type": "IlluminanceSensor",
+          "key": "illuminance"
+        }
+      ]
+    }
+  ],
+  "kpis": [],
+  "goals": []
+}

@@ -1,0 +1,585 @@
+{
+  "status": {
+    "sync": {
+      "enabled": true,
+      "version": 1,
+      "modelId": "5f2d0b4b-7c36-4a02-8d24-970f53bd4751",
+      "modelName": "eval-home-01",
+      "source": "supabase",
+      "lastSyncOk": "2026-09-23T07:50:16.814329959Z",
+      "lastAttempt": "2026-09-23T07:50:16.402084126Z",
+      "stale": false,
+      "lastError": null,
+      "failures": 0,
+      "nextAttemptAt": null,
+      "users": 5,
+      "spaces": 4,
+      "policies": 4,
+      "warnings": [],
+      "modelSource": "runtime",
+      "appliedAt": "2026-09-23T07:50:12.292640972Z"
+    },
+    "url": "https://tmqzzxrkvogfyilmkaok.supabase.co",
+    "studioUrl": "http://127.0.0.1:5173",
+    "studioModelUrl": "http://127.0.0.1:5173/?model=5f2d0b4b-7c36-4a02-8d24-970f53bd4751",
+    "pollMs": 5000,
+    "zone": "Europe/Rome",
+    "devices": [
+      {
+        "id": "acs1",
+        "name": "ACS 1",
+        "inFleet": true,
+        "deviceId": "EVAL-ACS-1",
+        "deviceIdSource": "engine",
+        "spaceId": "entrance",
+        "spaceSource": "model",
+        "modelDevice": {
+          "label": "Front door reader",
+          "sensors": [],
+          "id": "frontDoorReader"
+        },
+        "spaceName": "Front door",
+        "allowedRoles": [
+          "cleaner",
+          "owner",
+          "visitor"
+        ],
+        "hours": [
+          {
+            "days": "*",
+            "from": "00:00",
+            "to": "23:59"
+          },
+          {
+            "days": "wed",
+            "from": "06:00",
+            "to": "07:00"
+          },
+          {
+            "days": "wed",
+            "from": "08:00",
+            "to": "13:00"
+          }
+        ],
+        "staleness": {
+          "maxAgeMs": 86400000,
+          "whenExceeded": "allow-cached"
+        },
+        "restrictions": []
+      },
+      {
+        "id": "acs2",
+        "name": "ACS 2",
+        "inFleet": true,
+        "deviceId": "EVAL-ACS-2",
+        "deviceIdSource": "engine",
+        "spaceId": "garage",
+        "spaceSource": "model",
+        "modelDevice": {
+          "label": "Garage gate reader",
+          "sensors": [],
+          "id": "garageReader"
+        },
+        "spaceName": "Garage gate",
+        "allowedRoles": [
+          "cleaner",
+          "owner"
+        ],
+        "hours": [
+          {
+            "days": "*",
+            "from": "00:00",
+            "to": "23:59"
+          },
+          {
+            "days": "wed",
+            "from": "06:00",
+            "to": "07:00"
+          }
+        ],
+        "staleness": {
+          "maxAgeMs": 3600000,
+          "whenExceeded": "deny"
+        },
+        "restrictions": []
+      }
+    ]
+  },
+  "kpis": [
+    {
+      "id": "comfort-level",
+      "label": "Comfort level",
+      "inputs": [
+        "illuminance",
+        "temperature",
+        "decibel"
+      ],
+      "aggregation": "avg",
+      "source": "local",
+      "disabled": false
+    }
+  ],
+  "sensors": {
+    "publisher": {
+      "enabled": true,
+      "lastPublishedAt": "2026-09-23T07:50:10.588359387Z",
+      "rowsPublished": 1094,
+      "lastError": null
+    },
+    "observations": {
+      "enabled": true,
+      "lastPublishedAt": "2026-09-23T07:50:13.620154Z",
+      "rowsPublished": 58,
+      "lastError": null
+    },
+    "sensors": []
+  },
+  "projection": {
+    "schema": "pip-projection/1",
+    "modelId": "5f2d0b4b-7c36-4a02-8d24-970f53bd4751",
+    "modelName": "eval-home-01",
+    "version": 1,
+    "users": [
+      {
+        "id": "elena",
+        "displayName": "Elena (cleaning)",
+        "roles": [
+          "cleaner"
+        ],
+        "credentials": [
+          {
+            "kind": "nfc",
+            "id": "EVAL-TAG-3"
+          }
+        ],
+        "revoked": false
+      },
+      {
+        "id": "grandma",
+        "displayName": "Grandma Rosa",
+        "roles": [
+          "visitor"
+        ],
+        "credentials": [
+          {
+            "kind": "nfc",
+            "id": "EVAL-TAG-2"
+          }
+        ],
+        "revoked": false
+      },
+      {
+        "id": "laura",
+        "displayName": "Laura Rossi",
+        "roles": [
+          "owner"
+        ],
+        "credentials": [
+          {
+            "kind": "nfc",
+            "id": "EVAL-TAG-5"
+          }
+        ],
+        "revoked": false
+      },
+      {
+        "id": "marco",
+        "displayName": "Marco Rossi",
+        "roles": [
+          "owner"
+        ],
+        "credentials": [
+          {
+            "kind": "nfc",
+            "id": "EVAL-TAG-1"
+          }
+        ],
+        "revoked": false
+      },
+      {
+        "id": "septemberGuest",
+        "displayName": "September guest",
+        "roles": [
+          "visitor"
+        ],
+        "credentials": [
+          {
+            "kind": "nfc",
+            "id": "EVAL-TAG-4"
+          }
+        ],
+        "validTo": "2026-09-22",
+        "revoked": false
+      }
+    ],
+    "spaces": [
+      {
+        "id": "cellar",
+        "name": "Cellar",
+        "kind": "door",
+        "parent": "house"
+      },
+      {
+        "id": "entrance",
+        "name": "Front door",
+        "kind": "door",
+        "parent": "house",
+        "staleness": {
+          "maxAgeMs": 86400000,
+          "whenExceeded": "allow-cached"
+        }
+      },
+      {
+        "id": "garage",
+        "name": "Garage gate",
+        "kind": "gate",
+        "parent": "house"
+      },
+      {
+        "id": "house",
+        "name": "Rossi home",
+        "kind": "zone",
+        "parent": null
+      }
+    ],
+    "policies": [
+      {
+        "id": "cellarLock",
+        "effect": "deny",
+        "priority": 100,
+        "roles": [
+          "cleaner",
+          "visitor"
+        ],
+        "spaces": [
+          "cellar"
+        ],
+        "windows": []
+      },
+      {
+        "id": "cleanerWeekday",
+        "effect": "permit",
+        "priority": 30,
+        "roles": [
+          "cleaner"
+        ],
+        "spaces": [
+          "entrance",
+          "garage"
+        ],
+        "windows": [
+          {
+            "days": "wed",
+            "from": "06:00",
+            "to": "07:00"
+          }
+        ]
+      },
+      {
+        "id": "ownerRule",
+        "effect": "permit",
+        "priority": 10,
+        "roles": [
+          "owner"
+        ],
+        "spaces": [
+          "house"
+        ],
+        "windows": [
+          {
+            "days": "*",
+            "from": "00:00",
+            "to": "23:59"
+          }
+        ]
+      },
+      {
+        "id": "visitorDaytime",
+        "effect": "permit",
+        "priority": 20,
+        "roles": [
+          "visitor"
+        ],
+        "spaces": [
+          "entrance"
+        ],
+        "windows": [
+          {
+            "days": "wed",
+            "from": "08:00",
+            "to": "13:00"
+          }
+        ]
+      }
+    ],
+    "devices": [
+      {
+        "id": "frontDoorReader",
+        "deviceId": "EVAL-ACS-1",
+        "space": "entrance",
+        "label": "Front door reader"
+      },
+      {
+        "id": "garageReader",
+        "deviceId": "EVAL-ACS-2",
+        "space": "garage",
+        "label": "Garage gate reader"
+      }
+    ]
+  },
+  "bundles": {
+    "acs1": {
+      "schema": "pip-device-bundle/1",
+      "version": 1,
+      "generatedAt": "2026-09-23T07:50:17.452563835Z",
+      "stale": false,
+      "space": {
+        "id": "entrance",
+        "name": "Front door",
+        "kind": "door"
+      },
+      "roomPolicy": {
+        "schema": "pip-room-policy/1",
+        "modelId": "5f2d0b4b-7c36-4a02-8d24-970f53bd4751",
+        "version": 1,
+        "space": "entrance",
+        "allowedRoles": [
+          "cleaner",
+          "owner",
+          "visitor"
+        ],
+        "hours": [
+          {
+            "days": "*",
+            "from": "00:00",
+            "to": "23:59"
+          },
+          {
+            "days": "wed",
+            "from": "06:00",
+            "to": "07:00"
+          },
+          {
+            "days": "wed",
+            "from": "08:00",
+            "to": "13:00"
+          }
+        ],
+        "rules": [
+          {
+            "role": "cleaner",
+            "windows": [
+              {
+                "days": "wed",
+                "from": "06:00",
+                "to": "07:00"
+              }
+            ]
+          },
+          {
+            "role": "owner",
+            "windows": [
+              {
+                "days": "*",
+                "from": "00:00",
+                "to": "23:59"
+              }
+            ]
+          },
+          {
+            "role": "visitor",
+            "windows": [
+              {
+                "days": "wed",
+                "from": "08:00",
+                "to": "13:00"
+              }
+            ]
+          }
+        ],
+        "staleness": {
+          "maxAgeMs": 86400000,
+          "whenExceeded": "allow-cached"
+        }
+      },
+      "users": [
+        {
+          "id": "elena",
+          "displayName": "Elena (cleaning)",
+          "roles": [
+            "cleaner"
+          ],
+          "credentials": [
+            {
+              "kind": "nfc",
+              "id": "EVAL-TAG-3"
+            }
+          ],
+          "revoked": false
+        },
+        {
+          "id": "grandma",
+          "displayName": "Grandma Rosa",
+          "roles": [
+            "visitor"
+          ],
+          "credentials": [
+            {
+              "kind": "nfc",
+              "id": "EVAL-TAG-2"
+            }
+          ],
+          "revoked": false
+        },
+        {
+          "id": "laura",
+          "displayName": "Laura Rossi",
+          "roles": [
+            "owner"
+          ],
+          "credentials": [
+            {
+              "kind": "nfc",
+              "id": "EVAL-TAG-5"
+            }
+          ],
+          "revoked": false
+        },
+        {
+          "id": "marco",
+          "displayName": "Marco Rossi",
+          "roles": [
+            "owner"
+          ],
+          "credentials": [
+            {
+              "kind": "nfc",
+              "id": "EVAL-TAG-1"
+            }
+          ],
+          "revoked": false
+        },
+        {
+          "id": "septemberGuest",
+          "displayName": "September guest",
+          "roles": [
+            "visitor"
+          ],
+          "credentials": [
+            {
+              "kind": "nfc",
+              "id": "EVAL-TAG-4"
+            }
+          ],
+          "validTo": "2026-09-22",
+          "revoked": false
+        }
+      ],
+      "syncedAt": "2026-09-23T07:50:16.814329959Z"
+    },
+    "acs2": {
+      "schema": "pip-device-bundle/1",
+      "version": 1,
+      "generatedAt": "2026-09-23T07:50:17.456447710Z",
+      "stale": false,
+      "space": {
+        "id": "garage",
+        "name": "Garage gate",
+        "kind": "gate"
+      },
+      "roomPolicy": {
+        "schema": "pip-room-policy/1",
+        "modelId": "5f2d0b4b-7c36-4a02-8d24-970f53bd4751",
+        "version": 1,
+        "space": "garage",
+        "allowedRoles": [
+          "cleaner",
+          "owner"
+        ],
+        "hours": [
+          {
+            "days": "*",
+            "from": "00:00",
+            "to": "23:59"
+          },
+          {
+            "days": "wed",
+            "from": "06:00",
+            "to": "07:00"
+          }
+        ],
+        "rules": [
+          {
+            "role": "cleaner",
+            "windows": [
+              {
+                "days": "wed",
+                "from": "06:00",
+                "to": "07:00"
+              }
+            ]
+          },
+          {
+            "role": "owner",
+            "windows": [
+              {
+                "days": "*",
+                "from": "00:00",
+                "to": "23:59"
+              }
+            ]
+          }
+        ],
+        "staleness": {
+          "maxAgeMs": 3600000,
+          "whenExceeded": "deny"
+        }
+      },
+      "users": [
+        {
+          "id": "elena",
+          "displayName": "Elena (cleaning)",
+          "roles": [
+            "cleaner"
+          ],
+          "credentials": [
+            {
+              "kind": "nfc",
+              "id": "EVAL-TAG-3"
+            }
+          ],
+          "revoked": false
+        },
+        {
+          "id": "laura",
+          "displayName": "Laura Rossi",
+          "roles": [
+            "owner"
+          ],
+          "credentials": [
+            {
+              "kind": "nfc",
+              "id": "EVAL-TAG-5"
+            }
+          ],
+          "revoked": false
+        },
+        {
+          "id": "marco",
+          "displayName": "Marco Rossi",
+          "roles": [
+            "owner"
+          ],
+          "credentials": [
+            {
+              "kind": "nfc",
+              "id": "EVAL-TAG-1"
+            }
+          ],
+          "revoked": false
+        }
+      ],
+      "syncedAt": "2026-09-23T07:50:16.814329959Z"
+    }
+  }
+}

@@ -1,0 +1,233 @@
+{
+  "id": "home-07",
+  "domain": "home",
+  "row": 7,
+  "origin": "generated",
+  "hardware": false,
+  "model": "eval-home-07",
+  "roles": [
+    {
+      "id": "cleaner",
+      "type": "Cleaner"
+    },
+    {
+      "id": "owner",
+      "type": "Owner"
+    },
+    {
+      "id": "visitor",
+      "type": "Visitor"
+    }
+  ],
+  "principals": [
+    {
+      "id": "p1_ada",
+      "type": "Family",
+      "name": "Ada",
+      "roles": [
+        "cleaner"
+      ],
+      "credential": {
+        "type": "Fob",
+        "tag": "EVAL-TAG-1"
+      },
+      "validity": "VALID",
+      "revoked": false
+    },
+    {
+      "id": "p2_bruno",
+      "type": "Guest",
+      "name": "Bruno",
+      "roles": [
+        "owner"
+      ],
+      "credential": {
+        "type": "Fob",
+        "tag": "EVAL-TAG-2"
+      },
+      "validity": "VALID",
+      "revoked": false
+    },
+    {
+      "id": "p3_chiara",
+      "type": "Guest",
+      "name": "Chiara",
+      "roles": [
+        "owner"
+      ],
+      "credential": {
+        "type": "Fob",
+        "tag": "EVAL-TAG-3"
+      },
+      "validity": "VALID",
+      "revoked": false
+    },
+    {
+      "id": "p4_revoked",
+      "type": "Service",
+      "name": "Revoked",
+      "roles": [
+        "cleaner"
+      ],
+      "credential": {
+        "type": "Fob",
+        "tag": "EVAL-TAG-4"
+      },
+      "validity": "VALID",
+      "revoked": true
+    },
+    {
+      "id": "p5_outsider",
+      "type": "Guest",
+      "name": "Outsider",
+      "roles": [
+        "visitor"
+      ],
+      "credential": {
+        "type": "Fob",
+        "tag": "EVAL-TAG-5"
+      },
+      "validity": "VALID",
+      "revoked": false
+    }
+  ],
+  "spaces": [
+    {
+      "id": "zone_a",
+      "type": "House",
+      "name": "Zone A",
+      "parent": null
+    },
+    {
+      "id": "zone_b",
+      "type": "House",
+      "name": "Zone B",
+      "parent": "zone_a"
+    },
+    {
+      "id": "zone_c",
+      "type": "House",
+      "name": "Zone C",
+      "parent": "zone_b"
+    },
+    {
+      "id": "room_1",
+      "type": "Door",
+      "name": "Room 1",
+      "parent": "zone_c",
+      "staleness": {
+        "maxAgeMs": 3600000,
+        "whenExceeded": "allow-cached"
+      }
+    },
+    {
+      "id": "room_2",
+      "type": "Gate",
+      "name": "Room 2",
+      "parent": "zone_c",
+      "staleness": {
+        "maxAgeMs": 3600000,
+        "whenExceeded": "allow-cached"
+      }
+    }
+  ],
+  "windows": [
+    {
+      "id": "win_1",
+      "type": "AllDay",
+      "when": "NOW"
+    },
+    {
+      "id": "win_2",
+      "type": "Daytime",
+      "when": "NOW"
+    },
+    {
+      "id": "win_3",
+      "type": "Weekday",
+      "when": "NOT_NOW"
+    }
+  ],
+  "policies": [
+    {
+      "id": "permit_1",
+      "type": "VisitorDaytime",
+      "effect": "permit",
+      "roles": [
+        "cleaner"
+      ],
+      "spaces": [
+        "room_2"
+      ],
+      "windows": [
+        "win_1"
+      ],
+      "priority": 10
+    },
+    {
+      "id": "permit_2",
+      "type": "CleanerWeekday",
+      "effect": "permit",
+      "roles": [
+        "cleaner"
+      ],
+      "spaces": [
+        "room_2"
+      ],
+      "windows": [
+        "win_1"
+      ],
+      "priority": 20
+    },
+    {
+      "id": "permit_offhours",
+      "type": "OwnerRule",
+      "effect": "permit",
+      "roles": [
+        "owner"
+      ],
+      "spaces": [
+        "room_1"
+      ],
+      "windows": [
+        "win_3"
+      ],
+      "priority": 80
+    },
+    {
+      "id": "permit_dev2",
+      "type": "OwnerRule",
+      "effect": "permit",
+      "roles": [
+        "cleaner"
+      ],
+      "spaces": [
+        "room_1"
+      ],
+      "windows": [
+        "win_1"
+      ],
+      "priority": 92
+    }
+  ],
+  "devices": [
+    {
+      "id": "dev1",
+      "type": "DoorReader",
+      "deviceId": "EVAL-ACS-1",
+      "label": "Reader 1",
+      "space": "room_2",
+      "sensors": []
+    },
+    {
+      "id": "dev2",
+      "type": "DoorReader",
+      "deviceId": "EVAL-ACS-2",
+      "label": "Reader 2",
+      "space": "room_1",
+      "sensors": []
+    }
+  ],
+  "kpis": [],
+  "goals": []
+}

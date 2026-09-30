@@ -1,0 +1,1031 @@
+{
+  "status": {
+    "sync": {
+      "enabled": true,
+      "version": 1,
+      "modelId": "1ef0a715-e42a-4863-86d6-e32b4f12dadc",
+      "modelName": "eval-office-01",
+      "source": "supabase",
+      "lastSyncOk": "2026-09-24T12:47:54.063752472Z",
+      "lastAttempt": "2026-09-24T12:47:53.789960597Z",
+      "stale": false,
+      "lastError": null,
+      "failures": 0,
+      "nextAttemptAt": null,
+      "users": 8,
+      "spaces": 6,
+      "policies": 5,
+      "warnings": [],
+      "modelSource": "runtime",
+      "appliedAt": "2026-09-24T12:47:50.134987137Z"
+    },
+    "url": "https://tmqzzxrkvogfyilmkaok.supabase.co",
+    "studioUrl": "http://127.0.0.1:5173",
+    "studioModelUrl": "http://127.0.0.1:5173/?model=1ef0a715-e42a-4863-86d6-e32b4f12dadc",
+    "pollMs": 5000,
+    "zone": "Europe/Rome",
+    "devices": [
+      {
+        "id": "acs1",
+        "name": "ACS 1",
+        "inFleet": true,
+        "deviceId": "617eb96d-e566-48f5-a513-bcfbe14b4973",
+        "deviceIdSource": "engine",
+        "spaceId": "room_p1_28",
+        "spaceSource": "model",
+        "modelDevice": {
+          "id": "acs1",
+          "label": "ACS-1 reader (P1-28 door)",
+          "sensors": [
+            "co2",
+            "decibel",
+            "humidity",
+            "illuminance",
+            "temperature"
+          ]
+        },
+        "spaceName": "Office P1-28",
+        "allowedRoles": [
+          "facility",
+          "staff"
+        ],
+        "hours": [
+          {
+            "days": "*",
+            "from": "00:00",
+            "to": "23:59"
+          },
+          {
+            "days": "thu",
+            "from": "13:00",
+            "to": "18:00"
+          }
+        ],
+        "staleness": {
+          "maxAgeMs": 3600000,
+          "whenExceeded": "allow-cached"
+        },
+        "restrictions": []
+      },
+      {
+        "id": "acs2",
+        "name": "ACS 2",
+        "inFleet": true,
+        "deviceId": "95d30754-eb97-41d5-b8d9-459de7befa09",
+        "deviceIdSource": "engine",
+        "spaceId": "meeting_a",
+        "spaceSource": "model",
+        "modelDevice": {
+          "id": "acs2",
+          "label": "ACS-2 reader (meeting room door)",
+          "sensors": [
+            "co2",
+            "decibel",
+            "humidity",
+            "illuminance",
+            "temperature"
+          ]
+        },
+        "spaceName": "Meeting room A",
+        "allowedRoles": [
+          "facility",
+          "guest",
+          "staff"
+        ],
+        "hours": [
+          {
+            "days": "*",
+            "from": "00:00",
+            "to": "23:59"
+          },
+          {
+            "days": "thu",
+            "from": "13:00",
+            "to": "18:00"
+          }
+        ],
+        "staleness": {
+          "maxAgeMs": 3600000,
+          "whenExceeded": "deny"
+        },
+        "restrictions": []
+      }
+    ]
+  },
+  "kpis": [
+    {
+      "id": "co2.avg",
+      "label": "CO₂ (avg)",
+      "inputs": [
+        "co2"
+      ],
+      "aggregation": "avg",
+      "unit": "ppm",
+      "warnAbove": 1000,
+      "source": "model",
+      "sensors": [
+        {
+          "fleetId": "acs1",
+          "device": "acs1",
+          "sensor": "acs1_co2",
+          "key": "co2",
+          "online": true
+        },
+        {
+          "fleetId": "acs2",
+          "device": "acs2",
+          "sensor": "acs2_co2",
+          "key": "co2",
+          "online": true
+        }
+      ],
+      "disabled": false
+    },
+    {
+      "id": "illuminance.avg",
+      "label": "Illuminance (avg)",
+      "inputs": [
+        "illuminance"
+      ],
+      "aggregation": "avg",
+      "unit": "lx",
+      "source": "model",
+      "sensors": [
+        {
+          "fleetId": "acs1",
+          "device": "acs1",
+          "sensor": "acs1_illuminance",
+          "key": "illuminance",
+          "online": true
+        },
+        {
+          "fleetId": "acs2",
+          "device": "acs2",
+          "sensor": "acs2_illuminance",
+          "key": "illuminance",
+          "online": true
+        }
+      ],
+      "disabled": false
+    },
+    {
+      "id": "comfort-level",
+      "label": "Comfort level",
+      "inputs": [
+        "illuminance",
+        "temperature",
+        "decibel"
+      ],
+      "aggregation": "avg",
+      "source": "local",
+      "disabled": false
+    }
+  ],
+  "sensors": {
+    "publisher": {
+      "enabled": true,
+      "lastPublishedAt": "2026-09-24T12:47:56.282045667Z",
+      "rowsPublished": 17,
+      "lastError": null
+    },
+    "observations": {
+      "enabled": true,
+      "lastPublishedAt": "2026-09-24T12:47:53.178747763Z",
+      "rowsPublished": 2,
+      "lastError": null
+    },
+    "sensors": [
+      {
+        "sensor": "acs1_co2",
+        "device": "acs1",
+        "fleetId": "acs1",
+        "key": "co2",
+        "unit": "ppm",
+        "label": "CO₂",
+        "online": true,
+        "value": 708,
+        "observedAt": "2026-09-24T12:47:56.236082875Z"
+      },
+      {
+        "sensor": "acs1_decibel",
+        "device": "acs1",
+        "fleetId": "acs1",
+        "key": "decibel",
+        "unit": "dB",
+        "label": "Sound pressure",
+        "online": true,
+        "value": 59.1,
+        "observedAt": "2026-09-24T12:47:56.236082875Z"
+      },
+      {
+        "sensor": "acs1_humidity",
+        "device": "acs1",
+        "fleetId": "acs1",
+        "key": "humidity",
+        "unit": "%RH",
+        "label": "Humidity",
+        "online": true,
+        "value": 32.8,
+        "observedAt": "2026-09-24T12:47:56.236082875Z"
+      },
+      {
+        "sensor": "acs1_illuminance",
+        "device": "acs1",
+        "fleetId": "acs1",
+        "key": "illuminance",
+        "unit": "lx",
+        "label": "Illuminance",
+        "online": true,
+        "value": 3021,
+        "observedAt": "2026-09-24T12:47:56.236082875Z"
+      },
+      {
+        "sensor": "acs1_temperature",
+        "device": "acs1",
+        "fleetId": "acs1",
+        "key": "temperature",
+        "unit": "°C",
+        "label": "Temperature",
+        "online": true,
+        "value": 30.3,
+        "observedAt": "2026-09-24T12:47:56.236082875Z"
+      },
+      {
+        "sensor": "acs2_co2",
+        "device": "acs2",
+        "fleetId": "acs2",
+        "key": "co2",
+        "unit": "ppm",
+        "label": "CO₂",
+        "online": true,
+        "value": 629,
+        "observedAt": "2026-09-24T12:47:56.281123334Z"
+      },
+      {
+        "sensor": "acs2_decibel",
+        "device": "acs2",
+        "fleetId": "acs2",
+        "key": "decibel",
+        "unit": "dB",
+        "label": "Sound pressure",
+        "online": true,
+        "value": 50.8,
+        "observedAt": "2026-09-24T12:47:56.281123334Z"
+      },
+      {
+        "sensor": "acs2_humidity",
+        "device": "acs2",
+        "fleetId": "acs2",
+        "key": "humidity",
+        "unit": "%RH",
+        "label": "Humidity",
+        "online": true,
+        "value": 32,
+        "observedAt": "2026-09-24T12:47:56.281123334Z"
+      },
+      {
+        "sensor": "acs2_illuminance",
+        "device": "acs2",
+        "fleetId": "acs2",
+        "key": "illuminance",
+        "unit": "lx",
+        "label": "Illuminance",
+        "online": true,
+        "value": 27748,
+        "observedAt": "2026-09-24T12:47:56.281123334Z"
+      },
+      {
+        "sensor": "acs2_temperature",
+        "device": "acs2",
+        "fleetId": "acs2",
+        "key": "temperature",
+        "unit": "°C",
+        "label": "Temperature",
+        "online": true,
+        "value": 31,
+        "observedAt": "2026-09-24T12:47:56.281123334Z"
+      }
+    ]
+  },
+  "projection": {
+    "schema": "pip-projection/1",
+    "modelId": "1ef0a715-e42a-4863-86d6-e32b4f12dadc",
+    "modelName": "eval-office-01",
+    "version": 1,
+    "users": [
+      {
+        "id": "anna",
+        "displayName": "Anna",
+        "roles": [
+          "staff"
+        ],
+        "credentials": [
+          {
+            "kind": "nfc",
+            "id": "EVAL-TAG-5"
+          }
+        ],
+        "validTo": "2026-10-24",
+        "revoked": false
+      },
+      {
+        "id": "chen",
+        "displayName": "Chen",
+        "roles": [
+          "guest"
+        ],
+        "credentials": [
+          {
+            "kind": "badge",
+            "id": "EVAL-TAG-7"
+          }
+        ],
+        "validFrom": "2026-08-25",
+        "revoked": false
+      },
+      {
+        "id": "giulia",
+        "displayName": "Giulia",
+        "roles": [
+          "researcher",
+          "staff"
+        ],
+        "credentials": [
+          {
+            "kind": "nfc",
+            "id": "EVAL-TAG-6"
+          }
+        ],
+        "revoked": false
+      },
+      {
+        "id": "luca",
+        "displayName": "Luca",
+        "roles": [
+          "facility"
+        ],
+        "credentials": [
+          {
+            "kind": "nfc",
+            "id": "EVAL-TAG-8"
+          }
+        ],
+        "revoked": false
+      },
+      {
+        "id": "davide",
+        "displayName": "Davide",
+        "roles": [
+          "staff"
+        ],
+        "credentials": [
+          {
+            "kind": "nfc",
+            "id": "TAG_1"
+          }
+        ],
+        "validTo": "2026-10-24",
+        "revoked": false
+      },
+      {
+        "id": "mario",
+        "displayName": "Mario",
+        "roles": [
+          "guest"
+        ],
+        "credentials": [
+          {
+            "kind": "nfc",
+            "id": "TAG_2"
+          }
+        ],
+        "revoked": false
+      },
+      {
+        "id": "paolo",
+        "displayName": "Paolo",
+        "roles": [
+          "facility"
+        ],
+        "credentials": [
+          {
+            "kind": "nfc",
+            "id": "TAG_3"
+          }
+        ],
+        "revoked": false
+      },
+      {
+        "id": "sara",
+        "displayName": "Sara",
+        "roles": [
+          "staff"
+        ],
+        "credentials": [
+          {
+            "kind": "nfc",
+            "id": "TAG_4"
+          }
+        ],
+        "revoked": true
+      }
+    ],
+    "spaces": [
+      {
+        "id": "floor_1",
+        "name": "Floor 1",
+        "kind": "zone",
+        "parent": null
+      },
+      {
+        "id": "floor_2",
+        "name": "Floor 2",
+        "kind": "zone",
+        "parent": null
+      },
+      {
+        "id": "lab_cs",
+        "name": "CS lab",
+        "kind": "room",
+        "capacity": 20,
+        "parent": "floor_2"
+      },
+      {
+        "id": "meeting_a",
+        "name": "Meeting room A",
+        "kind": "room",
+        "capacity": 12,
+        "parent": "floor_1"
+      },
+      {
+        "id": "room_p1_28",
+        "name": "Office P1-28",
+        "kind": "room",
+        "capacity": 4,
+        "parent": "floor_1",
+        "staleness": {
+          "maxAgeMs": 3600000,
+          "whenExceeded": "allow-cached"
+        }
+      },
+      {
+        "id": "server_room",
+        "name": "Server room",
+        "kind": "room",
+        "parent": "floor_1"
+      }
+    ],
+    "policies": [
+      {
+        "id": "facilityAllHours",
+        "effect": "permit",
+        "priority": 30,
+        "roles": [
+          "facility"
+        ],
+        "spaces": [
+          "floor_1",
+          "floor_2"
+        ],
+        "windows": [
+          {
+            "days": "*",
+            "from": "00:00",
+            "to": "23:59"
+          }
+        ]
+      },
+      {
+        "id": "labResearchers",
+        "effect": "permit",
+        "priority": 40,
+        "roles": [
+          "researcher"
+        ],
+        "spaces": [
+          "lab_cs"
+        ],
+        "windows": [
+          {
+            "days": "thu",
+            "from": "13:00",
+            "to": "18:00"
+          }
+        ]
+      },
+      {
+        "id": "serverRoomLock",
+        "effect": "deny",
+        "priority": 100,
+        "roles": [
+          "guest",
+          "staff"
+        ],
+        "spaces": [
+          "server_room"
+        ],
+        "windows": []
+      },
+      {
+        "id": "staffAccess",
+        "effect": "permit",
+        "priority": 10,
+        "roles": [
+          "staff"
+        ],
+        "spaces": [
+          "floor_1",
+          "floor_2"
+        ],
+        "windows": [
+          {
+            "days": "thu",
+            "from": "13:00",
+            "to": "18:00"
+          }
+        ]
+      },
+      {
+        "id": "visitorEscort",
+        "effect": "permit",
+        "priority": 20,
+        "roles": [
+          "guest"
+        ],
+        "spaces": [
+          "meeting_a"
+        ],
+        "windows": [
+          {
+            "days": "thu",
+            "from": "13:00",
+            "to": "18:00"
+          }
+        ]
+      }
+    ],
+    "goals": [
+      {
+        "id": "floor1Air",
+        "space": "floor_1",
+        "expression": "co2.avg <= 900",
+        "kpi": "co2.avg",
+        "op": "<=",
+        "value": 900
+      }
+    ],
+    "devices": [
+      {
+        "id": "acs1",
+        "deviceId": "617eb96d-e566-48f5-a513-bcfbe14b4973",
+        "space": "room_p1_28",
+        "label": "ACS-1 reader (P1-28 door)",
+        "sensors": [
+          {
+            "id": "acs1_co2",
+            "key": "co2",
+            "unit": "ppm",
+            "label": "CO₂"
+          },
+          {
+            "id": "acs1_decibel",
+            "key": "decibel",
+            "unit": "dB",
+            "label": "Sound pressure"
+          },
+          {
+            "id": "acs1_humidity",
+            "key": "humidity",
+            "unit": "%RH",
+            "label": "Humidity"
+          },
+          {
+            "id": "acs1_illuminance",
+            "key": "illuminance",
+            "unit": "lx",
+            "label": "Illuminance"
+          },
+          {
+            "id": "acs1_temperature",
+            "key": "temperature",
+            "unit": "°C",
+            "label": "Temperature"
+          }
+        ]
+      },
+      {
+        "id": "acs2",
+        "deviceId": "95d30754-eb97-41d5-b8d9-459de7befa09",
+        "space": "meeting_a",
+        "label": "ACS-2 reader (meeting room door)",
+        "sensors": [
+          {
+            "id": "acs2_co2",
+            "key": "co2",
+            "unit": "ppm",
+            "label": "CO₂"
+          },
+          {
+            "id": "acs2_decibel",
+            "key": "decibel",
+            "unit": "dB",
+            "label": "Sound pressure"
+          },
+          {
+            "id": "acs2_humidity",
+            "key": "humidity",
+            "unit": "%RH",
+            "label": "Humidity"
+          },
+          {
+            "id": "acs2_illuminance",
+            "key": "illuminance",
+            "unit": "lx",
+            "label": "Illuminance"
+          },
+          {
+            "id": "acs2_temperature",
+            "key": "temperature",
+            "unit": "°C",
+            "label": "Temperature"
+          }
+        ]
+      }
+    ],
+    "kpis": [
+      {
+        "id": "co2.avg",
+        "label": "CO₂ (avg)",
+        "aggregation": "avg",
+        "unit": "ppm",
+        "warnAbove": 1000,
+        "inputs": [
+          {
+            "device": "acs1",
+            "sensor": "acs1_co2"
+          },
+          {
+            "device": "acs2",
+            "sensor": "acs2_co2"
+          }
+        ]
+      },
+      {
+        "id": "illuminance.avg",
+        "label": "Illuminance (avg)",
+        "aggregation": "avg",
+        "unit": "lx",
+        "inputs": [
+          {
+            "device": "acs1",
+            "sensor": "acs1_illuminance"
+          },
+          {
+            "device": "acs2",
+            "sensor": "acs2_illuminance"
+          }
+        ]
+      }
+    ]
+  },
+  "bundles": {
+    "acs1": {
+      "schema": "pip-device-bundle/1",
+      "version": 1,
+      "generatedAt": "2026-09-24T12:47:56.523150500Z",
+      "stale": false,
+      "space": {
+        "id": "room_p1_28",
+        "name": "Office P1-28",
+        "kind": "room"
+      },
+      "roomPolicy": {
+        "schema": "pip-room-policy/1",
+        "modelId": "1ef0a715-e42a-4863-86d6-e32b4f12dadc",
+        "version": 1,
+        "space": "room_p1_28",
+        "allowedRoles": [
+          "facility",
+          "staff"
+        ],
+        "hours": [
+          {
+            "days": "*",
+            "from": "00:00",
+            "to": "23:59"
+          },
+          {
+            "days": "thu",
+            "from": "13:00",
+            "to": "18:00"
+          }
+        ],
+        "rules": [
+          {
+            "role": "facility",
+            "windows": [
+              {
+                "days": "*",
+                "from": "00:00",
+                "to": "23:59"
+              }
+            ]
+          },
+          {
+            "role": "staff",
+            "windows": [
+              {
+                "days": "thu",
+                "from": "13:00",
+                "to": "18:00"
+              }
+            ]
+          }
+        ],
+        "staleness": {
+          "maxAgeMs": 3600000,
+          "whenExceeded": "allow-cached"
+        }
+      },
+      "users": [
+        {
+          "id": "anna",
+          "displayName": "Anna",
+          "roles": [
+            "staff"
+          ],
+          "credentials": [
+            {
+              "kind": "nfc",
+              "id": "EVAL-TAG-5"
+            }
+          ],
+          "validTo": "2026-10-24",
+          "revoked": false
+        },
+        {
+          "id": "giulia",
+          "displayName": "Giulia",
+          "roles": [
+            "researcher",
+            "staff"
+          ],
+          "credentials": [
+            {
+              "kind": "nfc",
+              "id": "EVAL-TAG-6"
+            }
+          ],
+          "revoked": false
+        },
+        {
+          "id": "luca",
+          "displayName": "Luca",
+          "roles": [
+            "facility"
+          ],
+          "credentials": [
+            {
+              "kind": "nfc",
+              "id": "EVAL-TAG-8"
+            }
+          ],
+          "revoked": false
+        },
+        {
+          "id": "davide",
+          "displayName": "Davide",
+          "roles": [
+            "staff"
+          ],
+          "credentials": [
+            {
+              "kind": "nfc",
+              "id": "TAG_1"
+            }
+          ],
+          "validTo": "2026-10-24",
+          "revoked": false
+        },
+        {
+          "id": "paolo",
+          "displayName": "Paolo",
+          "roles": [
+            "facility"
+          ],
+          "credentials": [
+            {
+              "kind": "nfc",
+              "id": "TAG_3"
+            }
+          ],
+          "revoked": false
+        },
+        {
+          "id": "sara",
+          "displayName": "Sara",
+          "roles": [
+            "staff"
+          ],
+          "credentials": [
+            {
+              "kind": "nfc",
+              "id": "TAG_4"
+            }
+          ],
+          "revoked": true
+        }
+      ],
+      "syncedAt": "2026-09-24T12:47:54.063752472Z"
+    },
+    "acs2": {
+      "schema": "pip-device-bundle/1",
+      "version": 1,
+      "generatedAt": "2026-09-24T12:47:56.526444917Z",
+      "stale": false,
+      "space": {
+        "id": "meeting_a",
+        "name": "Meeting room A",
+        "kind": "room"
+      },
+      "roomPolicy": {
+        "schema": "pip-room-policy/1",
+        "modelId": "1ef0a715-e42a-4863-86d6-e32b4f12dadc",
+        "version": 1,
+        "space": "meeting_a",
+        "allowedRoles": [
+          "facility",
+          "guest",
+          "staff"
+        ],
+        "hours": [
+          {
+            "days": "*",
+            "from": "00:00",
+            "to": "23:59"
+          },
+          {
+            "days": "thu",
+            "from": "13:00",
+            "to": "18:00"
+          }
+        ],
+        "rules": [
+          {
+            "role": "facility",
+            "windows": [
+              {
+                "days": "*",
+                "from": "00:00",
+                "to": "23:59"
+              }
+            ]
+          },
+          {
+            "role": "guest",
+            "windows": [
+              {
+                "days": "thu",
+                "from": "13:00",
+                "to": "18:00"
+              }
+            ]
+          },
+          {
+            "role": "staff",
+            "windows": [
+              {
+                "days": "thu",
+                "from": "13:00",
+                "to": "18:00"
+              }
+            ]
+          }
+        ],
+        "staleness": {
+          "maxAgeMs": 3600000,
+          "whenExceeded": "deny"
+        }
+      },
+      "users": [
+        {
+          "id": "anna",
+          "displayName": "Anna",
+          "roles": [
+            "staff"
+          ],
+          "credentials": [
+            {
+              "kind": "nfc",
+              "id": "EVAL-TAG-5"
+            }
+          ],
+          "validTo": "2026-10-24",
+          "revoked": false
+        },
+        {
+          "id": "chen",
+          "displayName": "Chen",
+          "roles": [
+            "guest"
+          ],
+          "credentials": [
+            {
+              "kind": "badge",
+              "id": "EVAL-TAG-7"
+            }
+          ],
+          "validFrom": "2026-08-25",
+          "revoked": false
+        },
+        {
+          "id": "giulia",
+          "displayName": "Giulia",
+          "roles": [
+            "researcher",
+            "staff"
+          ],
+          "credentials": [
+            {
+              "kind": "nfc",
+              "id": "EVAL-TAG-6"
+            }
+          ],
+          "revoked": false
+        },
+        {
+          "id": "luca",
+          "displayName": "Luca",
+          "roles": [
+            "facility"
+          ],
+          "credentials": [
+            {
+              "kind": "nfc",
+              "id": "EVAL-TAG-8"
+            }
+          ],
+          "revoked": false
+        },
+        {
+          "id": "davide",
+          "displayName": "Davide",
+          "roles": [
+            "staff"
+          ],
+          "credentials": [
+            {
+              "kind": "nfc",
+              "id": "TAG_1"
+            }
+          ],
+          "validTo": "2026-10-24",
+          "revoked": false
+        },
+        {
+          "id": "mario",
+          "displayName": "Mario",
+          "roles": [
+            "guest"
+          ],
+          "credentials": [
+            {
+              "kind": "nfc",
+              "id": "TAG_2"
+            }
+          ],
+          "revoked": false
+        },
+        {
+          "id": "paolo",
+          "displayName": "Paolo",
+          "roles": [
+            "facility"
+          ],
+          "credentials": [
+            {
+              "kind": "nfc",
+              "id": "TAG_3"
+            }
+          ],
+          "revoked": false
+        },
+        {
+          "id": "sara",
+          "displayName": "Sara",
+          "roles": [
+            "staff"
+          ],
+          "credentials": [
+            {
+              "kind": "nfc",
+              "id": "TAG_4"
+            }
+          ],
+          "revoked": true
+        }
+      ],
+      "syncedAt": "2026-09-24T12:47:54.063752472Z"
+    }
+  }
+}

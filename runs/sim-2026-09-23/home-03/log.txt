@@ -1,0 +1,35 @@
+2026-09-23T09:02:46.120Z ── home-03 (home, generated, sim)
+2026-09-23T09:02:47.176Z   loaded 5f2d094b-7c36-469c-8d24-950f53bd43eb v1 at 2026-09-23T09:02:47.102Z (NOW window margin 238 min)
+2026-09-23T09:02:55.133Z   M1 commit → last bundle 8288 ms (fleet 838 ms)
+2026-09-23T09:02:55.158Z   PASS RQ1.2 acs1 bundle users = principals with an allowed role
+2026-09-23T09:02:55.159Z   PASS RQ1.2 acs1 allowed roles
+2026-09-23T09:02:55.160Z   PASS RQ1.2 acs1 guards room_3
+2026-09-23T09:02:55.160Z   PASS RQ1.2 acs1 staleness
+2026-09-23T09:02:55.161Z   PASS RQ1.2 acs1 sensors known to the fleet
+2026-09-23T09:02:55.165Z   PASS RQ1.2 acs2 bundle users = principals with an allowed role
+2026-09-23T09:02:55.165Z   PASS RQ1.2 acs2 allowed roles
+2026-09-23T09:02:55.166Z   PASS RQ1.2 acs2 guards room_1
+2026-09-23T09:02:55.166Z   PASS RQ1.2 acs2 staleness
+2026-09-23T09:02:55.166Z   PASS RQ1.2 acs2 sensors known to the fleet
+2026-09-23T09:02:55.167Z   PASS RQ1.2 indicators known to the federation
+2026-09-23T09:02:55.167Z   PASS RQ1.2 goals known to the federation
+2026-09-23T09:02:56.060Z   PASS RQ1.1 acs1 p1_ada → ok
+2026-09-23T09:03:02.441Z   PASS RQ1.1 acs1 p2_bruno → ok
+2026-09-23T09:03:08.826Z   PASS RQ1.1 acs1 p3_chiara → not_yet_valid
+2026-09-23T09:03:11.824Z   PASS RQ1.1 acs1 p4_revoked → revoked
+2026-09-23T09:03:14.846Z   PASS RQ1.1 acs1 p5_outsider → unknown_credential
+2026-09-23T09:03:17.855Z   PASS RQ1.1 acs1 unknown tag → unknown_credential
+2026-09-23T09:03:18.754Z   PASS RQ1.1 acs2 p1_ada → ok
+2026-09-23T09:03:25.130Z   PASS RQ1.1 acs2 p2_bruno → ok
+2026-09-23T09:03:31.538Z   PASS RQ1.1 acs2 p3_chiara → not_yet_valid
+2026-09-23T09:03:34.560Z   PASS RQ1.1 acs2 p4_revoked → revoked
+2026-09-23T09:03:37.615Z   PASS RQ1.1 acs2 p5_outsider → unknown_credential
+2026-09-23T09:03:40.627Z   PASS RQ1.1 acs2 unknown tag → unknown_credential
+2026-09-23T09:03:40.629Z   RQ1.1 12/12 probes as expected; M3 median 9 ms over 4
+2026-09-23T09:03:40.949Z   PASS RQ1.3 acs1 enacts the fleet signature (1777 Hz)
+2026-09-23T09:03:41.216Z   PASS RQ1.3 acs2 enacts the fleet signature (1777 Hz)
+2026-09-23T09:03:41.216Z   M2 apply → last twin 26 ms
+2026-09-23T09:03:42.906Z   PASS RQ1.4 acs2 overrides (1999 Hz) while acs1 keeps the fleet behaviour (1777 Hz)
+2026-09-23T09:03:42.907Z   PASS RQ1.4 inheritance status
+2026-09-23T09:03:43.188Z   PASS RQ1.4 acs2 back under fleet control (1777 Hz, inheriting)
+2026-09-23T09:03:43.200Z   ROW PASS home-03

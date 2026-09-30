@@ -1,0 +1,129 @@
+{
+  "id": "fitness-04",
+  "model": "eval-fitness-04",
+  "probes": [
+    {
+      "device": "dev1",
+      "tag": "EVAL-TAG-1",
+      "principal": "p1_ada",
+      "reason": "unknown_credential",
+      "allowed": false,
+      "hardware": false
+    },
+    {
+      "device": "dev1",
+      "tag": "EVAL-TAG-2",
+      "principal": "p2_bruno",
+      "reason": "ok",
+      "allowed": true,
+      "hardware": false
+    },
+    {
+      "device": "dev1",
+      "tag": "EVAL-TAG-3",
+      "principal": "p3_chiara",
+      "reason": "unknown_credential",
+      "allowed": false,
+      "hardware": false
+    },
+    {
+      "device": "dev1",
+      "tag": "EVAL-TAG-4",
+      "principal": "p4_outsider",
+      "reason": "unknown_credential",
+      "allowed": false,
+      "hardware": false
+    },
+    {
+      "device": "dev1",
+      "tag": "EVAL-TAG-UNKNOWN",
+      "principal": null,
+      "reason": "unknown_credential",
+      "allowed": false,
+      "hardware": false
+    },
+    {
+      "device": "dev2",
+      "tag": "EVAL-TAG-1",
+      "principal": "p1_ada",
+      "reason": "unknown_credential",
+      "allowed": false,
+      "hardware": false
+    },
+    {
+      "device": "dev2",
+      "tag": "EVAL-TAG-2",
+      "principal": "p2_bruno",
+      "reason": "ok",
+      "allowed": true,
+      "hardware": false
+    },
+    {
+      "device": "dev2",
+      "tag": "EVAL-TAG-3",
+      "principal": "p3_chiara",
+      "reason": "outside_hours",
+      "allowed": false,
+      "hardware": false
+    },
+    {
+      "device": "dev2",
+      "tag": "EVAL-TAG-4",
+      "principal": "p4_outsider",
+      "reason": "unknown_credential",
+      "allowed": false,
+      "hardware": false
+    },
+    {
+      "device": "dev2",
+      "tag": "EVAL-TAG-UNKNOWN",
+      "principal": null,
+      "reason": "unknown_credential",
+      "allowed": false,
+      "hardware": false
+    }
+  ],
+  "bundles": [
+    {
+      "device": "dev1",
+      "space": "room_4",
+      "users": [
+        "p2_bruno"
+      ],
+      "allowedRoles": [
+        "trainer"
+      ],
+      "staleness": {
+        "maxAgeMs": 3600000,
+        "whenExceeded": "allow-cached"
+      }
+    },
+    {
+      "device": "dev2",
+      "space": "room_1",
+      "users": [
+        "p2_bruno",
+        "p3_chiara"
+      ],
+      "allowedRoles": [
+        "member",
+        "trainer"
+      ],
+      "staleness": {
+        "maxAgeMs": 3600000,
+        "whenExceeded": "allow-cached"
+      }
+    }
+  ],
+  "sensors": {
+    "dev1": [],
+    "dev2": []
+  },
+  "kpis": [],
+  "goals": [
+    {
+      "id": "goal_1",
+      "space": "zone_a"
+    }
+  ]
+}

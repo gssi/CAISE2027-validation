@@ -1,0 +1,342 @@
+{
+  "probes": [
+    {
+      "device": "dev1",
+      "tag": "EVAL-TAG-1",
+      "principal": "p1_ada",
+      "reason": "unknown_credential",
+      "allowed": false,
+      "hardware": false,
+      "result": {
+        "state": "s_denied",
+        "reason": "unknown_credential",
+        "allowed": false,
+        "ruleId": null,
+        "readerAt": 1790164571568,
+        "firstActuationAt": 1790164571576,
+        "firstAction": "speaker.beep",
+        "decidedAt": 1790164572205,
+        "attempts": 1
+      },
+      "audit": {
+        "seq": 501,
+        "at": "2026-09-23T11:56:12.194435421Z",
+        "source": "device",
+        "deviceId": "acs1",
+        "space": "room_3",
+        "tagId": "EVAL-TAG-1",
+        "allowed": false,
+        "reason": "unknown_credential",
+        "version": 1,
+        "stale": false,
+        "deviceSeq": 1790164572195,
+        "receivedAt": "2026-09-23T11:56:12.206879337Z"
+      }
+    },
+    {
+      "device": "dev1",
+      "tag": "EVAL-TAG-2",
+      "principal": "p2_bruno",
+      "reason": "ok",
+      "allowed": true,
+      "hardware": false,
+      "result": {
+        "state": "s_granted",
+        "reason": "ok",
+        "allowed": true,
+        "ruleId": null,
+        "readerAt": 1790164574599,
+        "firstActuationAt": 1790164574602,
+        "firstAction": "speaker.beep",
+        "decidedAt": 1790164575208,
+        "attempts": 1
+      },
+      "audit": {
+        "seq": 502,
+        "at": "2026-09-23T11:56:15.206540755Z",
+        "source": "device",
+        "deviceId": "acs1",
+        "space": "room_3",
+        "tagId": "EVAL-TAG-2",
+        "user": "p2_bruno",
+        "allowed": true,
+        "reason": "ok",
+        "version": 1,
+        "stale": false,
+        "deviceSeq": 1790164575206,
+        "receivedAt": "2026-09-23T11:56:15.209444964Z"
+      }
+    },
+    {
+      "device": "dev1",
+      "tag": "EVAL-TAG-3",
+      "principal": "p3_chiara",
+      "reason": "expired",
+      "allowed": false,
+      "hardware": false,
+      "result": {
+        "state": "s_denied",
+        "reason": "expired",
+        "allowed": false,
+        "ruleId": null,
+        "readerAt": 1790164580961,
+        "firstActuationAt": 1790164580967,
+        "firstAction": "speaker.beep",
+        "decidedAt": 1790164581587,
+        "attempts": 1
+      },
+      "audit": {
+        "seq": 503,
+        "at": "2026-09-23T11:56:21.580223217Z",
+        "source": "device",
+        "deviceId": "acs1",
+        "space": "room_3",
+        "tagId": "EVAL-TAG-3",
+        "user": "p3_chiara",
+        "allowed": false,
+        "reason": "expired",
+        "version": 1,
+        "stale": false,
+        "deviceSeq": 1790164581581,
+        "receivedAt": "2026-09-23T11:56:21.589712717Z"
+      }
+    },
+    {
+      "device": "dev1",
+      "tag": "EVAL-TAG-4",
+      "principal": "p4_outsider",
+      "reason": "unknown_credential",
+      "allowed": false,
+      "hardware": false,
+      "result": {
+        "state": "s_denied",
+        "reason": "unknown_credential",
+        "allowed": false,
+        "ruleId": null,
+        "readerAt": 1790164583972,
+        "firstActuationAt": 1790164583984,
+        "firstAction": "speaker.beep",
+        "decidedAt": 1790164584603,
+        "attempts": 1
+      },
+      "audit": {
+        "seq": 504,
+        "at": "2026-09-23T11:56:24.597498718Z",
+        "source": "device",
+        "deviceId": "acs1",
+        "space": "room_3",
+        "tagId": "EVAL-TAG-4",
+        "allowed": false,
+        "reason": "unknown_credential",
+        "version": 1,
+        "stale": false,
+        "deviceSeq": 1790164584597,
+        "receivedAt": "2026-09-23T11:56:24.604737885Z"
+      }
+    },
+    {
+      "device": "dev1",
+      "tag": "EVAL-TAG-UNKNOWN",
+      "principal": null,
+      "reason": "unknown_credential",
+      "allowed": false,
+      "hardware": false,
+      "result": {
+        "state": "s_denied",
+        "reason": "unknown_credential",
+        "allowed": false,
+        "ruleId": null,
+        "readerAt": 1790164587006,
+        "firstActuationAt": 1790164587010,
+        "firstAction": "speaker.beep",
+        "decidedAt": 1790164587631,
+        "attempts": 1
+      },
+      "audit": {
+        "seq": 505,
+        "at": "2026-09-23T11:56:27.620122136Z",
+        "source": "device",
+        "deviceId": "acs1",
+        "space": "room_3",
+        "tagId": "EVAL-TAG-UNKNOWN",
+        "allowed": false,
+        "reason": "unknown_credential",
+        "version": 1,
+        "stale": false,
+        "deviceSeq": 1790164587620,
+        "receivedAt": "2026-09-23T11:56:27.644143011Z"
+      }
+    },
+    {
+      "device": "dev2",
+      "tag": "EVAL-TAG-1",
+      "principal": "p1_ada",
+      "reason": "unknown_credential",
+      "allowed": false,
+      "hardware": false,
+      "result": {
+        "state": "s_denied",
+        "reason": "unknown_credential",
+        "allowed": false,
+        "ruleId": null,
+        "readerAt": 1790164587878,
+        "firstActuationAt": 1790164587889,
+        "firstAction": "speaker.beep",
+        "decidedAt": 1790164588513,
+        "attempts": 1
+      },
+      "audit": {
+        "seq": 506,
+        "at": "2026-09-23T11:56:28.505943637Z",
+        "source": "device",
+        "deviceId": "acs2",
+        "space": "room_1",
+        "tagId": "EVAL-TAG-1",
+        "allowed": false,
+        "reason": "unknown_credential",
+        "version": 1,
+        "stale": false,
+        "deviceSeq": 1790164588506,
+        "receivedAt": "2026-09-23T11:56:28.515439178Z"
+      }
+    },
+    {
+      "device": "dev2",
+      "tag": "EVAL-TAG-2",
+      "principal": "p2_bruno",
+      "reason": "ok",
+      "allowed": true,
+      "hardware": false,
+      "result": {
+        "state": "s_granted",
+        "reason": "ok",
+        "allowed": true,
+        "ruleId": null,
+        "readerAt": 1790164590907,
+        "firstActuationAt": 1790164590924,
+        "firstAction": "speaker.beep",
+        "decidedAt": 1790164591540,
+        "attempts": 1
+      },
+      "audit": {
+        "seq": 507,
+        "at": "2026-09-23T11:56:31.533271847Z",
+        "source": "device",
+        "deviceId": "acs2",
+        "space": "room_1",
+        "tagId": "EVAL-TAG-2",
+        "user": "p2_bruno",
+        "allowed": true,
+        "reason": "ok",
+        "version": 1,
+        "stale": false,
+        "deviceSeq": 1790164591534,
+        "receivedAt": "2026-09-23T11:56:31.541304013Z"
+      }
+    },
+    {
+      "device": "dev2",
+      "tag": "EVAL-TAG-3",
+      "principal": "p3_chiara",
+      "reason": "expired",
+      "allowed": false,
+      "hardware": false,
+      "result": {
+        "state": "s_denied",
+        "reason": "expired",
+        "allowed": false,
+        "ruleId": null,
+        "readerAt": 1790164597288,
+        "firstActuationAt": 1790164597295,
+        "firstAction": "speaker.beep",
+        "decidedAt": 1790164597916,
+        "attempts": 1
+      },
+      "audit": {
+        "seq": 508,
+        "at": "2026-09-23T11:56:37.910463544Z",
+        "source": "device",
+        "deviceId": "acs2",
+        "space": "room_1",
+        "tagId": "EVAL-TAG-3",
+        "user": "p3_chiara",
+        "allowed": false,
+        "reason": "expired",
+        "version": 1,
+        "stale": false,
+        "deviceSeq": 1790164597911,
+        "receivedAt": "2026-09-23T11:56:37.917032502Z"
+      }
+    },
+    {
+      "device": "dev2",
+      "tag": "EVAL-TAG-4",
+      "principal": "p4_outsider",
+      "reason": "unknown_credential",
+      "allowed": false,
+      "hardware": false,
+      "result": {
+        "state": "s_denied",
+        "reason": "unknown_credential",
+        "allowed": false,
+        "ruleId": null,
+        "readerAt": 1790164600315,
+        "firstActuationAt": 1790164600322,
+        "firstAction": "speaker.beep",
+        "decidedAt": 1790164600945,
+        "attempts": 1
+      },
+      "audit": {
+        "seq": 509,
+        "at": "2026-09-23T11:56:40.938582212Z",
+        "source": "device",
+        "deviceId": "acs2",
+        "space": "room_1",
+        "tagId": "EVAL-TAG-4",
+        "allowed": false,
+        "reason": "unknown_credential",
+        "version": 1,
+        "stale": false,
+        "deviceSeq": 1790164600938,
+        "receivedAt": "2026-09-23T11:56:40.946229712Z"
+      }
+    },
+    {
+      "device": "dev2",
+      "tag": "EVAL-TAG-UNKNOWN",
+      "principal": null,
+      "reason": "unknown_credential",
+      "allowed": false,
+      "hardware": false,
+      "result": {
+        "state": "s_denied",
+        "reason": "unknown_credential",
+        "allowed": false,
+        "ruleId": null,
+        "readerAt": 1790164603341,
+        "firstActuationAt": 1790164603349,
+        "firstAction": "speaker.beep",
+        "decidedAt": 1790164603957,
+        "attempts": 1
+      },
+      "audit": {
+        "seq": 510,
+        "at": "2026-09-23T11:56:43.955734088Z",
+        "source": "device",
+        "deviceId": "acs2",
+        "space": "room_1",
+        "tagId": "EVAL-TAG-UNKNOWN",
+        "allowed": false,
+        "reason": "unknown_credential",
+        "version": 1,
+        "stale": false,
+        "deviceSeq": 1790164603955,
+        "receivedAt": "2026-09-23T11:56:43.959474838Z"
+      }
+    }
+  ],
+  "m3": [
+    3,
+    17
+  ]
+}

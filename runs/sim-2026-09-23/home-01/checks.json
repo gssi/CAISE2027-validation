@@ -1,0 +1,285 @@
+[
+  {
+    "name": "RQ1.2 acs1 bundle users = principals with an allowed role",
+    "pass": true,
+    "expected": [
+      "elena",
+      "grandma",
+      "laura",
+      "marco",
+      "septemberGuest"
+    ],
+    "observed": [
+      "elena",
+      "grandma",
+      "laura",
+      "marco",
+      "septemberGuest"
+    ]
+  },
+  {
+    "name": "RQ1.2 acs1 allowed roles",
+    "pass": true,
+    "expected": [
+      "cleaner",
+      "owner",
+      "visitor"
+    ],
+    "observed": [
+      "cleaner",
+      "owner",
+      "visitor"
+    ]
+  },
+  {
+    "name": "RQ1.2 acs1 guards entrance",
+    "pass": true,
+    "expected": "entrance",
+    "observed": {
+      "bundle": "entrance",
+      "fleet": "entrance"
+    }
+  },
+  {
+    "name": "RQ1.2 acs1 staleness",
+    "pass": true,
+    "expected": {
+      "maxAgeMs": 86400000,
+      "whenExceeded": "allow-cached"
+    },
+    "observed": {
+      "maxAgeMs": 86400000,
+      "whenExceeded": "allow-cached"
+    }
+  },
+  {
+    "name": "RQ1.2 acs1 sensors known to the fleet",
+    "pass": true,
+    "expected": [],
+    "observed": []
+  },
+  {
+    "name": "RQ1.2 acs2 bundle users = principals with an allowed role",
+    "pass": true,
+    "expected": [
+      "elena",
+      "laura",
+      "marco"
+    ],
+    "observed": [
+      "elena",
+      "laura",
+      "marco"
+    ]
+  },
+  {
+    "name": "RQ1.2 acs2 allowed roles",
+    "pass": true,
+    "expected": [
+      "cleaner",
+      "owner"
+    ],
+    "observed": [
+      "cleaner",
+      "owner"
+    ]
+  },
+  {
+    "name": "RQ1.2 acs2 guards garage",
+    "pass": true,
+    "expected": "garage",
+    "observed": {
+      "bundle": "garage",
+      "fleet": "garage"
+    }
+  },
+  {
+    "name": "RQ1.2 acs2 staleness",
+    "pass": true,
+    "expected": {
+      "maxAgeMs": 3600000,
+      "whenExceeded": "deny"
+    },
+    "observed": {
+      "maxAgeMs": 3600000,
+      "whenExceeded": "deny"
+    }
+  },
+  {
+    "name": "RQ1.2 acs2 sensors known to the fleet",
+    "pass": true,
+    "expected": [],
+    "observed": []
+  },
+  {
+    "name": "RQ1.2 indicators known to the federation",
+    "pass": true,
+    "expected": [],
+    "observed": []
+  },
+  {
+    "name": "RQ1.2 goals known to the federation",
+    "pass": true,
+    "expected": [],
+    "observed": []
+  },
+  {
+    "name": "RQ1.1 acs1 marco → ok",
+    "pass": true,
+    "expected": "ok",
+    "observed": {
+      "twin": "ok",
+      "audit": "ok"
+    }
+  },
+  {
+    "name": "RQ1.1 acs1 grandma → ok",
+    "pass": true,
+    "expected": "ok",
+    "observed": {
+      "twin": "ok",
+      "audit": "ok"
+    }
+  },
+  {
+    "name": "RQ1.1 acs1 elena → outside_hours",
+    "pass": true,
+    "expected": "outside_hours",
+    "observed": {
+      "twin": "outside_hours",
+      "audit": "outside_hours"
+    }
+  },
+  {
+    "name": "RQ1.1 acs1 septemberGuest → expired",
+    "pass": true,
+    "expected": "expired",
+    "observed": {
+      "twin": "expired",
+      "audit": "expired"
+    }
+  },
+  {
+    "name": "RQ1.1 acs1 laura → ok",
+    "pass": true,
+    "expected": "ok",
+    "observed": {
+      "twin": "ok",
+      "audit": "ok"
+    }
+  },
+  {
+    "name": "RQ1.1 acs1 unknown tag → unknown_credential",
+    "pass": true,
+    "expected": "unknown_credential",
+    "observed": {
+      "twin": "unknown_credential",
+      "audit": "unknown_credential"
+    }
+  },
+  {
+    "name": "RQ1.1 acs2 marco → ok",
+    "pass": true,
+    "expected": "ok",
+    "observed": {
+      "twin": "ok",
+      "audit": "ok"
+    }
+  },
+  {
+    "name": "RQ1.1 acs2 grandma → unknown_credential",
+    "pass": true,
+    "expected": "unknown_credential",
+    "observed": {
+      "twin": "unknown_credential",
+      "audit": "unknown_credential"
+    }
+  },
+  {
+    "name": "RQ1.1 acs2 elena → outside_hours",
+    "pass": true,
+    "expected": "outside_hours",
+    "observed": {
+      "twin": "outside_hours",
+      "audit": "outside_hours"
+    }
+  },
+  {
+    "name": "RQ1.1 acs2 septemberGuest → unknown_credential",
+    "pass": true,
+    "expected": "unknown_credential",
+    "observed": {
+      "twin": "unknown_credential",
+      "audit": "unknown_credential"
+    }
+  },
+  {
+    "name": "RQ1.1 acs2 laura → ok",
+    "pass": true,
+    "expected": "ok",
+    "observed": {
+      "twin": "ok",
+      "audit": "ok"
+    }
+  },
+  {
+    "name": "RQ1.1 acs2 unknown tag → unknown_credential",
+    "pass": true,
+    "expected": "unknown_credential",
+    "observed": {
+      "twin": "unknown_credential",
+      "audit": "unknown_credential"
+    }
+  },
+  {
+    "name": "RQ1.3 acs1 enacts the fleet signature (1777 Hz)",
+    "pass": true,
+    "expected": 1777,
+    "observed": {
+      "state": "s_sig",
+      "frequency": 1777
+    }
+  },
+  {
+    "name": "RQ1.3 acs2 enacts the fleet signature (1777 Hz)",
+    "pass": true,
+    "expected": 1777,
+    "observed": {
+      "state": "s_sig",
+      "frequency": 1777
+    }
+  },
+  {
+    "name": "RQ1.4 acs2 overrides (1999 Hz) while acs1 keeps the fleet behaviour (1777 Hz)",
+    "pass": true,
+    "expected": {
+      "acs1": 1777,
+      "acs2": 1999
+    },
+    "observed": {
+      "acs1": 1777,
+      "acs2": 1999
+    }
+  },
+  {
+    "name": "RQ1.4 inheritance status",
+    "pass": true,
+    "expected": {
+      "acs1": "inheriting",
+      "acs2": "overriding"
+    },
+    "observed": {
+      "acs1": "inheriting",
+      "acs2": "overriding"
+    }
+  },
+  {
+    "name": "RQ1.4 acs2 back under fleet control (1777 Hz, inheriting)",
+    "pass": true,
+    "expected": 1777,
+    "observed": {
+      "frequency": 1777,
+      "status": "inheriting"
+    }
+  }
+]

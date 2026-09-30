@@ -1,0 +1,298 @@
+{
+  "id": "fitness-09",
+  "domain": "fitness",
+  "row": 9,
+  "origin": "generated",
+  "hardware": false,
+  "model": "eval-fitness-09",
+  "roles": [
+    {
+      "id": "staff",
+      "type": "StaffRole"
+    },
+    {
+      "id": "full",
+      "type": "FullMemberRole"
+    },
+    {
+      "id": "member",
+      "type": "MemberRole"
+    },
+    {
+      "id": "trainer",
+      "type": "TrainerRole"
+    }
+  ],
+  "principals": [
+    {
+      "id": "p1_ada",
+      "type": "Member",
+      "name": "Ada",
+      "roles": [
+        "staff"
+      ],
+      "credential": {
+        "type": "MembershipCard",
+        "tag": "EVAL-TAG-1"
+      },
+      "validity": "VALID",
+      "revoked": false
+    },
+    {
+      "id": "p2_bruno",
+      "type": "Trainer",
+      "name": "Bruno",
+      "roles": [
+        "full"
+      ],
+      "credential": {
+        "type": "MembershipCard",
+        "tag": "EVAL-TAG-2"
+      },
+      "validity": "VALID",
+      "revoked": false
+    },
+    {
+      "id": "p3_chiara",
+      "type": "Staff",
+      "name": "Chiara",
+      "roles": [
+        "member"
+      ],
+      "credential": {
+        "type": "MembershipCard",
+        "tag": "EVAL-TAG-3"
+      },
+      "validity": "VALID",
+      "revoked": false
+    },
+    {
+      "id": "p4_dario",
+      "type": "Trainer",
+      "name": "Dario",
+      "roles": [
+        "staff"
+      ],
+      "credential": {
+        "type": "MembershipCard",
+        "tag": "EVAL-TAG-4"
+      },
+      "validity": "VALID_FUTURE",
+      "revoked": false
+    },
+    {
+      "id": "p5_elena",
+      "type": "Staff",
+      "name": "Elena",
+      "roles": [
+        "full",
+        "staff"
+      ],
+      "credential": {
+        "type": "MembershipCard",
+        "tag": "EVAL-TAG-5"
+      },
+      "validity": "VALID_FUTURE",
+      "revoked": false
+    },
+    {
+      "id": "p6_fabio",
+      "type": "Trainer",
+      "name": "Fabio",
+      "roles": [
+        "staff",
+        "full"
+      ],
+      "credential": {
+        "type": "MembershipCard",
+        "tag": "EVAL-TAG-6"
+      },
+      "validity": "VALID",
+      "revoked": false
+    },
+    {
+      "id": "p7_giulia",
+      "type": "Trainer",
+      "name": "Giulia",
+      "roles": [
+        "full"
+      ],
+      "credential": {
+        "type": "MembershipCard",
+        "tag": "EVAL-TAG-7"
+      },
+      "validity": "EXPIRED",
+      "revoked": false
+    },
+    {
+      "id": "p8_revoked",
+      "type": "Staff",
+      "name": "Revoked",
+      "roles": [
+        "staff"
+      ],
+      "credential": {
+        "type": "MembershipCard",
+        "tag": "EVAL-TAG-8"
+      },
+      "validity": "VALID",
+      "revoked": true
+    },
+    {
+      "id": "p9_outsider",
+      "type": "Staff",
+      "name": "Outsider",
+      "roles": [
+        "trainer"
+      ],
+      "credential": {
+        "type": "MembershipCard",
+        "tag": "EVAL-TAG-9"
+      },
+      "validity": "VALID",
+      "revoked": false
+    }
+  ],
+  "spaces": [
+    {
+      "id": "zone_a",
+      "type": "Reception",
+      "name": "Zone A",
+      "parent": null,
+      "staleness": {
+        "maxAgeMs": 7200000,
+        "whenExceeded": "deny"
+      }
+    },
+    {
+      "id": "zone_b",
+      "type": "Reception",
+      "name": "Zone B",
+      "parent": "zone_a"
+    },
+    {
+      "id": "zone_c",
+      "type": "GymFloor",
+      "name": "Zone C",
+      "parent": "zone_b"
+    },
+    {
+      "id": "room_1",
+      "type": "Locker",
+      "name": "Room 1",
+      "parent": "zone_c",
+      "staleness": {
+        "maxAgeMs": 3600000,
+        "whenExceeded": "allow-cached"
+      }
+    },
+    {
+      "id": "room_2",
+      "type": "SpinningRoom",
+      "name": "Room 2",
+      "parent": "zone_c",
+      "capacity": 27,
+      "staleness": {
+        "maxAgeMs": 3600000,
+        "whenExceeded": "allow-cached"
+      }
+    },
+    {
+      "id": "room_3",
+      "type": "SpinningRoom",
+      "name": "Room 3",
+      "parent": "zone_a",
+      "staleness": {
+        "maxAgeMs": 3600000,
+        "whenExceeded": "allow-cached"
+      }
+    },
+    {
+      "id": "room_4",
+      "type": "SpinningRoom",
+      "name": "Room 4",
+      "parent": "zone_b",
+      "capacity": 14,
+      "staleness": {
+        "maxAgeMs": 3600000,
+        "whenExceeded": "allow-cached"
+      }
+    }
+  ],
+  "windows": [
+    {
+      "id": "win_1",
+      "type": "OpeningHours",
+      "when": "ALWAYS"
+    },
+    {
+      "id": "win_2",
+      "type": "PeakHours",
+      "when": "NOW"
+    },
+    {
+      "id": "win_3",
+      "type": "StaffHours",
+      "when": "ALWAYS"
+    }
+  ],
+  "policies": [
+    {
+      "id": "permit_1",
+      "type": "MemberAccess",
+      "effect": "permit",
+      "roles": [
+        "staff",
+        "full"
+      ],
+      "spaces": [
+        "zone_a"
+      ],
+      "windows": [
+        "win_1"
+      ],
+      "priority": 10
+    },
+    {
+      "id": "permit_2",
+      "type": "StaffAccess",
+      "effect": "permit",
+      "roles": [
+        "full",
+        "staff"
+      ],
+      "spaces": [
+        "zone_c"
+      ],
+      "windows": [],
+      "priority": 20
+    }
+  ],
+  "devices": [
+    {
+      "id": "dev1",
+      "type": "Turnstile",
+      "deviceId": "EVAL-ACS-1",
+      "label": "Reader 1",
+      "space": "room_2",
+      "sensors": []
+    },
+    {
+      "id": "dev2",
+      "type": "Turnstile",
+      "deviceId": "EVAL-ACS-2",
+      "label": "Reader 2",
+      "space": "room_3",
+      "sensors": []
+    }
+  ],
+  "kpis": [],
+  "goals": [
+    {
+      "id": "goal_1",
+      "type": "CapacityGoal",
+      "space": "zone_a",
+      "expression": "presence.staff <= capacity(zone_a)"
+    }
+  ]
+}

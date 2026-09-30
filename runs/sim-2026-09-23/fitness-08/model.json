@@ -1,0 +1,629 @@
+{
+  "version": 1,
+  "clabjects": [
+    {
+      "id": "a679b4da-322c-43c6-8a73-d19b6e08d015",
+      "modelId": "e57ca0e6-8897-4cca-8643-b325dcf41f37",
+      "name": "staff",
+      "potency": 0,
+      "tags": [],
+      "x": 680,
+      "y": 40,
+      "typeId": "26565592-7261-4ce1-8fef-8c2bf8c7dc46"
+    },
+    {
+      "id": "881ac8c2-1927-464d-85da-b0446f20dc00",
+      "modelId": "e57ca0e6-8897-4cca-8643-b325dcf41f37",
+      "name": "full",
+      "potency": 0,
+      "tags": [],
+      "x": 680,
+      "y": 196,
+      "typeId": "be0dc896-f0fa-48da-80a2-36ff1aeb5057"
+    },
+    {
+      "id": "f237c0eb-a9d2-447a-8f06-1fb71f97a1b7",
+      "modelId": "e57ca0e6-8897-4cca-8643-b325dcf41f37",
+      "name": "member",
+      "potency": 0,
+      "tags": [],
+      "x": 680,
+      "y": 352,
+      "typeId": "7d1e4056-85dc-43ab-8382-81b5111fef02"
+    },
+    {
+      "id": "d97a1998-c54b-43fd-81a6-9b340dba3a36",
+      "modelId": "e57ca0e6-8897-4cca-8643-b325dcf41f37",
+      "name": "trainer",
+      "potency": 0,
+      "tags": [],
+      "x": 680,
+      "y": 508,
+      "typeId": "634a0e96-7f9f-4596-87bd-cf08b38cca29"
+    },
+    {
+      "id": "87f30efe-58a4-4df8-8575-f90fd886bde5",
+      "modelId": "e57ca0e6-8897-4cca-8643-b325dcf41f37",
+      "name": "p1_ada",
+      "potency": 0,
+      "tags": [],
+      "x": 40,
+      "y": 40,
+      "typeId": "df2955f9-8b27-495f-8517-298ba56a22e2"
+    },
+    {
+      "id": "5d4acfda-c44a-4d89-8e23-7a7c85e2594a",
+      "modelId": "e57ca0e6-8897-4cca-8643-b325dcf41f37",
+      "name": "cred_p1_ada",
+      "potency": 0,
+      "tags": [],
+      "x": 360,
+      "y": 40,
+      "typeId": "87a14214-c832-4bff-83a7-982c289325c6"
+    },
+    {
+      "id": "ed590a78-a264-4981-86b6-b34c40093eec",
+      "modelId": "e57ca0e6-8897-4cca-8643-b325dcf41f37",
+      "name": "p2_bruno",
+      "potency": 0,
+      "tags": [],
+      "x": 40,
+      "y": 196,
+      "typeId": "12d255b4-7bb4-4b0e-814b-52affca53395"
+    },
+    {
+      "id": "144c61a9-e51b-4550-8964-d6e493344a5f",
+      "modelId": "e57ca0e6-8897-4cca-8643-b325dcf41f37",
+      "name": "cred_p2_bruno",
+      "potency": 0,
+      "tags": [],
+      "x": 360,
+      "y": 196,
+      "typeId": "87a14214-c832-4bff-83a7-982c289325c6"
+    },
+    {
+      "id": "75088858-d959-4a96-8c70-d684dd0ea3b1",
+      "modelId": "e57ca0e6-8897-4cca-8643-b325dcf41f37",
+      "name": "p3_chiara",
+      "potency": 0,
+      "tags": [],
+      "x": 40,
+      "y": 352,
+      "typeId": "12d255b4-7bb4-4b0e-814b-52affca53395"
+    },
+    {
+      "id": "770241ad-25c3-4585-84d1-6839997388d0",
+      "modelId": "e57ca0e6-8897-4cca-8643-b325dcf41f37",
+      "name": "cred_p3_chiara",
+      "potency": 0,
+      "tags": [],
+      "x": 360,
+      "y": 352,
+      "typeId": "87a14214-c832-4bff-83a7-982c289325c6"
+    },
+    {
+      "id": "646db7ba-9a96-4066-830a-a6f1621148b1",
+      "modelId": "e57ca0e6-8897-4cca-8643-b325dcf41f37",
+      "name": "p4_outsider",
+      "potency": 0,
+      "tags": [],
+      "x": 40,
+      "y": 508,
+      "typeId": "df2955f9-8b27-495f-8517-298ba56a22e2"
+    },
+    {
+      "id": "8e96987a-fb84-4455-892f-70fa0d64b288",
+      "modelId": "e57ca0e6-8897-4cca-8643-b325dcf41f37",
+      "name": "cred_p4_outsider",
+      "potency": 0,
+      "tags": [],
+      "x": 360,
+      "y": 508,
+      "typeId": "87a14214-c832-4bff-83a7-982c289325c6"
+    },
+    {
+      "id": "40ad9475-6f25-4196-8c0e-82f4aab1f77f",
+      "modelId": "e57ca0e6-8897-4cca-8643-b325dcf41f37",
+      "name": "zone_a",
+      "potency": 0,
+      "tags": [],
+      "x": 1000,
+      "y": 40,
+      "typeId": "06a70a7f-0219-4e92-8c54-729926339977"
+    },
+    {
+      "id": "40ad9375-6f25-4fe3-8c0e-83f4aab1f932",
+      "modelId": "e57ca0e6-8897-4cca-8643-b325dcf41f37",
+      "name": "zone_b",
+      "potency": 0,
+      "tags": [],
+      "x": 1000,
+      "y": 196,
+      "typeId": "9712a7e6-2913-43fa-88b5-3504270064cd"
+    },
+    {
+      "id": "8d581356-0c28-48e7-8c39-b1fe2203e01e",
+      "modelId": "e57ca0e6-8897-4cca-8643-b325dcf41f37",
+      "name": "room_1",
+      "potency": 0,
+      "tags": [],
+      "x": 1000,
+      "y": 352,
+      "typeId": "617e0a70-72d8-4ce0-8f57-0814f739f315"
+    },
+    {
+      "id": "8d581456-0c28-4a9a-8c39-b0fe2203de6b",
+      "modelId": "e57ca0e6-8897-4cca-8643-b325dcf41f37",
+      "name": "room_2",
+      "potency": 0,
+      "tags": [],
+      "x": 1000,
+      "y": 508,
+      "typeId": "2049bd1f-ba46-4d79-8277-a79f1ad0852c"
+    },
+    {
+      "id": "8d581556-0c28-4c4d-8c39-affe2203dcb8",
+      "modelId": "e57ca0e6-8897-4cca-8643-b325dcf41f37",
+      "name": "room_3",
+      "potency": 0,
+      "tags": [],
+      "x": 1000,
+      "y": 664,
+      "typeId": "617e0a70-72d8-4ce0-8f57-0814f739f315"
+    },
+    {
+      "id": "98b02468-5622-463e-81e7-00c742fae6fd",
+      "modelId": "e57ca0e6-8897-4cca-8643-b325dcf41f37",
+      "name": "win_1",
+      "potency": 0,
+      "tags": [],
+      "x": 1320,
+      "y": 40,
+      "typeId": "451c7a8f-2236-405a-8aa5-3df0aa6df50f"
+    },
+    {
+      "id": "e8d773a0-a54f-45a7-8063-2973d35b6342",
+      "modelId": "e57ca0e6-8897-4cca-8643-b325dcf41f37",
+      "name": "permit_1",
+      "potency": 0,
+      "tags": [],
+      "x": 1640,
+      "y": 40,
+      "typeId": "f87d5a7f-68a0-428d-8d1d-f516a7194be4"
+    },
+    {
+      "id": "e8d774a0-a54f-475a-8063-2873d35b618f",
+      "modelId": "e57ca0e6-8897-4cca-8643-b325dcf41f37",
+      "name": "permit_2",
+      "potency": 0,
+      "tags": [],
+      "x": 1640,
+      "y": 196,
+      "typeId": "88dba32e-90e1-43c2-86f9-5af928599695"
+    },
+    {
+      "id": "2f4345a6-2730-4e6d-8179-3bd166b7e782",
+      "modelId": "e57ca0e6-8897-4cca-8643-b325dcf41f37",
+      "name": "deny_zone",
+      "potency": 0,
+      "tags": [],
+      "x": 1640,
+      "y": 352,
+      "typeId": "fa24f0fe-6b13-43a6-867c-d2e80be48ec3"
+    },
+    {
+      "id": "4b0594c1-42dd-4382-85ae-3cf06fcb70c1",
+      "modelId": "e57ca0e6-8897-4cca-8643-b325dcf41f37",
+      "name": "permit_dev2_b",
+      "potency": 0,
+      "tags": [],
+      "x": 1640,
+      "y": 508,
+      "typeId": "925b9980-8f66-4493-8149-326869759238"
+    },
+    {
+      "id": "4d023faf-bc3d-470a-8f6b-f93238ed7993",
+      "modelId": "e57ca0e6-8897-4cca-8643-b325dcf41f37",
+      "name": "dev1",
+      "potency": 0,
+      "tags": [],
+      "x": 1960,
+      "y": 40,
+      "typeId": "10560442-0cc5-4493-81bb-f206169f4250"
+    },
+    {
+      "id": "4d023eaf-bc3d-4557-8f6b-fa3238ed7b46",
+      "modelId": "e57ca0e6-8897-4cca-8643-b325dcf41f37",
+      "name": "dev2",
+      "potency": 0,
+      "tags": [],
+      "x": 1960,
+      "y": 352,
+      "typeId": "10560442-0cc5-4493-81bb-f206169f4250"
+    }
+  ],
+  "attributes": [],
+  "slots": [
+    {
+      "id": "d17d2f43-2de1-4024-8dcb-65828a149755",
+      "ownerId": "87f30efe-58a4-4df8-8575-f90fd886bde5",
+      "attributeId": "8539ad47-9c6f-4439-85ba-5646f56162c0",
+      "value": "Ada"
+    },
+    {
+      "id": "d511add3-c0b6-4a6f-87b9-29d6a528840a",
+      "ownerId": "5d4acfda-c44a-4d89-8e23-7a7c85e2594a",
+      "attributeId": "0a5566fd-125e-40f0-8e7c-9c1add8f1a55",
+      "value": "EVAL-TAG-1"
+    },
+    {
+      "id": "01587617-e858-41fd-8c3c-7f9e56f7210c",
+      "ownerId": "ed590a78-a264-4981-86b6-b34c40093eec",
+      "attributeId": "8539ad47-9c6f-4439-85ba-5646f56162c0",
+      "value": "Bruno"
+    },
+    {
+      "id": "dab456bf-00da-4e80-8eb0-0278ddda7ce5",
+      "ownerId": "144c61a9-e51b-4550-8964-d6e493344a5f",
+      "attributeId": "0a5566fd-125e-40f0-8e7c-9c1add8f1a55",
+      "value": "EVAL-TAG-2"
+    },
+    {
+      "id": "df0199ad-3976-487e-8318-57cc633bbcd1",
+      "ownerId": "75088858-d959-4a96-8c70-d684dd0ea3b1",
+      "attributeId": "8539ad47-9c6f-4439-85ba-5646f56162c0",
+      "value": "Chiara"
+    },
+    {
+      "id": "397f3b4f-5d3b-4efb-8184-c225e7f4b91c",
+      "ownerId": "770241ad-25c3-4585-84d1-6839997388d0",
+      "attributeId": "0a5566fd-125e-40f0-8e7c-9c1add8f1a55",
+      "value": "EVAL-TAG-3"
+    },
+    {
+      "id": "91ff1b0f-b1a5-4bf6-808e-6e63dba599c9",
+      "ownerId": "646db7ba-9a96-4066-830a-a6f1621148b1",
+      "attributeId": "8539ad47-9c6f-4439-85ba-5646f56162c0",
+      "value": "Outsider"
+    },
+    {
+      "id": "316a71aa-4973-4a83-83cc-3d36453ea74c",
+      "ownerId": "8e96987a-fb84-4455-892f-70fa0d64b288",
+      "attributeId": "0a5566fd-125e-40f0-8e7c-9c1add8f1a55",
+      "value": "EVAL-TAG-4"
+    },
+    {
+      "id": "78bc6152-5769-4fca-8e49-ad08f6da2c6d",
+      "ownerId": "40ad9475-6f25-4196-8c0e-82f4aab1f77f",
+      "attributeId": "bb198e48-5390-4967-8ecc-4586d7064e44",
+      "value": "Zone A"
+    },
+    {
+      "id": "a6d9a7a9-1359-45c0-88ba-4748aac14f53",
+      "ownerId": "40ad9475-6f25-4196-8c0e-82f4aab1f77f",
+      "attributeId": "ccf8d424-800d-45d1-8739-60de8e17c016",
+      "value": 7200000
+    },
+    {
+      "id": "1c05834e-7f86-48ec-81eb-2958210a9c57",
+      "ownerId": "40ad9475-6f25-4196-8c0e-82f4aab1f77f",
+      "attributeId": "c1131aa9-e82b-4079-8dce-8a81eed8da6e",
+      "value": "allow-cached"
+    },
+    {
+      "id": "b7c3829f-dc1d-40d5-83bd-dde339469162",
+      "ownerId": "40ad9375-6f25-4fe3-8c0e-83f4aab1f932",
+      "attributeId": "bb198e48-5390-4967-8ecc-4586d7064e44",
+      "value": "Zone B"
+    },
+    {
+      "id": "3f1bd99d-9845-4e25-8dff-9957fc3e5de2",
+      "ownerId": "8d581356-0c28-48e7-8c39-b1fe2203e01e",
+      "attributeId": "bb198e48-5390-4967-8ecc-4586d7064e44",
+      "value": "Room 1"
+    },
+    {
+      "id": "593279e5-2f79-464a-85b6-2c3a9c34cca5",
+      "ownerId": "8d581356-0c28-48e7-8c39-b1fe2203e01e",
+      "attributeId": "397a48b6-09b2-41a8-8e4b-98a8113363d3",
+      "value": 13
+    },
+    {
+      "id": "da3c8d65-7ca2-4efb-835b-bbbe36f07208",
+      "ownerId": "8d581356-0c28-48e7-8c39-b1fe2203e01e",
+      "attributeId": "ccf8d424-800d-45d1-8739-60de8e17c016",
+      "value": 3600000
+    },
+    {
+      "id": "06d14c94-b4ba-401f-817b-4f4a8516f7b4",
+      "ownerId": "8d581356-0c28-48e7-8c39-b1fe2203e01e",
+      "attributeId": "c1131aa9-e82b-4079-8dce-8a81eed8da6e",
+      "value": "allow-cached"
+    },
+    {
+      "id": "80962983-2f69-481a-888b-687db9d1f8ed",
+      "ownerId": "8d581456-0c28-4a9a-8c39-b0fe2203de6b",
+      "attributeId": "bb198e48-5390-4967-8ecc-4586d7064e44",
+      "value": "Room 2"
+    },
+    {
+      "id": "baa0085a-f2d1-4390-806f-339969ca23d3",
+      "ownerId": "8d581456-0c28-4a9a-8c39-b0fe2203de6b",
+      "attributeId": "ccf8d424-800d-45d1-8739-60de8e17c016",
+      "value": 86400000
+    },
+    {
+      "id": "83b22be1-3e5c-4d7c-85e1-7795cf98f8d7",
+      "ownerId": "8d581456-0c28-4a9a-8c39-b0fe2203de6b",
+      "attributeId": "c1131aa9-e82b-4079-8dce-8a81eed8da6e",
+      "value": "deny"
+    },
+    {
+      "id": "4915f048-9918-447b-85fa-d55e89520014",
+      "ownerId": "8d581556-0c28-4c4d-8c39-affe2203dcb8",
+      "attributeId": "bb198e48-5390-4967-8ecc-4586d7064e44",
+      "value": "Room 3"
+    },
+    {
+      "id": "7010c964-e1c5-4f8d-8925-b601180342a6",
+      "ownerId": "8d581556-0c28-4c4d-8c39-affe2203dcb8",
+      "attributeId": "ccf8d424-800d-45d1-8739-60de8e17c016",
+      "value": 86400000
+    },
+    {
+      "id": "91949d24-ea04-403d-87ed-388c91437f3e",
+      "ownerId": "8d581556-0c28-4c4d-8c39-affe2203dcb8",
+      "attributeId": "c1131aa9-e82b-4079-8dce-8a81eed8da6e",
+      "value": "deny"
+    },
+    {
+      "id": "9ae36193-ab91-4986-8cb1-9585be93160f",
+      "ownerId": "98b02468-5622-463e-81e7-00c742fae6fd",
+      "attributeId": "a9aa9fd0-0f27-4010-8f58-dcd75c49445d",
+      "value": "wed"
+    },
+    {
+      "id": "011c56a1-07e3-4bf1-83b7-889748db0f14",
+      "ownerId": "98b02468-5622-463e-81e7-00c742fae6fd",
+      "attributeId": "559014c2-bd52-437b-83ac-6fc52cc5d50a",
+      "value": "10:00"
+    },
+    {
+      "id": "6357c636-4249-4fa8-855b-b266390c4485",
+      "ownerId": "98b02468-5622-463e-81e7-00c742fae6fd",
+      "attributeId": "64203336-920c-4272-83d5-42e1f2335a13",
+      "value": "15:00"
+    },
+    {
+      "id": "b9302e8d-3be1-4782-85a4-31fba6741fc9",
+      "ownerId": "e8d773a0-a54f-45a7-8063-2973d35b6342",
+      "attributeId": "de316a17-12b0-46ce-8aff-39e3f359c393",
+      "value": 10
+    },
+    {
+      "id": "f733f547-1676-48fd-896b-64ea1d83b6be",
+      "ownerId": "e8d774a0-a54f-475a-8063-2873d35b618f",
+      "attributeId": "de316a17-12b0-46ce-8aff-39e3f359c393",
+      "value": 20
+    },
+    {
+      "id": "84b9a1f2-ee59-46ac-88b6-cdb2ce651fd9",
+      "ownerId": "2f4345a6-2730-4e6d-8179-3bd166b7e782",
+      "attributeId": "de316a17-12b0-46ce-8aff-39e3f359c393",
+      "value": 100
+    },
+    {
+      "id": "acea3de4-467f-43ed-8d65-e2d51bdb25d4",
+      "ownerId": "4b0594c1-42dd-4382-85ae-3cf06fcb70c1",
+      "attributeId": "de316a17-12b0-46ce-8aff-39e3f359c393",
+      "value": 96
+    },
+    {
+      "id": "793d6de4-167b-46da-8e22-f7782980b925",
+      "ownerId": "4d023faf-bc3d-470a-8f6b-f93238ed7993",
+      "attributeId": "bff5c698-244e-4aad-8ed3-98c8c866bff4",
+      "value": "EVAL-ACS-1"
+    },
+    {
+      "id": "c49eaba8-5260-4fb1-86e9-44e12bb7190c",
+      "ownerId": "4d023faf-bc3d-470a-8f6b-f93238ed7993",
+      "attributeId": "b65befc7-8e17-4844-83e0-3e828862cd03",
+      "value": "Reader 1"
+    },
+    {
+      "id": "adf5e0ae-5052-4c3d-80a4-2cf63d77fba2",
+      "ownerId": "4d023eaf-bc3d-4557-8f6b-fa3238ed7b46",
+      "attributeId": "bff5c698-244e-4aad-8ed3-98c8c866bff4",
+      "value": "EVAL-ACS-2"
+    },
+    {
+      "id": "c9ac964b-a1f2-4594-8956-3a83187f0909",
+      "ownerId": "4d023eaf-bc3d-4557-8f6b-fa3238ed7b46",
+      "attributeId": "b65befc7-8e17-4844-83e0-3e828862cd03",
+      "value": "Reader 2"
+    }
+  ],
+  "associations": [],
+  "links": [
+    {
+      "id": "9400afc8-77d4-4843-8ec5-aaa810d88e0a",
+      "modelId": "e57ca0e6-8897-4cca-8643-b325dcf41f37",
+      "associationId": "adb317ae-44d1-4d08-84f1-883950172289",
+      "sourceId": "87f30efe-58a4-4df8-8575-f90fd886bde5",
+      "targetId": "5d4acfda-c44a-4d89-8e23-7a7c85e2594a"
+    },
+    {
+      "id": "cefe59a2-12ab-4b1a-8812-d29cbfd4d997",
+      "modelId": "e57ca0e6-8897-4cca-8643-b325dcf41f37",
+      "associationId": "45ea559d-e0c4-4c2a-82ef-b5760680605b",
+      "sourceId": "87f30efe-58a4-4df8-8575-f90fd886bde5",
+      "targetId": "a679b4da-322c-43c6-8a73-d19b6e08d015"
+    },
+    {
+      "id": "946c4b77-b418-43b7-8678-417ba1f1e926",
+      "modelId": "e57ca0e6-8897-4cca-8643-b325dcf41f37",
+      "associationId": "adb317ae-44d1-4d08-84f1-883950172289",
+      "sourceId": "ed590a78-a264-4981-86b6-b34c40093eec",
+      "targetId": "144c61a9-e51b-4550-8964-d6e493344a5f"
+    },
+    {
+      "id": "ca8fd6e5-4d41-4206-85bc-8d1ef30224e1",
+      "modelId": "e57ca0e6-8897-4cca-8643-b325dcf41f37",
+      "associationId": "45ea559d-e0c4-4c2a-82ef-b5760680605b",
+      "sourceId": "ed590a78-a264-4981-86b6-b34c40093eec",
+      "targetId": "881ac8c2-1927-464d-85da-b0446f20dc00"
+    },
+    {
+      "id": "3eb001bb-d064-4a2b-89de-be6fcfcea962",
+      "modelId": "e57ca0e6-8897-4cca-8643-b325dcf41f37",
+      "associationId": "adb317ae-44d1-4d08-84f1-883950172289",
+      "sourceId": "75088858-d959-4a96-8c70-d684dd0ea3b1",
+      "targetId": "770241ad-25c3-4585-84d1-6839997388d0"
+    },
+    {
+      "id": "197fa3b1-d627-4bca-8ef1-9265dcc853b7",
+      "modelId": "e57ca0e6-8897-4cca-8643-b325dcf41f37",
+      "associationId": "45ea559d-e0c4-4c2a-82ef-b5760680605b",
+      "sourceId": "75088858-d959-4a96-8c70-d684dd0ea3b1",
+      "targetId": "f237c0eb-a9d2-447a-8f06-1fb71f97a1b7"
+    },
+    {
+      "id": "2346523f-58dc-4303-86a9-24882129b0e2",
+      "modelId": "e57ca0e6-8897-4cca-8643-b325dcf41f37",
+      "associationId": "adb317ae-44d1-4d08-84f1-883950172289",
+      "sourceId": "646db7ba-9a96-4066-830a-a6f1621148b1",
+      "targetId": "8e96987a-fb84-4455-892f-70fa0d64b288"
+    },
+    {
+      "id": "a9ab605f-e6ff-4f85-868d-cd8ea8d10eee",
+      "modelId": "e57ca0e6-8897-4cca-8643-b325dcf41f37",
+      "associationId": "45ea559d-e0c4-4c2a-82ef-b5760680605b",
+      "sourceId": "646db7ba-9a96-4066-830a-a6f1621148b1",
+      "targetId": "d97a1998-c54b-43fd-81a6-9b340dba3a36"
+    },
+    {
+      "id": "5f4420a6-d266-428c-86f5-d25580da2ba5",
+      "modelId": "e57ca0e6-8897-4cca-8643-b325dcf41f37",
+      "associationId": "3bcf9104-cc94-44ef-85f3-1c145b19d6d0",
+      "sourceId": "40ad9475-6f25-4196-8c0e-82f4aab1f77f",
+      "targetId": "40ad9375-6f25-4fe3-8c0e-83f4aab1f932"
+    },
+    {
+      "id": "91f65904-7771-4437-80de-d0d8fff18f16",
+      "modelId": "e57ca0e6-8897-4cca-8643-b325dcf41f37",
+      "associationId": "3bcf9104-cc94-44ef-85f3-1c145b19d6d0",
+      "sourceId": "40ad9375-6f25-4fe3-8c0e-83f4aab1f932",
+      "targetId": "8d581356-0c28-48e7-8c39-b1fe2203e01e"
+    },
+    {
+      "id": "f33e0db0-6fb4-4f45-8027-8dfd1281a69c",
+      "modelId": "e57ca0e6-8897-4cca-8643-b325dcf41f37",
+      "associationId": "3bcf9104-cc94-44ef-85f3-1c145b19d6d0",
+      "sourceId": "40ad9475-6f25-4196-8c0e-82f4aab1f77f",
+      "targetId": "8d581456-0c28-4a9a-8c39-b0fe2203de6b"
+    },
+    {
+      "id": "91f65b04-7771-479d-80de-ced8fff18bb0",
+      "modelId": "e57ca0e6-8897-4cca-8643-b325dcf41f37",
+      "associationId": "3bcf9104-cc94-44ef-85f3-1c145b19d6d0",
+      "sourceId": "40ad9375-6f25-4fe3-8c0e-83f4aab1f932",
+      "targetId": "8d581556-0c28-4c4d-8c39-affe2203dcb8"
+    },
+    {
+      "id": "de8bad3b-7445-4a50-88d7-b8b980e31579",
+      "modelId": "e57ca0e6-8897-4cca-8643-b325dcf41f37",
+      "associationId": "318a0e18-9f07-4189-819b-97d396094102",
+      "sourceId": "e8d773a0-a54f-45a7-8063-2973d35b6342",
+      "targetId": "f237c0eb-a9d2-447a-8f06-1fb71f97a1b7"
+    },
+    {
+      "id": "5a9a5298-382d-47cf-8405-02897980bee6",
+      "modelId": "e57ca0e6-8897-4cca-8643-b325dcf41f37",
+      "associationId": "318a0e18-9f07-4189-819b-97d396094102",
+      "sourceId": "e8d773a0-a54f-45a7-8063-2973d35b6342",
+      "targetId": "881ac8c2-1927-464d-85da-b0446f20dc00"
+    },
+    {
+      "id": "0aff7222-1a47-429d-862d-8f8dfdfe7de0",
+      "modelId": "e57ca0e6-8897-4cca-8643-b325dcf41f37",
+      "associationId": "1efc1ea3-f7b8-48cb-8eab-22a5a42d0b28",
+      "sourceId": "e8d773a0-a54f-45a7-8063-2973d35b6342",
+      "targetId": "8d581556-0c28-4c4d-8c39-affe2203dcb8"
+    },
+    {
+      "id": "2ef90659-54e5-4b8e-8a8f-32bda5a81e31",
+      "modelId": "e57ca0e6-8897-4cca-8643-b325dcf41f37",
+      "associationId": "d8df5449-a5f8-473b-8774-58cf6105e5a0",
+      "sourceId": "e8d773a0-a54f-45a7-8063-2973d35b6342",
+      "targetId": "98b02468-5622-463e-81e7-00c742fae6fd"
+    },
+    {
+      "id": "1e64a298-b152-496d-88f3-0c5351f0a7c2",
+      "modelId": "e57ca0e6-8897-4cca-8643-b325dcf41f37",
+      "associationId": "318a0e18-9f07-4189-819b-97d396094102",
+      "sourceId": "e8d774a0-a54f-475a-8063-2873d35b618f",
+      "targetId": "a679b4da-322c-43c6-8a73-d19b6e08d015"
+    },
+    {
+      "id": "d84d3ac4-753d-42a5-88a1-7ccffcce86dc",
+      "modelId": "e57ca0e6-8897-4cca-8643-b325dcf41f37",
+      "associationId": "1efc1ea3-f7b8-48cb-8eab-22a5a42d0b28",
+      "sourceId": "e8d774a0-a54f-475a-8063-2873d35b618f",
+      "targetId": "40ad9475-6f25-4196-8c0e-82f4aab1f77f"
+    },
+    {
+      "id": "f2e21a84-ff16-42bb-8a52-842d4d937fc0",
+      "modelId": "e57ca0e6-8897-4cca-8643-b325dcf41f37",
+      "associationId": "d8df5449-a5f8-473b-8774-58cf6105e5a0",
+      "sourceId": "e8d774a0-a54f-475a-8063-2873d35b618f",
+      "targetId": "98b02468-5622-463e-81e7-00c742fae6fd"
+    },
+    {
+      "id": "51b7c03d-e0ed-46fa-86b7-fed889ffa6d7",
+      "modelId": "e57ca0e6-8897-4cca-8643-b325dcf41f37",
+      "associationId": "318a0e18-9f07-4189-819b-97d396094102",
+      "sourceId": "2f4345a6-2730-4e6d-8179-3bd166b7e782",
+      "targetId": "a679b4da-322c-43c6-8a73-d19b6e08d015"
+    },
+    {
+      "id": "95e002fd-7a9a-43d5-85f7-a6a5d4fe6bda",
+      "modelId": "e57ca0e6-8897-4cca-8643-b325dcf41f37",
+      "associationId": "1efc1ea3-f7b8-48cb-8eab-22a5a42d0b28",
+      "sourceId": "2f4345a6-2730-4e6d-8179-3bd166b7e782",
+      "targetId": "40ad9375-6f25-4fe3-8c0e-83f4aab1f932"
+    },
+    {
+      "id": "59697f94-54ac-43b8-84f3-560de680194f",
+      "modelId": "e57ca0e6-8897-4cca-8643-b325dcf41f37",
+      "associationId": "318a0e18-9f07-4189-819b-97d396094102",
+      "sourceId": "4b0594c1-42dd-4382-85ae-3cf06fcb70c1",
+      "targetId": "881ac8c2-1927-464d-85da-b0446f20dc00"
+    },
+    {
+      "id": "fe6e3e93-41c9-436d-89cc-30304b5ee172",
+      "modelId": "e57ca0e6-8897-4cca-8643-b325dcf41f37",
+      "associationId": "1efc1ea3-f7b8-48cb-8eab-22a5a42d0b28",
+      "sourceId": "4b0594c1-42dd-4382-85ae-3cf06fcb70c1",
+      "targetId": "8d581456-0c28-4a9a-8c39-b0fe2203de6b"
+    },
+    {
+      "id": "ce437fec-556d-4669-887e-f0056b60ba9c",
+      "modelId": "e57ca0e6-8897-4cca-8643-b325dcf41f37",
+      "associationId": "f98cf0c2-9960-4eb8-8224-445ad45d575f",
+      "sourceId": "4d023faf-bc3d-470a-8f6b-f93238ed7993",
+      "targetId": "8d581556-0c28-4c4d-8c39-affe2203dcb8"
+    },
+    {
+      "id": "9b45f2c2-bbb4-46d1-87f3-fcad254e7848",
+      "modelId": "e57ca0e6-8897-4cca-8643-b325dcf41f37",
+      "associationId": "f98cf0c2-9960-4eb8-8224-445ad45d575f",
+      "sourceId": "4d023eaf-bc3d-4557-8f6b-fa3238ed7b46",
+      "targetId": "8d581456-0c28-4a9a-8c39-b0fe2203de6b"
+    }
+  ],
+  "id": "e57ca0e6-8897-4cca-8643-b325dcf41f37",
+  "projectId": "00000000-0000-4000-8000-000000000004",
+  "name": "eval-fitness-08",
+  "level": 0,
+  "typeModelId": "b42eb4a0-ec79-4be3-8f35-393157c0f486"
+}

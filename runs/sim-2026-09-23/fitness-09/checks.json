@@ -1,0 +1,377 @@
+[
+  {
+    "name": "RQ1.2 acs1 bundle users = principals with an allowed role",
+    "pass": true,
+    "expected": [
+      "p1_ada",
+      "p2_bruno",
+      "p4_dario",
+      "p5_elena",
+      "p6_fabio",
+      "p7_giulia",
+      "p8_revoked"
+    ],
+    "observed": [
+      "p1_ada",
+      "p2_bruno",
+      "p4_dario",
+      "p5_elena",
+      "p6_fabio",
+      "p7_giulia",
+      "p8_revoked"
+    ]
+  },
+  {
+    "name": "RQ1.2 acs1 allowed roles",
+    "pass": true,
+    "expected": [
+      "full",
+      "staff"
+    ],
+    "observed": [
+      "full",
+      "staff"
+    ]
+  },
+  {
+    "name": "RQ1.2 acs1 guards room_2",
+    "pass": true,
+    "expected": "room_2",
+    "observed": {
+      "bundle": "room_2",
+      "fleet": "room_2"
+    }
+  },
+  {
+    "name": "RQ1.2 acs1 staleness",
+    "pass": true,
+    "expected": {
+      "maxAgeMs": 3600000,
+      "whenExceeded": "allow-cached"
+    },
+    "observed": {
+      "maxAgeMs": 3600000,
+      "whenExceeded": "allow-cached"
+    }
+  },
+  {
+    "name": "RQ1.2 acs1 sensors known to the fleet",
+    "pass": true,
+    "expected": [],
+    "observed": []
+  },
+  {
+    "name": "RQ1.2 acs2 bundle users = principals with an allowed role",
+    "pass": true,
+    "expected": [
+      "p1_ada",
+      "p2_bruno",
+      "p4_dario",
+      "p5_elena",
+      "p6_fabio",
+      "p7_giulia",
+      "p8_revoked"
+    ],
+    "observed": [
+      "p1_ada",
+      "p2_bruno",
+      "p4_dario",
+      "p5_elena",
+      "p6_fabio",
+      "p7_giulia",
+      "p8_revoked"
+    ]
+  },
+  {
+    "name": "RQ1.2 acs2 allowed roles",
+    "pass": true,
+    "expected": [
+      "full",
+      "staff"
+    ],
+    "observed": [
+      "full",
+      "staff"
+    ]
+  },
+  {
+    "name": "RQ1.2 acs2 guards room_3",
+    "pass": true,
+    "expected": "room_3",
+    "observed": {
+      "bundle": "room_3",
+      "fleet": "room_3"
+    }
+  },
+  {
+    "name": "RQ1.2 acs2 staleness",
+    "pass": true,
+    "expected": {
+      "maxAgeMs": 3600000,
+      "whenExceeded": "allow-cached"
+    },
+    "observed": {
+      "maxAgeMs": 3600000,
+      "whenExceeded": "allow-cached"
+    }
+  },
+  {
+    "name": "RQ1.2 acs2 sensors known to the fleet",
+    "pass": true,
+    "expected": [],
+    "observed": []
+  },
+  {
+    "name": "RQ1.2 indicators known to the federation",
+    "pass": true,
+    "expected": [],
+    "observed": []
+  },
+  {
+    "name": "RQ1.2 goals known to the federation",
+    "pass": true,
+    "expected": [
+      {
+        "id": "goal_1",
+        "space": "zone_a"
+      }
+    ],
+    "observed": [
+      {
+        "id": "goal_1",
+        "space": "zone_a"
+      }
+    ]
+  },
+  {
+    "name": "RQ1.1 acs1 p1_ada → ok",
+    "pass": true,
+    "expected": "ok",
+    "observed": {
+      "twin": "ok",
+      "audit": "ok"
+    }
+  },
+  {
+    "name": "RQ1.1 acs1 p2_bruno → ok",
+    "pass": true,
+    "expected": "ok",
+    "observed": {
+      "twin": "ok",
+      "audit": "ok"
+    }
+  },
+  {
+    "name": "RQ1.1 acs1 p3_chiara → unknown_credential",
+    "pass": true,
+    "expected": "unknown_credential",
+    "observed": {
+      "twin": "unknown_credential",
+      "audit": "unknown_credential"
+    }
+  },
+  {
+    "name": "RQ1.1 acs1 p4_dario → ok",
+    "pass": true,
+    "expected": "ok",
+    "observed": {
+      "twin": "ok",
+      "audit": "ok"
+    }
+  },
+  {
+    "name": "RQ1.1 acs1 p5_elena → ok",
+    "pass": true,
+    "expected": "ok",
+    "observed": {
+      "twin": "ok",
+      "audit": "ok"
+    }
+  },
+  {
+    "name": "RQ1.1 acs1 p6_fabio → ok",
+    "pass": true,
+    "expected": "ok",
+    "observed": {
+      "twin": "ok",
+      "audit": "ok"
+    }
+  },
+  {
+    "name": "RQ1.1 acs1 p7_giulia → expired",
+    "pass": true,
+    "expected": "expired",
+    "observed": {
+      "twin": "expired",
+      "audit": "expired"
+    }
+  },
+  {
+    "name": "RQ1.1 acs1 p8_revoked → revoked",
+    "pass": true,
+    "expected": "revoked",
+    "observed": {
+      "twin": "revoked",
+      "audit": "revoked"
+    }
+  },
+  {
+    "name": "RQ1.1 acs1 p9_outsider → unknown_credential",
+    "pass": true,
+    "expected": "unknown_credential",
+    "observed": {
+      "twin": "unknown_credential",
+      "audit": "unknown_credential"
+    }
+  },
+  {
+    "name": "RQ1.1 acs1 unknown tag → unknown_credential",
+    "pass": true,
+    "expected": "unknown_credential",
+    "observed": {
+      "twin": "unknown_credential",
+      "audit": "unknown_credential"
+    }
+  },
+  {
+    "name": "RQ1.1 acs2 p1_ada → ok",
+    "pass": true,
+    "expected": "ok",
+    "observed": {
+      "twin": "ok",
+      "audit": "ok"
+    }
+  },
+  {
+    "name": "RQ1.1 acs2 p2_bruno → ok",
+    "pass": true,
+    "expected": "ok",
+    "observed": {
+      "twin": "ok",
+      "audit": "ok"
+    }
+  },
+  {
+    "name": "RQ1.1 acs2 p3_chiara → unknown_credential",
+    "pass": true,
+    "expected": "unknown_credential",
+    "observed": {
+      "twin": "unknown_credential",
+      "audit": "unknown_credential"
+    }
+  },
+  {
+    "name": "RQ1.1 acs2 p4_dario → ok",
+    "pass": true,
+    "expected": "ok",
+    "observed": {
+      "twin": "ok",
+      "audit": "ok"
+    }
+  },
+  {
+    "name": "RQ1.1 acs2 p5_elena → ok",
+    "pass": true,
+    "expected": "ok",
+    "observed": {
+      "twin": "ok",
+      "audit": "ok"
+    }
+  },
+  {
+    "name": "RQ1.1 acs2 p6_fabio → ok",
+    "pass": true,
+    "expected": "ok",
+    "observed": {
+      "twin": "ok",
+      "audit": "ok"
+    }
+  },
+  {
+    "name": "RQ1.1 acs2 p7_giulia → expired",
+    "pass": true,
+    "expected": "expired",
+    "observed": {
+      "twin": "expired",
+      "audit": "expired"
+    }
+  },
+  {
+    "name": "RQ1.1 acs2 p8_revoked → revoked",
+    "pass": true,
+    "expected": "revoked",
+    "observed": {
+      "twin": "revoked",
+      "audit": "revoked"
+    }
+  },
+  {
+    "name": "RQ1.1 acs2 p9_outsider → unknown_credential",
+    "pass": true,
+    "expected": "unknown_credential",
+    "observed": {
+      "twin": "unknown_credential",
+      "audit": "unknown_credential"
+    }
+  },
+  {
+    "name": "RQ1.1 acs2 unknown tag → unknown_credential",
+    "pass": true,
+    "expected": "unknown_credential",
+    "observed": {
+      "twin": "unknown_credential",
+      "audit": "unknown_credential"
+    }
+  },
+  {
+    "name": "RQ1.3 acs1 enacts the fleet signature (1777 Hz)",
+    "pass": true,
+    "expected": 1777,
+    "observed": {
+      "state": "s_sig",
+      "frequency": 1777
+    }
+  },
+  {
+    "name": "RQ1.3 acs2 enacts the fleet signature (1777 Hz)",
+    "pass": true,
+    "expected": 1777,
+    "observed": {
+      "state": "s_sig",
+      "frequency": 1777
+    }
+  },
+  {
+    "name": "RQ1.4 acs2 overrides (1999 Hz) while acs1 keeps the fleet behaviour (1777 Hz)",
+    "pass": true,
+    "expected": {
+      "acs1": 1777,
+      "acs2": 1999
+    },
+    "observed": {
+      "acs1": 1777,
+      "acs2": 1999
+    }
+  },
+  {
+    "name": "RQ1.4 inheritance status",
+    "pass": true,
+    "expected": {
+      "acs1": "inheriting",
+      "acs2": "overriding"
+    },
+    "observed": {
+      "acs1": "inheriting",
+      "acs2": "overriding"
+    }
+  },
+  {
+    "name": "RQ1.4 acs2 back under fleet control (1777 Hz, inheriting)",
+    "pass": true,
+    "expected": 1777,
+    "observed": {
+      "frequency": 1777,
+      "status": "inheriting"
+    }
+  }
+]

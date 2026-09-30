@@ -1,0 +1,55 @@
+{
+  "step": 6,
+  "change": "unplug dev1 ambient (only input of illuminance.avg, measured by the goal)",
+  "runtime": {
+    "pass": true,
+    "observed": {
+      "disabled": {
+        "id": "illuminance.avg",
+        "label": "illuminance.avg",
+        "aggregation": "avg",
+        "inputs": [
+          "illuminance"
+        ],
+        "source": "model",
+        "sensors": [
+          {
+            "fleetId": "acs1",
+            "device": "dev1",
+            "sensor": "dev1_illuminance",
+            "key": "illuminance",
+            "online": false
+          }
+        ],
+        "disabled": true,
+        "disabledReason": "dev1_illuminance offline",
+        "sampleCount": 0,
+        "unit": "lx",
+        "value": null,
+        "missing": true
+      }
+    }
+  },
+  "proposal": {
+    "pass": true,
+    "observed": [],
+    "expected": []
+  },
+  "commit": {
+    "pass": true,
+    "observed": {
+      "status": 422,
+      "error": "not_conforming",
+      "diagnostics": [
+        "C8.TOO_FEW",
+        "P5.NO_INPUTS",
+        "P6.GOAL_OUT_OF_SCOPE"
+      ],
+      "versionUnchanged": true
+    }
+  },
+  "m4": 1634,
+  "notes": [
+    "the commit is blocked: the indicator would lose its inputs and the goal become unevaluable"
+  ]
+}

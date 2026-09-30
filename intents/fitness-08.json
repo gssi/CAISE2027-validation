@@ -1,0 +1,219 @@
+{
+  "id": "fitness-08",
+  "domain": "fitness",
+  "row": 8,
+  "origin": "generated",
+  "hardware": false,
+  "model": "eval-fitness-08",
+  "roles": [
+    {
+      "id": "staff",
+      "type": "StaffRole"
+    },
+    {
+      "id": "full",
+      "type": "FullMemberRole"
+    },
+    {
+      "id": "member",
+      "type": "MemberRole"
+    },
+    {
+      "id": "trainer",
+      "type": "TrainerRole"
+    }
+  ],
+  "principals": [
+    {
+      "id": "p1_ada",
+      "type": "Member",
+      "name": "Ada",
+      "roles": [
+        "staff"
+      ],
+      "credential": {
+        "type": "MembershipCard",
+        "tag": "EVAL-TAG-1"
+      },
+      "validity": "VALID",
+      "revoked": false
+    },
+    {
+      "id": "p2_bruno",
+      "type": "Trainer",
+      "name": "Bruno",
+      "roles": [
+        "full"
+      ],
+      "credential": {
+        "type": "MembershipCard",
+        "tag": "EVAL-TAG-2"
+      },
+      "validity": "VALID",
+      "revoked": false
+    },
+    {
+      "id": "p3_chiara",
+      "type": "Trainer",
+      "name": "Chiara",
+      "roles": [
+        "member"
+      ],
+      "credential": {
+        "type": "MembershipCard",
+        "tag": "EVAL-TAG-3"
+      },
+      "validity": "VALID",
+      "revoked": false
+    },
+    {
+      "id": "p4_outsider",
+      "type": "Member",
+      "name": "Outsider",
+      "roles": [
+        "trainer"
+      ],
+      "credential": {
+        "type": "MembershipCard",
+        "tag": "EVAL-TAG-4"
+      },
+      "validity": "VALID",
+      "revoked": false
+    }
+  ],
+  "spaces": [
+    {
+      "id": "zone_a",
+      "type": "GymFloor",
+      "name": "Zone A",
+      "parent": null,
+      "staleness": {
+        "maxAgeMs": 7200000,
+        "whenExceeded": "allow-cached"
+      }
+    },
+    {
+      "id": "zone_b",
+      "type": "Reception",
+      "name": "Zone B",
+      "parent": "zone_a"
+    },
+    {
+      "id": "room_1",
+      "type": "SpinningRoom",
+      "name": "Room 1",
+      "parent": "zone_b",
+      "capacity": 13,
+      "staleness": {
+        "maxAgeMs": 3600000,
+        "whenExceeded": "allow-cached"
+      }
+    },
+    {
+      "id": "room_2",
+      "type": "Locker",
+      "name": "Room 2",
+      "parent": "zone_a",
+      "staleness": {
+        "maxAgeMs": 86400000,
+        "whenExceeded": "deny"
+      }
+    },
+    {
+      "id": "room_3",
+      "type": "SpinningRoom",
+      "name": "Room 3",
+      "parent": "zone_b",
+      "staleness": {
+        "maxAgeMs": 86400000,
+        "whenExceeded": "deny"
+      }
+    }
+  ],
+  "windows": [
+    {
+      "id": "win_1",
+      "type": "OpeningHours",
+      "when": "NOW"
+    }
+  ],
+  "policies": [
+    {
+      "id": "permit_1",
+      "type": "MemberAccess",
+      "effect": "permit",
+      "roles": [
+        "member",
+        "full"
+      ],
+      "spaces": [
+        "room_3"
+      ],
+      "windows": [
+        "win_1"
+      ],
+      "priority": 10
+    },
+    {
+      "id": "permit_2",
+      "type": "SpaFullAccess",
+      "effect": "permit",
+      "roles": [
+        "staff"
+      ],
+      "spaces": [
+        "zone_a"
+      ],
+      "windows": [
+        "win_1"
+      ],
+      "priority": 20
+    },
+    {
+      "id": "deny_zone",
+      "type": "SpaBasicLock",
+      "effect": "deny",
+      "roles": [
+        "staff"
+      ],
+      "spaces": [
+        "zone_b"
+      ],
+      "windows": [],
+      "priority": 100
+    },
+    {
+      "id": "permit_dev2_b",
+      "type": "StaffAccess",
+      "effect": "permit",
+      "roles": [
+        "full"
+      ],
+      "spaces": [
+        "room_2"
+      ],
+      "windows": [],
+      "priority": 96
+    }
+  ],
+  "devices": [
+    {
+      "id": "dev1",
+      "type": "Turnstile",
+      "deviceId": "EVAL-ACS-1",
+      "label": "Reader 1",
+      "space": "room_3",
+      "sensors": []
+    },
+    {
+      "id": "dev2",
+      "type": "Turnstile",
+      "deviceId": "EVAL-ACS-2",
+      "label": "Reader 2",
+      "space": "room_2",
+      "sensors": []
+    }
+  ],
+  "kpis": [],
+  "goals": []
+}

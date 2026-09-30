@@ -1,0 +1,37 @@
+{
+  "step": 7,
+  "change": "replace the controller of dev2 (new X-Device-Id)",
+  "runtime": {
+    "pass": true,
+    "observed": {
+      "spaceWhileUnmapped": null,
+      "mappedAgain": "room_b"
+    }
+  },
+  "proposal": {
+    "pass": true,
+    "observed": [
+      "A1:DEVICE_UNMODELLED"
+    ],
+    "expected": [
+      "A1:DEVICE_UNMODELLED (use dev2)"
+    ]
+  },
+  "commit": {
+    "pass": true,
+    "observed": {
+      "rebind": {
+        "target": "O0",
+        "status": 200,
+        "version": 9
+      },
+      "conformance": {
+        "errors": [],
+        "warnings": [],
+        "projects": true
+      }
+    }
+  },
+  "m4": 9036,
+  "notes": []
+}

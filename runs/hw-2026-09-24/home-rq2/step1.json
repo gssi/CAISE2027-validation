@@ -1,0 +1,87 @@
+{
+  "step": 1,
+  "change": "plug ambient (illuminance) on dev1",
+  "runtime": {
+    "pass": true,
+    "observed": {
+      "keyObserved": true,
+      "modelledBefore": []
+    }
+  },
+  "proposal": {
+    "pass": true,
+    "observed": [
+      "A4:TYPES_MISSING_ABOVE",
+      "B2:SENSOR_TYPE_MISSING[co2]",
+      "B2:SENSOR_TYPE_MISSING[temperature]",
+      "B2:SENSOR_TYPE_MISSING[humidity]",
+      "B2:SENSOR_TYPE_MISSING[illuminance]",
+      "B3:KPI_TYPE_MISSING"
+    ],
+    "expected": [
+      "A4:TYPES_MISSING_ABOVE",
+      "B2:SENSOR_TYPE_MISSING[illuminance]"
+    ]
+  },
+  "commit": {
+    "pass": true,
+    "observed": {
+      "typesAtO1": [
+        {
+          "key": "co2",
+          "target": "O1",
+          "status": 200,
+          "version": 2
+        },
+        {
+          "key": "temperature",
+          "target": "O1",
+          "status": 200,
+          "version": 3
+        },
+        {
+          "key": "humidity",
+          "target": "O1",
+          "status": 200,
+          "version": 4
+        },
+        {
+          "key": "illuminance",
+          "target": "O1",
+          "status": 200,
+          "version": 5
+        }
+      ],
+      "sensorsAtO0": [
+        {
+          "sensors": [
+            "dev1_co2",
+            "dev1_temperature",
+            "dev1_humidity",
+            "dev1_illuminance"
+          ],
+          "target": "O0",
+          "status": 200,
+          "version": 6
+        },
+        {
+          "sensors": [
+            "dev2_co2",
+            "dev2_temperature",
+            "dev2_humidity"
+          ],
+          "target": "O0",
+          "status": 200,
+          "version": 7
+        }
+      ],
+      "conformance": {
+        "errors": [],
+        "warnings": [],
+        "projects": true
+      }
+    }
+  },
+  "m4": 5712,
+  "notes": []
+}

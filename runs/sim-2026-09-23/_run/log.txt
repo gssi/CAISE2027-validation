@@ -1,0 +1,47 @@
+2026-09-23T07:48:33.044Z run sim-2026-09-23: 30 row(s), mode sim; demo checksum FitnessCentre:3:23:0|office-demo:7:49:55|office-demo-minimal:1:10:10|gym-2026:3:35:40|OfficeBuilding:5:30:0|PIP metamodel:3:10:0|rossi-home:1:25:27|SmartHome:1:18:0
+2026-09-23T08:15:13.269Z   ROW ERROR office-09: Error: timeout after 30s waiting for acs1 idle
+2026-09-23T08:15:24.981Z   ROW ERROR office-10: TimeoutError: The operation was aborted due to timeout
+2026-09-23T08:32:33.854Z   ROW ERROR home-02: Error: timeout after 60s waiting for fleet on the model
+2026-09-23T08:32:45.658Z   ROW ERROR home-03: TimeoutError: The operation was aborted due to timeout
+2026-09-23T08:34:37.164Z run sim-2026-09-23: 20 row(s), mode sim; demo checksum FitnessCentre:3:23:0|office-demo:7:49:55|office-demo-minimal:1:10:10|gym-2026:3:35:40|OfficeBuilding:5:30:0|PIP metamodel:3:10:0|rossi-home:1:25:27|SmartHome:1:18:0
+2026-09-23T08:39:25.108Z   ROW ERROR office-09: Error: timeout after 60s waiting for acs2 idle
+2026-09-23T08:55:34.983Z   ROW ERROR office-10: Error: timeout after 120s waiting for fleet on the model
+2026-09-23T09:02:46.116Z   ROW ERROR home-02: Error: timeout after 120s waiting for fleet on the model
+2026-09-23T09:35:10.969Z   ROW ERROR fitness-07: Error: timeout after 90s waiting for acs1 bundle of eval-fitness-07
+2026-09-23T09:42:03.808Z cleanup skipped (Error: SUPABASE_PROJECT_REF and SUPABASE_ACCESS_TOKEN are needed for this step (evaluation/prod-devices.env)); models left: eval-fitness-02, eval-fitness-03, eval-fitness-04, eval-fitness-05, eval-fitness-06, eval-fitness-07, eval-fitness-08, eval-fitness-09, eval-fitness-10, eval-home-02, eval-home-03, eval-home-04, eval-home-05, eval-home-06, eval-home-07, eval-home-08, eval-home-09, eval-home-10, eval-office-09, eval-office-10 — run `npm run eval -- clean` with SUPABASE_ACCESS_TOKEN set
+2026-09-23T09:42:04.828Z demo checksum unchanged
+2026-09-23T09:42:04.829Z 
+row | result
+--- | ---
+office-09 | FAIL
+office-10 | FAIL
+home-02 | FAIL
+home-03 | PASS
+home-04 | PASS
+home-05 | PASS
+home-06 | PASS
+home-07 | PASS
+home-08 | PASS
+home-09 | PASS
+home-10 | PASS
+fitness-02 | PASS
+fitness-03 | PASS
+fitness-04 | PASS
+fitness-05 | PASS
+fitness-06 | PASS
+fitness-07 | FAIL
+fitness-08 | PASS
+fitness-09 | PASS
+fitness-10 | PASS
+16/20 rows pass
+2026-09-23T11:53:46.948Z run sim-2026-09-23: 4 row(s), mode sim; demo checksum FitnessCentre:3:23:0|office-demo:7:49:55|office-demo-minimal:1:10:10|gym-2026:3:35:40|OfficeBuilding:5:30:0|PIP metamodel:3:10:0|rossi-home:1:25:27|SmartHome:1:18:0
+2026-09-23T11:58:30.449Z cleanup skipped (Error: SUPABASE_PROJECT_REF and SUPABASE_ACCESS_TOKEN are needed for this step (evaluation/prod-devices.env)); models left: eval-fitness-07, eval-home-02, eval-office-09, eval-office-10 — run `npm run eval -- clean` with SUPABASE_ACCESS_TOKEN set
+2026-09-23T11:58:31.599Z demo checksum unchanged
+2026-09-23T11:58:31.600Z 
+row | result
+--- | ---
+office-09 | PASS
+office-10 | PASS
+home-02 | PASS
+fitness-07 | PASS
+4/4 rows pass

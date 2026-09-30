@@ -1,0 +1,269 @@
+{
+  "copy": {
+    "id": "f1389fc7-849b-42a0-8043-464d78a63665",
+    "name": "EvalSmartHome"
+  },
+  "model": {
+    "version": 1,
+    "clabjects": [
+      {
+        "id": "c78c180a-c4f3-40d3-8745-dce3bdfc24ac",
+        "modelId": "29b2fb45-5267-4392-8b7f-980c7acf8717",
+        "name": "owner",
+        "potency": 0,
+        "tags": [],
+        "x": 680,
+        "y": 40,
+        "typeId": "75fb70b5-0e05-422a-8cf9-3ccd8d36b081"
+      },
+      {
+        "id": "66f47000-ea1f-428e-8dd3-5521a07b84ad",
+        "modelId": "29b2fb45-5267-4392-8b7f-980c7acf8717",
+        "name": "marco",
+        "potency": 0,
+        "tags": [],
+        "x": 40,
+        "y": 40,
+        "typeId": "8d0c0e17-6da1-4d58-85d0-52d8864e57af"
+      },
+      {
+        "id": "f3cd6292-cf9b-4041-8cec-c34db09aa444",
+        "modelId": "29b2fb45-5267-4392-8b7f-980c7acf8717",
+        "name": "cred_marco",
+        "potency": 0,
+        "tags": [],
+        "x": 360,
+        "y": 40,
+        "typeId": "163b36cd-6499-419f-879d-a83678f99e74"
+      },
+      {
+        "id": "3874f4a9-ef34-4648-822f-7187988ce693",
+        "modelId": "29b2fb45-5267-4392-8b7f-980c7acf8717",
+        "name": "house",
+        "potency": 0,
+        "tags": [],
+        "x": 1000,
+        "y": 40,
+        "typeId": "28bde47e-9bcc-41dd-87a4-236db8de801a"
+      },
+      {
+        "id": "7b078f56-c44d-4823-88f9-9675e4bf7d62",
+        "modelId": "29b2fb45-5267-4392-8b7f-980c7acf8717",
+        "name": "room_a",
+        "potency": 0,
+        "tags": [],
+        "x": 1000,
+        "y": 196,
+        "typeId": "b88011ab-83ad-48b7-8b81-0942a05f1b10"
+      },
+      {
+        "id": "7b079056-c44d-49d6-88f9-9575e4bf7baf",
+        "modelId": "29b2fb45-5267-4392-8b7f-980c7acf8717",
+        "name": "room_b",
+        "potency": 0,
+        "tags": [],
+        "x": 1000,
+        "y": 352,
+        "typeId": "dfea8f76-0e19-4834-831b-e728e67f46a3"
+      },
+      {
+        "id": "b113fe7f-cb07-4fab-8bd2-20460ebe6cf6",
+        "modelId": "29b2fb45-5267-4392-8b7f-980c7acf8717",
+        "name": "allDay",
+        "potency": 0,
+        "tags": [],
+        "x": 1320,
+        "y": 40,
+        "typeId": "fe8eb120-dea5-4fc6-8641-eb25a8244a7d"
+      },
+      {
+        "id": "8287882f-99e9-47ad-85ed-e816658c3c52",
+        "modelId": "29b2fb45-5267-4392-8b7f-980c7acf8717",
+        "name": "ownerRule",
+        "potency": 0,
+        "tags": [],
+        "x": 1640,
+        "y": 40,
+        "typeId": "88201876-135e-4776-8dbe-2b1aa105497d"
+      },
+      {
+        "id": "e93e6d39-97e5-499e-84a2-55075fa3f43f",
+        "modelId": "29b2fb45-5267-4392-8b7f-980c7acf8717",
+        "name": "dev1",
+        "potency": 0,
+        "tags": [],
+        "x": 1960,
+        "y": 40,
+        "typeId": "a254fc43-da10-4b88-8276-68ee299f5f1f"
+      },
+      {
+        "id": "e93e6c39-97e5-47eb-84a2-56075fa3f5f2",
+        "modelId": "29b2fb45-5267-4392-8b7f-980c7acf8717",
+        "name": "dev2",
+        "potency": 0,
+        "tags": [],
+        "x": 1960,
+        "y": 352,
+        "typeId": "a254fc43-da10-4b88-8276-68ee299f5f1f"
+      }
+    ],
+    "attributes": [],
+    "slots": [
+      {
+        "id": "c3ef4706-f6d2-45da-8e69-c41874fc3ac1",
+        "ownerId": "66f47000-ea1f-428e-8dd3-5521a07b84ad",
+        "attributeId": "8539ad47-9c6f-4439-85ba-5646f56162c0",
+        "value": "Marco"
+      },
+      {
+        "id": "00f18bb6-6c7f-426b-8457-cd64fbe63954",
+        "ownerId": "f3cd6292-cf9b-4041-8cec-c34db09aa444",
+        "attributeId": "0a5566fd-125e-40f0-8e7c-9c1add8f1a55",
+        "value": "EVAL-TAG-1"
+      },
+      {
+        "id": "e504eb1a-2df5-4d9c-882b-4c52a6b529f5",
+        "ownerId": "3874f4a9-ef34-4648-822f-7187988ce693",
+        "attributeId": "bb198e48-5390-4967-8ecc-4586d7064e44",
+        "value": "House"
+      },
+      {
+        "id": "8b29e170-9015-48e9-8401-1b87f47863ce",
+        "ownerId": "7b078f56-c44d-4823-88f9-9675e4bf7d62",
+        "attributeId": "bb198e48-5390-4967-8ecc-4586d7064e44",
+        "value": "Front door"
+      },
+      {
+        "id": "734ac12f-09ef-42be-817c-2f149954b039",
+        "ownerId": "7b079056-c44d-49d6-88f9-9575e4bf7baf",
+        "attributeId": "bb198e48-5390-4967-8ecc-4586d7064e44",
+        "value": "Garage"
+      },
+      {
+        "id": "40e86c43-1749-4a09-86f1-d5bf1a709b4e",
+        "ownerId": "b113fe7f-cb07-4fab-8bd2-20460ebe6cf6",
+        "attributeId": "a9aa9fd0-0f27-4010-8f58-dcd75c49445d",
+        "value": "*"
+      },
+      {
+        "id": "7d957732-200e-4c76-809c-bad0c107a789",
+        "ownerId": "b113fe7f-cb07-4fab-8bd2-20460ebe6cf6",
+        "attributeId": "559014c2-bd52-437b-83ac-6fc52cc5d50a",
+        "value": "00:00"
+      },
+      {
+        "id": "43b9dbfa-9e86-4c07-83b8-cadfaf14bc50",
+        "ownerId": "b113fe7f-cb07-4fab-8bd2-20460ebe6cf6",
+        "attributeId": "64203336-920c-4272-83d5-42e1f2335a13",
+        "value": "23:59"
+      },
+      {
+        "id": "5c3f0b46-5d7d-47cc-887e-4a6b8c635a51",
+        "ownerId": "8287882f-99e9-47ad-85ed-e816658c3c52",
+        "attributeId": "de316a17-12b0-46ce-8aff-39e3f359c393",
+        "value": 10
+      },
+      {
+        "id": "705ac920-b75b-4236-88ae-4f8a564efcf9",
+        "ownerId": "e93e6d39-97e5-499e-84a2-55075fa3f43f",
+        "attributeId": "bff5c698-244e-4aad-8ed3-98c8c866bff4",
+        "value": "EVAL-ACS-1"
+      },
+      {
+        "id": "02ea13ab-e85c-4a65-878e-5e7cd5215b28",
+        "ownerId": "e93e6d39-97e5-499e-84a2-55075fa3f43f",
+        "attributeId": "b65befc7-8e17-4844-83e0-3e828862cd03",
+        "value": "Reader 1"
+      },
+      {
+        "id": "fa6c2cda-6a2b-4769-8e38-49c6e8732a46",
+        "ownerId": "e93e6c39-97e5-47eb-84a2-56075fa3f5f2",
+        "attributeId": "bff5c698-244e-4aad-8ed3-98c8c866bff4",
+        "value": "EVAL-ACS-2"
+      },
+      {
+        "id": "36d6b8d6-f51d-4958-8a0f-8cb4a0ee6875",
+        "ownerId": "e93e6c39-97e5-47eb-84a2-56075fa3f5f2",
+        "attributeId": "b65befc7-8e17-4844-83e0-3e828862cd03",
+        "value": "Reader 2"
+      }
+    ],
+    "associations": [],
+    "links": [
+      {
+        "id": "674e71d5-10a5-4513-8a2c-2b30183b73ae",
+        "modelId": "29b2fb45-5267-4392-8b7f-980c7acf8717",
+        "associationId": "adb317ae-44d1-4d08-84f1-883950172289",
+        "sourceId": "66f47000-ea1f-428e-8dd3-5521a07b84ad",
+        "targetId": "f3cd6292-cf9b-4041-8cec-c34db09aa444"
+      },
+      {
+        "id": "816277a6-96bb-4d7f-887e-15fa07ece6c4",
+        "modelId": "29b2fb45-5267-4392-8b7f-980c7acf8717",
+        "associationId": "45ea559d-e0c4-4c2a-82ef-b5760680605b",
+        "sourceId": "66f47000-ea1f-428e-8dd3-5521a07b84ad",
+        "targetId": "c78c180a-c4f3-40d3-8745-dce3bdfc24ac"
+      },
+      {
+        "id": "f1cafb81-ada0-4e56-8c63-4799abe2a605",
+        "modelId": "29b2fb45-5267-4392-8b7f-980c7acf8717",
+        "associationId": "3bcf9104-cc94-44ef-85f3-1c145b19d6d0",
+        "sourceId": "3874f4a9-ef34-4648-822f-7187988ce693",
+        "targetId": "7b078f56-c44d-4823-88f9-9675e4bf7d62"
+      },
+      {
+        "id": "f1cafa81-ada0-4ca3-8c63-4499abe2a0ec",
+        "modelId": "29b2fb45-5267-4392-8b7f-980c7acf8717",
+        "associationId": "3bcf9104-cc94-44ef-85f3-1c145b19d6d0",
+        "sourceId": "3874f4a9-ef34-4648-822f-7187988ce693",
+        "targetId": "7b079056-c44d-49d6-88f9-9575e4bf7baf"
+      },
+      {
+        "id": "44f35def-a1c4-44cb-87b4-d3438dd3fb3e",
+        "modelId": "29b2fb45-5267-4392-8b7f-980c7acf8717",
+        "associationId": "318a0e18-9f07-4189-819b-97d396094102",
+        "sourceId": "8287882f-99e9-47ad-85ed-e816658c3c52",
+        "targetId": "c78c180a-c4f3-40d3-8745-dce3bdfc24ac"
+      },
+      {
+        "id": "52d52bf1-c93f-4bae-8968-7d3dd53536a7",
+        "modelId": "29b2fb45-5267-4392-8b7f-980c7acf8717",
+        "associationId": "1efc1ea3-f7b8-48cb-8eab-22a5a42d0b28",
+        "sourceId": "8287882f-99e9-47ad-85ed-e816658c3c52",
+        "targetId": "3874f4a9-ef34-4648-822f-7187988ce693"
+      },
+      {
+        "id": "46466327-ff8f-4c25-8bdb-0fa03c8e8296",
+        "modelId": "29b2fb45-5267-4392-8b7f-980c7acf8717",
+        "associationId": "d8df5449-a5f8-473b-8774-58cf6105e5a0",
+        "sourceId": "8287882f-99e9-47ad-85ed-e816658c3c52",
+        "targetId": "b113fe7f-cb07-4fab-8bd2-20460ebe6cf6"
+      },
+      {
+        "id": "364dc8cf-faf6-4cb7-8ac2-7f6f4c2cd00e",
+        "modelId": "29b2fb45-5267-4392-8b7f-980c7acf8717",
+        "associationId": "f98cf0c2-9960-4eb8-8224-445ad45d575f",
+        "sourceId": "e93e6d39-97e5-499e-84a2-55075fa3f43f",
+        "targetId": "7b078f56-c44d-4823-88f9-9675e4bf7d62"
+      },
+      {
+        "id": "871c3001-0428-4e45-8248-6c15d6c23414",
+        "modelId": "29b2fb45-5267-4392-8b7f-980c7acf8717",
+        "associationId": "f98cf0c2-9960-4eb8-8224-445ad45d575f",
+        "sourceId": "e93e6c39-97e5-47eb-84a2-56075fa3f5f2",
+        "targetId": "7b079056-c44d-49d6-88f9-9575e4bf7baf"
+      }
+    ],
+    "id": "29b2fb45-5267-4392-8b7f-980c7acf8717",
+    "projectId": "00000000-0000-4000-8000-000000000003",
+    "name": "eval-home-rq2",
+    "level": 0,
+    "typeModelId": "f1389fc7-849b-42a0-8043-464d78a63665"
+  },
+  "loaded": {
+    "modelId": "29b2fb45-5267-4392-8b7f-980c7acf8717",
+    "version": 1,
+    "committedAt": "2026-09-23T19:46:26.424Z",
+    "clockOffsetMs": 388
+  }
+}

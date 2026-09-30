@@ -1,0 +1,28 @@
+{
+  "fleet": {
+    "enabled": true,
+    "version": 1,
+    "modelId": "e57ca0e6-8897-4cca-8643-b325dcf41f37",
+    "modelName": "eval-fitness-08",
+    "source": "supabase",
+    "lastSyncOk": "2026-09-23T09:38:30.875846542Z",
+    "lastAttempt": "2026-09-23T09:38:30.875846542Z",
+    "stale": false,
+    "lastError": null,
+    "failures": 0,
+    "nextAttemptAt": null,
+    "users": 4,
+    "spaces": 5,
+    "policies": 4,
+    "warnings": [],
+    "modelSource": "runtime",
+    "appliedAt": "2026-09-23T09:38:30.875846542Z"
+  },
+  "appliedAt": 1790156310875,
+  "fetched": {
+    "acs1": 1790156315740,
+    "acs2": 1790156313481
+  },
+  "m1": 203335,
+  "m1a": 198470
+}

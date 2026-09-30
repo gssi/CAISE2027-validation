@@ -1,0 +1,43 @@
+2026-09-23T09:07:46.868Z ── home-08 (home, generated, sim)
+2026-09-23T09:07:47.919Z   loaded 5f2d144b-7c36-494d-8d24-8e0f53bd3806 v1 at 2026-09-23T09:07:47.800Z (NOW window margin 233 min)
+2026-09-23T09:07:55.646Z   M1 commit → last bundle 7991 ms (fleet 958 ms)
+2026-09-23T09:07:55.666Z   PASS RQ1.2 acs1 bundle users = principals with an allowed role
+2026-09-23T09:07:55.667Z   PASS RQ1.2 acs1 allowed roles
+2026-09-23T09:07:55.668Z   PASS RQ1.2 acs1 guards room_4
+2026-09-23T09:07:55.668Z   PASS RQ1.2 acs1 staleness
+2026-09-23T09:07:55.669Z   PASS RQ1.2 acs1 sensors known to the fleet
+2026-09-23T09:07:55.673Z   PASS RQ1.2 acs2 bundle users = principals with an allowed role
+2026-09-23T09:07:55.673Z   PASS RQ1.2 acs2 allowed roles
+2026-09-23T09:07:55.674Z   PASS RQ1.2 acs2 guards room_2
+2026-09-23T09:07:55.674Z   PASS RQ1.2 acs2 staleness
+2026-09-23T09:07:55.675Z   PASS RQ1.2 acs2 sensors known to the fleet
+2026-09-23T09:07:55.675Z   PASS RQ1.2 indicators known to the federation
+2026-09-23T09:07:55.675Z   PASS RQ1.2 goals known to the federation
+2026-09-23T09:07:56.557Z   PASS RQ1.1 acs1 p1_ada → unknown_credential
+2026-09-23T09:07:59.576Z   PASS RQ1.1 acs1 p2_bruno → ok
+2026-09-23T09:08:05.966Z   PASS RQ1.1 acs1 p3_chiara → unknown_credential
+2026-09-23T09:08:08.977Z   PASS RQ1.1 acs1 p4_dario → unknown_credential
+2026-09-23T09:08:11.986Z   PASS RQ1.1 acs1 p5_elena → unknown_credential
+2026-09-23T09:08:15.008Z   PASS RQ1.1 acs1 p6_fabio → unknown_credential
+2026-09-23T09:08:18.024Z   PASS RQ1.1 acs1 p7_giulia → ok
+2026-09-23T09:08:24.401Z   PASS RQ1.1 acs1 p8_hakim → expired
+2026-09-23T09:08:27.421Z   PASS RQ1.1 acs1 p9_outsider → unknown_credential
+2026-09-23T09:08:30.443Z   PASS RQ1.1 acs1 unknown tag → unknown_credential
+2026-09-23T09:08:32.245Z   PASS RQ1.1 acs2 p1_ada → ok
+2026-09-23T09:08:38.631Z   PASS RQ1.1 acs2 p2_bruno → ok
+2026-09-23T09:08:45.020Z   PASS RQ1.1 acs2 p3_chiara → ok
+2026-09-23T09:08:51.400Z   PASS RQ1.1 acs2 p4_dario → not_yet_valid
+2026-09-23T09:08:54.427Z   PASS RQ1.1 acs2 p5_elena → expired
+2026-09-23T09:08:57.460Z   PASS RQ1.1 acs2 p6_fabio → ok
+2026-09-23T09:09:03.847Z   PASS RQ1.1 acs2 p7_giulia → ok
+2026-09-23T09:09:10.234Z   PASS RQ1.1 acs2 p8_hakim → expired
+2026-09-23T09:09:13.245Z   PASS RQ1.1 acs2 p9_outsider → unknown_credential
+2026-09-23T09:09:16.265Z   PASS RQ1.1 acs2 unknown tag → unknown_credential
+2026-09-23T09:09:16.267Z   RQ1.1 20/20 probes as expected; M3 median 6 ms over 7
+2026-09-23T09:09:16.579Z   PASS RQ1.3 acs1 enacts the fleet signature (1777 Hz)
+2026-09-23T09:09:16.851Z   PASS RQ1.3 acs2 enacts the fleet signature (1777 Hz)
+2026-09-23T09:09:16.853Z   M2 apply → last twin 20 ms
+2026-09-23T09:09:18.544Z   PASS RQ1.4 acs2 overrides (1999 Hz) while acs1 keeps the fleet behaviour (1777 Hz)
+2026-09-23T09:09:18.545Z   PASS RQ1.4 inheritance status
+2026-09-23T09:09:18.848Z   PASS RQ1.4 acs2 back under fleet control (1777 Hz, inheriting)
+2026-09-23T09:09:18.857Z   ROW PASS home-08

@@ -1,0 +1,33 @@
+2026-09-24T12:47:48.281Z ── office-01 (office, seed, hw)
+2026-09-24T12:47:49.366Z   loaded 1ef0a715-e42a-4863-86d6-e32b4f12dadc v1 at 2026-09-24T12:47:49.262Z (NOW window margin 193 min)
+2026-09-24T12:47:56.492Z   M1 commit → last bundle 7499 ms (fleet 1295 ms)
+2026-09-24T12:47:56.526Z   PASS RQ1.2 acs1 bundle users = principals with an allowed role
+2026-09-24T12:47:56.526Z   PASS RQ1.2 acs1 allowed roles
+2026-09-24T12:47:56.526Z   PASS RQ1.2 acs1 guards room_p1_28
+2026-09-24T12:47:56.526Z   PASS RQ1.2 acs1 staleness
+2026-09-24T12:47:56.526Z   PASS RQ1.2 acs1 sensors known to the fleet
+2026-09-24T12:47:56.529Z   PASS RQ1.2 acs2 bundle users = principals with an allowed role
+2026-09-24T12:47:56.529Z   PASS RQ1.2 acs2 allowed roles
+2026-09-24T12:47:56.529Z   PASS RQ1.2 acs2 guards meeting_a
+2026-09-24T12:47:56.529Z   PASS RQ1.2 acs2 staleness
+2026-09-24T12:47:56.529Z   PASS RQ1.2 acs2 sensors known to the fleet
+2026-09-24T12:47:56.529Z   PASS RQ1.2 indicators known to the federation
+2026-09-24T12:47:56.529Z   PASS RQ1.2 goals known to the federation
+2026-09-24T12:48:07.887Z   PASS RQ1.1 acs1 davide → ok
+2026-09-24T12:48:27.377Z   PASS RQ1.1 acs1 mario → unknown_credential
+2026-09-24T12:48:39.105Z   PASS RQ1.1 acs1 paolo → ok
+2026-09-24T12:48:54.055Z   PASS RQ1.1 acs1 sara → revoked
+2026-09-24T12:49:05.573Z   PASS RQ1.1 acs1 unknown tag → unknown_credential
+2026-09-24T12:49:13.035Z   PASS RQ1.1 acs2 davide → ok
+2026-09-24T12:49:34.921Z   PASS RQ1.1 acs2 mario → ok
+2026-09-24T12:49:42.607Z   PASS RQ1.1 acs2 paolo → ok
+2026-09-24T12:49:58.541Z   PASS RQ1.1 acs2 sara → revoked
+2026-09-24T12:50:05.605Z   PASS RQ1.1 acs2 unknown tag → unknown_credential
+2026-09-24T12:50:05.606Z   RQ1.1 10/10 probes as expected; M3 median -4899 ms over 5
+2026-09-24T12:50:11.412Z   PASS RQ1.3 acs1 enacts the fleet signature (1777 Hz)
+2026-09-24T12:50:16.358Z   PASS RQ1.3 acs2 enacts the fleet signature (1777 Hz)
+2026-09-24T12:50:16.359Z   M2 apply → last twin 39 ms
+2026-09-24T12:50:24.559Z   PASS RQ1.4 acs2 overrides (1999 Hz) while acs1 keeps the fleet behaviour (1777 Hz)
+2026-09-24T12:50:24.560Z   PASS RQ1.4 inheritance status
+2026-09-24T12:50:28.940Z   PASS RQ1.4 acs2 back under fleet control (1777 Hz, inheriting)
+2026-09-24T12:50:28.963Z   ROW PASS office-01

@@ -1,0 +1,147 @@
+{
+  "id": "home-01",
+  "model": "eval-home-01",
+  "probes": [
+    {
+      "device": "frontDoorReader",
+      "tag": "EVAL-TAG-1",
+      "principal": "marco",
+      "reason": "ok",
+      "allowed": true,
+      "hardware": true
+    },
+    {
+      "device": "frontDoorReader",
+      "tag": "EVAL-TAG-2",
+      "principal": "grandma",
+      "reason": "ok",
+      "allowed": true,
+      "hardware": true
+    },
+    {
+      "device": "frontDoorReader",
+      "tag": "EVAL-TAG-3",
+      "principal": "elena",
+      "reason": "outside_hours",
+      "allowed": false,
+      "hardware": true
+    },
+    {
+      "device": "frontDoorReader",
+      "tag": "EVAL-TAG-4",
+      "principal": "septemberGuest",
+      "reason": "expired",
+      "allowed": false,
+      "hardware": true
+    },
+    {
+      "device": "frontDoorReader",
+      "tag": "EVAL-TAG-5",
+      "principal": "laura",
+      "reason": "ok",
+      "allowed": true,
+      "hardware": false
+    },
+    {
+      "device": "frontDoorReader",
+      "tag": "EVAL-TAG-UNKNOWN",
+      "principal": null,
+      "reason": "unknown_credential",
+      "allowed": false,
+      "hardware": false
+    },
+    {
+      "device": "garageReader",
+      "tag": "EVAL-TAG-1",
+      "principal": "marco",
+      "reason": "ok",
+      "allowed": true,
+      "hardware": true
+    },
+    {
+      "device": "garageReader",
+      "tag": "EVAL-TAG-2",
+      "principal": "grandma",
+      "reason": "unknown_credential",
+      "allowed": false,
+      "hardware": true
+    },
+    {
+      "device": "garageReader",
+      "tag": "EVAL-TAG-3",
+      "principal": "elena",
+      "reason": "outside_hours",
+      "allowed": false,
+      "hardware": true
+    },
+    {
+      "device": "garageReader",
+      "tag": "EVAL-TAG-4",
+      "principal": "septemberGuest",
+      "reason": "unknown_credential",
+      "allowed": false,
+      "hardware": true
+    },
+    {
+      "device": "garageReader",
+      "tag": "EVAL-TAG-5",
+      "principal": "laura",
+      "reason": "ok",
+      "allowed": true,
+      "hardware": false
+    },
+    {
+      "device": "garageReader",
+      "tag": "EVAL-TAG-UNKNOWN",
+      "principal": null,
+      "reason": "unknown_credential",
+      "allowed": false,
+      "hardware": false
+    }
+  ],
+  "bundles": [
+    {
+      "device": "frontDoorReader",
+      "space": "entrance",
+      "users": [
+        "elena",
+        "grandma",
+        "laura",
+        "marco",
+        "septemberGuest"
+      ],
+      "allowedRoles": [
+        "cleaner",
+        "owner",
+        "visitor"
+      ],
+      "staleness": {
+        "maxAgeMs": 86400000,
+        "whenExceeded": "allow-cached"
+      }
+    },
+    {
+      "device": "garageReader",
+      "space": "garage",
+      "users": [
+        "elena",
+        "laura",
+        "marco"
+      ],
+      "allowedRoles": [
+        "cleaner",
+        "owner"
+      ],
+      "staleness": {
+        "maxAgeMs": 3600000,
+        "whenExceeded": "deny"
+      }
+    }
+  ],
+  "sensors": {
+    "frontDoorReader": [],
+    "garageReader": []
+  },
+  "kpis": [],
+  "goals": []
+}

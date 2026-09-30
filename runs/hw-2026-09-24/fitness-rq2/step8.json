@@ -1,0 +1,30 @@
+{
+  "step": 8,
+  "change": "re-plug dev2 ambient, then unplug it before accepting the proposal",
+  "runtime": {
+    "pass": true,
+    "observed": {
+      "proposalWhilePlugged": [
+        "A2:SENSOR_UNMODELLED"
+      ],
+      "proposalAfter": []
+    }
+  },
+  "proposal": {
+    "pass": true,
+    "observed": [
+      "A2:SENSOR_UNMODELLED",
+      "→"
+    ],
+    "expected": [
+      "A2:SENSOR_UNMODELLED",
+      "→",
+      "(none)"
+    ]
+  },
+  "commit": null,
+  "m4": 10730,
+  "notes": [
+    "nothing was committed"
+  ]
+}

@@ -1,0 +1,373 @@
+[
+  {
+    "name": "RQ1.2 acs1 bundle users = principals with an allowed role",
+    "pass": true,
+    "expected": [
+      "anna",
+      "giulia",
+      "luca",
+      "davide",
+      "paolo",
+      "sara"
+    ],
+    "observed": [
+      "anna",
+      "giulia",
+      "luca",
+      "davide",
+      "paolo",
+      "sara"
+    ]
+  },
+  {
+    "name": "RQ1.2 acs1 allowed roles",
+    "pass": true,
+    "expected": [
+      "facility",
+      "staff"
+    ],
+    "observed": [
+      "facility",
+      "staff"
+    ]
+  },
+  {
+    "name": "RQ1.2 acs1 guards room_p1_28",
+    "pass": true,
+    "expected": "room_p1_28",
+    "observed": {
+      "bundle": "room_p1_28",
+      "fleet": "room_p1_28"
+    }
+  },
+  {
+    "name": "RQ1.2 acs1 staleness",
+    "pass": true,
+    "expected": {
+      "maxAgeMs": 3600000,
+      "whenExceeded": "allow-cached"
+    },
+    "observed": {
+      "maxAgeMs": 3600000,
+      "whenExceeded": "allow-cached"
+    }
+  },
+  {
+    "name": "RQ1.2 acs1 sensors known to the fleet",
+    "pass": true,
+    "expected": [
+      "acs1_co2",
+      "acs1_decibel",
+      "acs1_humidity",
+      "acs1_illuminance",
+      "acs1_temperature"
+    ],
+    "observed": [
+      "acs1_co2",
+      "acs1_decibel",
+      "acs1_humidity",
+      "acs1_illuminance",
+      "acs1_temperature"
+    ]
+  },
+  {
+    "name": "RQ1.2 acs2 bundle users = principals with an allowed role",
+    "pass": true,
+    "expected": [
+      "anna",
+      "chen",
+      "giulia",
+      "luca",
+      "davide",
+      "mario",
+      "paolo",
+      "sara"
+    ],
+    "observed": [
+      "anna",
+      "chen",
+      "giulia",
+      "luca",
+      "davide",
+      "mario",
+      "paolo",
+      "sara"
+    ]
+  },
+  {
+    "name": "RQ1.2 acs2 allowed roles",
+    "pass": true,
+    "expected": [
+      "facility",
+      "guest",
+      "staff"
+    ],
+    "observed": [
+      "facility",
+      "guest",
+      "staff"
+    ]
+  },
+  {
+    "name": "RQ1.2 acs2 guards meeting_a",
+    "pass": true,
+    "expected": "meeting_a",
+    "observed": {
+      "bundle": "meeting_a",
+      "fleet": "meeting_a"
+    }
+  },
+  {
+    "name": "RQ1.2 acs2 staleness",
+    "pass": true,
+    "expected": {
+      "maxAgeMs": 3600000,
+      "whenExceeded": "deny"
+    },
+    "observed": {
+      "maxAgeMs": 3600000,
+      "whenExceeded": "deny"
+    }
+  },
+  {
+    "name": "RQ1.2 acs2 sensors known to the fleet",
+    "pass": true,
+    "expected": [
+      "acs2_co2",
+      "acs2_decibel",
+      "acs2_humidity",
+      "acs2_illuminance",
+      "acs2_temperature"
+    ],
+    "observed": [
+      "acs2_co2",
+      "acs2_decibel",
+      "acs2_humidity",
+      "acs2_illuminance",
+      "acs2_temperature"
+    ]
+  },
+  {
+    "name": "RQ1.2 indicators known to the federation",
+    "pass": true,
+    "expected": [
+      {
+        "id": "co2.avg",
+        "inputs": [
+          {
+            "device": "acs1",
+            "sensor": "acs1_co2"
+          },
+          {
+            "device": "acs2",
+            "sensor": "acs2_co2"
+          }
+        ]
+      },
+      {
+        "id": "illuminance.avg",
+        "inputs": [
+          {
+            "device": "acs1",
+            "sensor": "acs1_illuminance"
+          },
+          {
+            "device": "acs2",
+            "sensor": "acs2_illuminance"
+          }
+        ]
+      }
+    ],
+    "observed": [
+      {
+        "id": "co2.avg",
+        "inputs": [
+          {
+            "device": "acs1",
+            "sensor": "acs1_co2"
+          },
+          {
+            "device": "acs2",
+            "sensor": "acs2_co2"
+          }
+        ]
+      },
+      {
+        "id": "illuminance.avg",
+        "inputs": [
+          {
+            "device": "acs1",
+            "sensor": "acs1_illuminance"
+          },
+          {
+            "device": "acs2",
+            "sensor": "acs2_illuminance"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "RQ1.2 goals known to the federation",
+    "pass": true,
+    "expected": [
+      {
+        "id": "floor1Air",
+        "space": "floor_1",
+        "kpi": "co2.avg",
+        "op": "<=",
+        "value": 900
+      }
+    ],
+    "observed": [
+      {
+        "id": "floor1Air",
+        "space": "floor_1",
+        "kpi": "co2.avg",
+        "op": "<=",
+        "value": 900
+      }
+    ]
+  },
+  {
+    "name": "RQ1.1 acs1 davide → ok",
+    "pass": true,
+    "expected": "ok",
+    "observed": {
+      "twin": "ok",
+      "audit": "ok"
+    }
+  },
+  {
+    "name": "RQ1.1 acs1 mario → unknown_credential",
+    "pass": true,
+    "expected": "unknown_credential",
+    "observed": {
+      "twin": "unknown_credential",
+      "audit": "unknown_credential"
+    }
+  },
+  {
+    "name": "RQ1.1 acs1 paolo → ok",
+    "pass": true,
+    "expected": "ok",
+    "observed": {
+      "twin": "ok",
+      "audit": "ok"
+    }
+  },
+  {
+    "name": "RQ1.1 acs1 sara → revoked",
+    "pass": true,
+    "expected": "revoked",
+    "observed": {
+      "twin": "revoked",
+      "audit": "revoked"
+    }
+  },
+  {
+    "name": "RQ1.1 acs1 unknown tag → unknown_credential",
+    "pass": true,
+    "expected": "unknown_credential",
+    "observed": {
+      "twin": "unknown_credential",
+      "audit": "unknown_credential"
+    }
+  },
+  {
+    "name": "RQ1.1 acs2 davide → ok",
+    "pass": true,
+    "expected": "ok",
+    "observed": {
+      "twin": "ok",
+      "audit": "ok"
+    }
+  },
+  {
+    "name": "RQ1.1 acs2 mario → ok",
+    "pass": true,
+    "expected": "ok",
+    "observed": {
+      "twin": "ok",
+      "audit": "ok"
+    }
+  },
+  {
+    "name": "RQ1.1 acs2 paolo → ok",
+    "pass": true,
+    "expected": "ok",
+    "observed": {
+      "twin": "ok",
+      "audit": "ok"
+    }
+  },
+  {
+    "name": "RQ1.1 acs2 sara → revoked",
+    "pass": true,
+    "expected": "revoked",
+    "observed": {
+      "twin": "revoked",
+      "audit": "revoked"
+    }
+  },
+  {
+    "name": "RQ1.1 acs2 unknown tag → unknown_credential",
+    "pass": true,
+    "expected": "unknown_credential",
+    "observed": {
+      "twin": "unknown_credential",
+      "audit": "unknown_credential"
+    }
+  },
+  {
+    "name": "RQ1.3 acs1 enacts the fleet signature (1777 Hz)",
+    "pass": true,
+    "expected": 1777,
+    "observed": {
+      "state": "s_sig",
+      "frequency": 1777
+    }
+  },
+  {
+    "name": "RQ1.3 acs2 enacts the fleet signature (1777 Hz)",
+    "pass": true,
+    "expected": 1777,
+    "observed": {
+      "state": "s_sig",
+      "frequency": 1777
+    }
+  },
+  {
+    "name": "RQ1.4 acs2 overrides (1999 Hz) while acs1 keeps the fleet behaviour (1777 Hz)",
+    "pass": true,
+    "expected": {
+      "acs1": 1777,
+      "acs2": 1999
+    },
+    "observed": {
+      "acs1": 1777,
+      "acs2": 1999
+    }
+  },
+  {
+    "name": "RQ1.4 inheritance status",
+    "pass": true,
+    "expected": {
+      "acs1": "inheriting",
+      "acs2": "overriding"
+    },
+    "observed": {
+      "acs1": "inheriting",
+      "acs2": "overriding"
+    }
+  },
+  {
+    "name": "RQ1.4 acs2 back under fleet control (1777 Hz, inheriting)",
+    "pass": true,
+    "expected": 1777,
+    "observed": {
+      "frequency": 1777,
+      "status": "inheriting"
+    }
+  }
+]

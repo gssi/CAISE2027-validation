@@ -1,0 +1,40 @@
+{
+  "step": 1,
+  "change": "plug ambient (illuminance) on dev1",
+  "runtime": {
+    "pass": true,
+    "observed": {
+      "keyObserved": true,
+      "modelledBefore": []
+    }
+  },
+  "proposal": {
+    "pass": true,
+    "observed": [
+      "A2:SENSOR_UNMODELLED"
+    ],
+    "expected": [
+      "A2:SENSOR_UNMODELLED"
+    ]
+  },
+  "commit": {
+    "pass": true,
+    "observed": {
+      "sensorAtO0": {
+        "sensors": [
+          "dev1_illuminance"
+        ],
+        "target": "O0",
+        "status": 200,
+        "version": 2
+      },
+      "conformance": {
+        "errors": [],
+        "warnings": [],
+        "projects": true
+      }
+    }
+  },
+  "m4": 1913,
+  "notes": []
+}

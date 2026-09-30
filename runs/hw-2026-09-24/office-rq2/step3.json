@@ -1,0 +1,41 @@
+{
+  "step": 3,
+  "change": "model decibel.max (dev1+dev2), illuminance.avg (dev1) and the goal roomLight",
+  "runtime": {
+    "pass": true,
+    "observed": [
+      {
+        "id": "decibel.max",
+        "source": "model"
+      },
+      {
+        "id": "illuminance.avg",
+        "source": "model"
+      },
+      {
+        "id": "comfort-level",
+        "source": "local"
+      }
+    ]
+  },
+  "proposal": {
+    "pass": true,
+    "observed": [],
+    "expected": []
+  },
+  "commit": {
+    "pass": true,
+    "observed": {
+      "kpiTypeAtO1": null,
+      "commit": 200,
+      "o1": null,
+      "conformance": {
+        "errors": [],
+        "warnings": [],
+        "projects": true
+      }
+    }
+  },
+  "m4": null,
+  "notes": []
+}

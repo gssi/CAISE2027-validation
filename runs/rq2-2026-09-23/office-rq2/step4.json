@@ -1,0 +1,40 @@
+{
+  "step": 4,
+  "change": "unplug dev2 ambient (used by nothing)",
+  "runtime": {
+    "pass": true,
+    "observed": {
+      "dev2_illuminance": {
+        "sensor": "dev2_illuminance",
+        "device": "dev2",
+        "fleetId": "acs2",
+        "key": "illuminance",
+        "unit": "lx",
+        "label": "Illuminance",
+        "online": false,
+        "value": null,
+        "observedAt": null
+      }
+    }
+  },
+  "proposal": {
+    "pass": true,
+    "observed": [],
+    "expected": []
+  },
+  "commit": {
+    "pass": true,
+    "observed": {
+      "deleteSensor": 200,
+      "conformance": {
+        "errors": [],
+        "warnings": [],
+        "projects": true
+      }
+    }
+  },
+  "m4": 2175,
+  "notes": [
+    "the model is cleaned by the operator, the assistant does not propose removals"
+  ]
+}

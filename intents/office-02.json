@@ -1,0 +1,283 @@
+{
+  "id": "office-02",
+  "domain": "office",
+  "row": 2,
+  "origin": "generated",
+  "hardware": false,
+  "model": "eval-office-02",
+  "roles": [
+    {
+      "id": "researcher",
+      "type": "Researcher"
+    },
+    {
+      "id": "facility",
+      "type": "Facility"
+    },
+    {
+      "id": "guest",
+      "type": "Guest"
+    },
+    {
+      "id": "staff",
+      "type": "Staff"
+    }
+  ],
+  "principals": [
+    {
+      "id": "p1_ada",
+      "type": "Visitor",
+      "name": "Ada",
+      "roles": [
+        "researcher"
+      ],
+      "credential": {
+        "type": "NfcTag",
+        "tag": "EVAL-TAG-1"
+      },
+      "validity": "VALID",
+      "revoked": false
+    },
+    {
+      "id": "p2_bruno",
+      "type": "Contractor",
+      "name": "Bruno",
+      "roles": [
+        "facility"
+      ],
+      "credential": {
+        "type": "NfcTag",
+        "tag": "EVAL-TAG-2"
+      },
+      "validity": "VALID",
+      "revoked": false
+    },
+    {
+      "id": "p3_chiara",
+      "type": "Contractor",
+      "name": "Chiara",
+      "roles": [
+        "guest"
+      ],
+      "credential": {
+        "type": "NfcTag",
+        "tag": "EVAL-TAG-3"
+      },
+      "validity": "VALID",
+      "revoked": false
+    },
+    {
+      "id": "p4_dario",
+      "type": "Visitor",
+      "name": "Dario",
+      "roles": [
+        "researcher"
+      ],
+      "credential": {
+        "type": "NfcTag",
+        "tag": "EVAL-TAG-4"
+      },
+      "validity": "VALID",
+      "revoked": false
+    },
+    {
+      "id": "p5_outsider",
+      "type": "Visitor",
+      "name": "Outsider",
+      "roles": [
+        "staff"
+      ],
+      "credential": {
+        "type": "NfcTag",
+        "tag": "EVAL-TAG-5"
+      },
+      "validity": "VALID",
+      "revoked": false
+    }
+  ],
+  "spaces": [
+    {
+      "id": "zone_a",
+      "type": "Floor",
+      "name": "Zone A",
+      "parent": null
+    },
+    {
+      "id": "zone_b",
+      "type": "Floor",
+      "name": "Zone B",
+      "parent": "zone_a"
+    },
+    {
+      "id": "room_1",
+      "type": "MeetingRoom",
+      "name": "Room 1",
+      "parent": "zone_b",
+      "capacity": 15
+    },
+    {
+      "id": "room_2",
+      "type": "Office",
+      "name": "Room 2",
+      "parent": "zone_b",
+      "staleness": {
+        "maxAgeMs": 86400000,
+        "whenExceeded": "deny"
+      }
+    },
+    {
+      "id": "room_3",
+      "type": "Office",
+      "name": "Room 3",
+      "parent": "zone_b",
+      "capacity": 23
+    }
+  ],
+  "windows": [
+    {
+      "id": "win_1",
+      "type": "OfficeHours",
+      "when": "ALWAYS"
+    },
+    {
+      "id": "win_2",
+      "type": "ExtendedHours",
+      "when": "NOT_NOW"
+    },
+    {
+      "id": "win_3",
+      "type": "Always",
+      "when": "NOW"
+    }
+  ],
+  "policies": [
+    {
+      "id": "permit_1",
+      "type": "StaffAccess",
+      "effect": "permit",
+      "roles": [
+        "facility"
+      ],
+      "spaces": [
+        "room_3"
+      ],
+      "windows": [
+        "win_1"
+      ],
+      "priority": 10
+    },
+    {
+      "id": "permit_2",
+      "type": "StaffAccess",
+      "effect": "permit",
+      "roles": [
+        "facility"
+      ],
+      "spaces": [
+        "zone_b"
+      ],
+      "windows": [
+        "win_3"
+      ],
+      "priority": 20
+    },
+    {
+      "id": "permit_3",
+      "type": "LabResearchers",
+      "effect": "permit",
+      "roles": [
+        "facility"
+      ],
+      "spaces": [
+        "room_1"
+      ],
+      "windows": [],
+      "priority": 30
+    },
+    {
+      "id": "permit_offhours",
+      "type": "LabResearchers",
+      "effect": "permit",
+      "roles": [
+        "guest"
+      ],
+      "spaces": [
+        "room_1"
+      ],
+      "windows": [
+        "win_2"
+      ],
+      "priority": 80
+    },
+    {
+      "id": "deny_zone",
+      "type": "ServerRoomLock",
+      "effect": "deny",
+      "roles": [
+        "researcher"
+      ],
+      "spaces": [
+        "zone_b"
+      ],
+      "windows": [],
+      "priority": 100
+    },
+    {
+      "id": "permit_overridden",
+      "type": "LabResearchers",
+      "effect": "permit",
+      "roles": [
+        "researcher"
+      ],
+      "spaces": [
+        "room_3"
+      ],
+      "windows": [],
+      "priority": 5
+    }
+  ],
+  "devices": [
+    {
+      "id": "dev1",
+      "type": "AccessPoint",
+      "deviceId": "EVAL-ACS-1",
+      "label": "Reader 1",
+      "space": "room_3",
+      "sensors": [
+        {
+          "id": "dev1_temperature",
+          "type": "TemperatureSensor",
+          "key": "temperature"
+        }
+      ]
+    },
+    {
+      "id": "dev2",
+      "type": "AccessPoint",
+      "deviceId": "EVAL-ACS-2",
+      "label": "Reader 2",
+      "space": "room_1",
+      "sensors": [
+        {
+          "id": "dev2_temperature",
+          "type": "TemperatureSensor",
+          "key": "temperature"
+        }
+      ]
+    }
+  ],
+  "kpis": [
+    {
+      "id": "temperature.avg",
+      "type": "FleetKpi",
+      "label": "temperature (avg)",
+      "aggregation": "avg",
+      "unit": "°C",
+      "inputs": [
+        "dev1_temperature",
+        "dev2_temperature"
+      ]
+    }
+  ],
+  "goals": []
+}

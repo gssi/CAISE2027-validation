@@ -1,0 +1,92 @@
+{
+  "applied": [
+    {
+      "id": "acs1",
+      "name": "ACS 1",
+      "result": "applied",
+      "message": "now running fleet-eval-signature",
+      "appliedAt": "2026-09-23T07:52:41.452887680Z"
+    },
+    {
+      "id": "acs2",
+      "name": "ACS 2",
+      "result": "applied",
+      "message": "now running fleet-eval-signature",
+      "appliedAt": "2026-09-23T07:52:41.461898638Z"
+    }
+  ],
+  "applyAt": 1790149961439,
+  "active": [
+    {
+      "id": "acs1",
+      "name": "ACS 1",
+      "engineUrl": "http://host.docker.internal:8081",
+      "deviceId": "EVAL-ACS-1",
+      "online": true,
+      "hardware": "mock",
+      "live": true,
+      "lastSeen": 1790149961452,
+      "snapshot": {
+        "currentState": "s_idle",
+        "label": "Idle / NFC listening",
+        "lastEvent": null,
+        "lastAction": null,
+        "lastResponse": null,
+        "context": {},
+        "at": 1790149961452,
+        "machine": "fleet-eval-signature",
+        "machineSince": 1790149961452
+      }
+    },
+    {
+      "id": "acs2",
+      "name": "ACS 2",
+      "engineUrl": "http://host.docker.internal:8083",
+      "deviceId": "EVAL-ACS-2",
+      "online": true,
+      "hardware": "mock",
+      "live": true,
+      "lastSeen": 1790149961461,
+      "snapshot": {
+        "currentState": "s_idle",
+        "label": "Idle / NFC listening",
+        "lastEvent": null,
+        "lastAction": null,
+        "lastResponse": null,
+        "context": {},
+        "at": 1790149961461,
+        "machine": "fleet-eval-signature",
+        "machineSince": 1790149961461
+      }
+    }
+  ],
+  "m2": 22,
+  "sig": {
+    "acs1": {
+      "state": "s_sig",
+      "frequency": 1777,
+      "lastCommand": {
+        "action": "beep",
+        "params": {
+          "frequency": 1777,
+          "volume": 3,
+          "durationMs": 120
+        },
+        "at": 1790149961629
+      }
+    },
+    "acs2": {
+      "state": "s_sig",
+      "frequency": 1777,
+      "lastCommand": {
+        "action": "beep",
+        "params": {
+          "frequency": 1777,
+          "volume": 3,
+          "durationMs": 120
+        },
+        "at": 1790149961903
+      }
+    }
+  }
+}

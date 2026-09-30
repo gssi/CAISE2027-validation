@@ -1,0 +1,28 @@
+{
+  "fleet": {
+    "enabled": true,
+    "version": 1,
+    "modelId": "5f2d0a4b-7c36-484f-8d24-940f53bd4238",
+    "modelName": "eval-home-02",
+    "source": "supabase",
+    "lastSyncOk": "2026-09-23T11:56:06.543503293Z",
+    "lastAttempt": "2026-09-23T11:56:06.543503293Z",
+    "stale": false,
+    "lastError": null,
+    "failures": 0,
+    "nextAttemptAt": null,
+    "users": 4,
+    "spaces": 4,
+    "policies": 10,
+    "warnings": [],
+    "modelSource": "runtime",
+    "appliedAt": "2026-09-23T11:56:06.543503293Z"
+  },
+  "appliedAt": 1790164566543,
+  "fetched": {
+    "acs1": 1790164571221,
+    "acs2": 1790164568887
+  },
+  "m1": 5300,
+  "m1a": 622
+}

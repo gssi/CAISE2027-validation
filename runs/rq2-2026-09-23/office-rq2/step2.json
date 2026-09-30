@@ -1,0 +1,58 @@
+{
+  "step": 2,
+  "change": "plug soundPressure (decibel, untyped) on dev1; then both bricklets on dev2",
+  "runtime": {
+    "pass": true,
+    "observed": {
+      "keysObserved": [
+        "decibel"
+      ]
+    }
+  },
+  "proposal": {
+    "pass": true,
+    "observed": [
+      "A4:TYPES_MISSING_ABOVE",
+      "B2:SENSOR_TYPE_MISSING[decibel]",
+      "A2:SENSOR_UNMODELLED (2 sensors on dev2)"
+    ],
+    "expected": [
+      "A4:TYPES_MISSING_ABOVE",
+      "B2:SENSOR_TYPE_MISSING[decibel]",
+      "A2:SENSOR_UNMODELLED",
+      "A2:SENSOR_UNMODELLED (2 sensors on dev2)"
+    ]
+  },
+  "commit": {
+    "pass": true,
+    "observed": {
+      "typeAtO1": {
+        "target": "O1",
+        "status": 200,
+        "version": 2
+      },
+      "sensorsAtO0": [
+        {
+          "sensors": [
+            "dev1_decibel"
+          ],
+          "target": "O0",
+          "status": 200,
+          "version": 4
+        },
+        {
+          "target": "O0",
+          "status": 200,
+          "version": 5
+        }
+      ],
+      "conformance": {
+        "errors": [],
+        "warnings": [],
+        "projects": true
+      }
+    }
+  },
+  "m4": 172,
+  "notes": []
+}

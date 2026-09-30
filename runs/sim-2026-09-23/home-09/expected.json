@@ -1,0 +1,232 @@
+{
+  "id": "home-09",
+  "model": "eval-home-09",
+  "probes": [
+    {
+      "device": "dev1",
+      "tag": "EVAL-TAG-1",
+      "principal": "p1_ada",
+      "reason": "ok",
+      "allowed": true,
+      "hardware": false
+    },
+    {
+      "device": "dev1",
+      "tag": "EVAL-TAG-2",
+      "principal": "p2_bruno",
+      "reason": "unknown_credential",
+      "allowed": false,
+      "hardware": false
+    },
+    {
+      "device": "dev1",
+      "tag": "EVAL-TAG-3",
+      "principal": "p3_chiara",
+      "reason": "ok",
+      "allowed": true,
+      "hardware": false
+    },
+    {
+      "device": "dev1",
+      "tag": "EVAL-TAG-4",
+      "principal": "p4_dario",
+      "reason": "ok",
+      "allowed": true,
+      "hardware": false
+    },
+    {
+      "device": "dev1",
+      "tag": "EVAL-TAG-5",
+      "principal": "p5_elena",
+      "reason": "expired",
+      "allowed": false,
+      "hardware": false
+    },
+    {
+      "device": "dev1",
+      "tag": "EVAL-TAG-6",
+      "principal": "p6_fabio",
+      "reason": "unknown_credential",
+      "allowed": false,
+      "hardware": false
+    },
+    {
+      "device": "dev1",
+      "tag": "EVAL-TAG-7",
+      "principal": "p7_giulia",
+      "reason": "expired",
+      "allowed": false,
+      "hardware": false
+    },
+    {
+      "device": "dev1",
+      "tag": "EVAL-TAG-8",
+      "principal": "p8_hakim",
+      "reason": "unknown_credential",
+      "allowed": false,
+      "hardware": false
+    },
+    {
+      "device": "dev1",
+      "tag": "EVAL-TAG-9",
+      "principal": "p9_revoked",
+      "reason": "revoked",
+      "allowed": false,
+      "hardware": false
+    },
+    {
+      "device": "dev1",
+      "tag": "EVAL-TAG-10",
+      "principal": "p10_outsider",
+      "reason": "unknown_credential",
+      "allowed": false,
+      "hardware": false
+    },
+    {
+      "device": "dev1",
+      "tag": "EVAL-TAG-UNKNOWN",
+      "principal": null,
+      "reason": "unknown_credential",
+      "allowed": false,
+      "hardware": false
+    },
+    {
+      "device": "dev2",
+      "tag": "EVAL-TAG-1",
+      "principal": "p1_ada",
+      "reason": "ok",
+      "allowed": true,
+      "hardware": false
+    },
+    {
+      "device": "dev2",
+      "tag": "EVAL-TAG-2",
+      "principal": "p2_bruno",
+      "reason": "outside_hours",
+      "allowed": false,
+      "hardware": false
+    },
+    {
+      "device": "dev2",
+      "tag": "EVAL-TAG-3",
+      "principal": "p3_chiara",
+      "reason": "ok",
+      "allowed": true,
+      "hardware": false
+    },
+    {
+      "device": "dev2",
+      "tag": "EVAL-TAG-4",
+      "principal": "p4_dario",
+      "reason": "ok",
+      "allowed": true,
+      "hardware": false
+    },
+    {
+      "device": "dev2",
+      "tag": "EVAL-TAG-5",
+      "principal": "p5_elena",
+      "reason": "expired",
+      "allowed": false,
+      "hardware": false
+    },
+    {
+      "device": "dev2",
+      "tag": "EVAL-TAG-6",
+      "principal": "p6_fabio",
+      "reason": "expired",
+      "allowed": false,
+      "hardware": false
+    },
+    {
+      "device": "dev2",
+      "tag": "EVAL-TAG-7",
+      "principal": "p7_giulia",
+      "reason": "expired",
+      "allowed": false,
+      "hardware": false
+    },
+    {
+      "device": "dev2",
+      "tag": "EVAL-TAG-8",
+      "principal": "p8_hakim",
+      "reason": "expired",
+      "allowed": false,
+      "hardware": false
+    },
+    {
+      "device": "dev2",
+      "tag": "EVAL-TAG-9",
+      "principal": "p9_revoked",
+      "reason": "revoked",
+      "allowed": false,
+      "hardware": false
+    },
+    {
+      "device": "dev2",
+      "tag": "EVAL-TAG-10",
+      "principal": "p10_outsider",
+      "reason": "unknown_credential",
+      "allowed": false,
+      "hardware": false
+    },
+    {
+      "device": "dev2",
+      "tag": "EVAL-TAG-UNKNOWN",
+      "principal": null,
+      "reason": "unknown_credential",
+      "allowed": false,
+      "hardware": false
+    }
+  ],
+  "bundles": [
+    {
+      "device": "dev1",
+      "space": "room_1",
+      "users": [
+        "p1_ada",
+        "p3_chiara",
+        "p4_dario",
+        "p5_elena",
+        "p7_giulia",
+        "p9_revoked"
+      ],
+      "allowedRoles": [
+        "owner"
+      ],
+      "staleness": {
+        "maxAgeMs": 3600000,
+        "whenExceeded": "deny"
+      }
+    },
+    {
+      "device": "dev2",
+      "space": "room_3",
+      "users": [
+        "p1_ada",
+        "p2_bruno",
+        "p3_chiara",
+        "p4_dario",
+        "p5_elena",
+        "p6_fabio",
+        "p7_giulia",
+        "p8_hakim",
+        "p9_revoked"
+      ],
+      "allowedRoles": [
+        "owner",
+        "visitor"
+      ],
+      "staleness": {
+        "maxAgeMs": 3600000,
+        "whenExceeded": "allow-cached"
+      }
+    }
+  ],
+  "sensors": {
+    "dev1": [],
+    "dev2": []
+  },
+  "kpis": [],
+  "goals": []
+}

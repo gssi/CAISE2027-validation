@@ -1,0 +1,248 @@
+{
+  "id": "office-01",
+  "model": "eval-office-01",
+  "probes": [
+    {
+      "device": "acs1",
+      "tag": "EVAL-TAG-1",
+      "principal": "davide",
+      "reason": "ok",
+      "allowed": true,
+      "hardware": true
+    },
+    {
+      "device": "acs1",
+      "tag": "EVAL-TAG-2",
+      "principal": "mario",
+      "reason": "unknown_credential",
+      "allowed": false,
+      "hardware": true
+    },
+    {
+      "device": "acs1",
+      "tag": "EVAL-TAG-3",
+      "principal": "paolo",
+      "reason": "ok",
+      "allowed": true,
+      "hardware": true
+    },
+    {
+      "device": "acs1",
+      "tag": "EVAL-TAG-4",
+      "principal": "sara",
+      "reason": "revoked",
+      "allowed": false,
+      "hardware": true
+    },
+    {
+      "device": "acs1",
+      "tag": "EVAL-TAG-5",
+      "principal": "anna",
+      "reason": "ok",
+      "allowed": true,
+      "hardware": false
+    },
+    {
+      "device": "acs1",
+      "tag": "EVAL-TAG-6",
+      "principal": "giulia",
+      "reason": "ok",
+      "allowed": true,
+      "hardware": false
+    },
+    {
+      "device": "acs1",
+      "tag": "EVAL-TAG-7",
+      "principal": "chen",
+      "reason": "unknown_credential",
+      "allowed": false,
+      "hardware": false
+    },
+    {
+      "device": "acs1",
+      "tag": "EVAL-TAG-8",
+      "principal": "luca",
+      "reason": "ok",
+      "allowed": true,
+      "hardware": false
+    },
+    {
+      "device": "acs1",
+      "tag": "EVAL-TAG-UNKNOWN",
+      "principal": null,
+      "reason": "unknown_credential",
+      "allowed": false,
+      "hardware": false
+    },
+    {
+      "device": "acs2",
+      "tag": "EVAL-TAG-1",
+      "principal": "davide",
+      "reason": "ok",
+      "allowed": true,
+      "hardware": true
+    },
+    {
+      "device": "acs2",
+      "tag": "EVAL-TAG-2",
+      "principal": "mario",
+      "reason": "ok",
+      "allowed": true,
+      "hardware": true
+    },
+    {
+      "device": "acs2",
+      "tag": "EVAL-TAG-3",
+      "principal": "paolo",
+      "reason": "ok",
+      "allowed": true,
+      "hardware": true
+    },
+    {
+      "device": "acs2",
+      "tag": "EVAL-TAG-4",
+      "principal": "sara",
+      "reason": "revoked",
+      "allowed": false,
+      "hardware": true
+    },
+    {
+      "device": "acs2",
+      "tag": "EVAL-TAG-5",
+      "principal": "anna",
+      "reason": "ok",
+      "allowed": true,
+      "hardware": false
+    },
+    {
+      "device": "acs2",
+      "tag": "EVAL-TAG-6",
+      "principal": "giulia",
+      "reason": "ok",
+      "allowed": true,
+      "hardware": false
+    },
+    {
+      "device": "acs2",
+      "tag": "EVAL-TAG-7",
+      "principal": "chen",
+      "reason": "ok",
+      "allowed": true,
+      "hardware": false
+    },
+    {
+      "device": "acs2",
+      "tag": "EVAL-TAG-8",
+      "principal": "luca",
+      "reason": "ok",
+      "allowed": true,
+      "hardware": false
+    },
+    {
+      "device": "acs2",
+      "tag": "EVAL-TAG-UNKNOWN",
+      "principal": null,
+      "reason": "unknown_credential",
+      "allowed": false,
+      "hardware": false
+    }
+  ],
+  "bundles": [
+    {
+      "device": "acs1",
+      "space": "room_p1_28",
+      "users": [
+        "anna",
+        "davide",
+        "giulia",
+        "luca",
+        "paolo",
+        "sara"
+      ],
+      "allowedRoles": [
+        "facility",
+        "staff"
+      ],
+      "staleness": {
+        "maxAgeMs": 3600000,
+        "whenExceeded": "allow-cached"
+      }
+    },
+    {
+      "device": "acs2",
+      "space": "meeting_a",
+      "users": [
+        "anna",
+        "chen",
+        "davide",
+        "giulia",
+        "luca",
+        "mario",
+        "paolo",
+        "sara"
+      ],
+      "allowedRoles": [
+        "facility",
+        "guest",
+        "staff"
+      ],
+      "staleness": {
+        "maxAgeMs": 3600000,
+        "whenExceeded": "deny"
+      }
+    }
+  ],
+  "sensors": {
+    "acs1": [
+      "acs1_co2",
+      "acs1_decibel",
+      "acs1_humidity",
+      "acs1_illuminance",
+      "acs1_temperature"
+    ],
+    "acs2": [
+      "acs2_co2",
+      "acs2_decibel",
+      "acs2_humidity",
+      "acs2_illuminance",
+      "acs2_temperature"
+    ]
+  },
+  "kpis": [
+    {
+      "id": "co2.avg",
+      "inputs": [
+        {
+          "device": "acs1",
+          "sensor": "acs1_co2"
+        },
+        {
+          "device": "acs2",
+          "sensor": "acs2_co2"
+        }
+      ]
+    },
+    {
+      "id": "illuminance.avg",
+      "inputs": [
+        {
+          "device": "acs1",
+          "sensor": "acs1_illuminance"
+        },
+        {
+          "device": "acs2",
+          "sensor": "acs2_illuminance"
+        }
+      ]
+    }
+  ],
+  "goals": [
+    {
+      "id": "floor1Air",
+      "space": "floor_1",
+      "kpi": "co2.avg",
+      "op": "<=",
+      "value": 900
+    }
+  ]
+}

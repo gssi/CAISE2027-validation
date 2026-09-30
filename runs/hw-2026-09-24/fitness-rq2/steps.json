@@ -1,0 +1,440 @@
+[
+  {
+    "step": 1,
+    "change": "plug ambient (illuminance) on dev1",
+    "runtime": {
+      "pass": true,
+      "observed": {
+        "keyObserved": true,
+        "modelledBefore": []
+      }
+    },
+    "proposal": {
+      "pass": true,
+      "observed": [
+        "A4:TYPES_MISSING_ABOVE",
+        "B2:SENSOR_TYPE_MISSING[co2]",
+        "B2:SENSOR_TYPE_MISSING[temperature]",
+        "B2:SENSOR_TYPE_MISSING[humidity]",
+        "B2:SENSOR_TYPE_MISSING[illuminance]",
+        "B3:KPI_TYPE_MISSING"
+      ],
+      "expected": [
+        "A4:TYPES_MISSING_ABOVE",
+        "B2:SENSOR_TYPE_MISSING[illuminance]"
+      ]
+    },
+    "commit": {
+      "pass": true,
+      "observed": {
+        "typesAtO1": [
+          {
+            "key": "co2",
+            "target": "O1",
+            "status": 200,
+            "version": 2
+          },
+          {
+            "key": "temperature",
+            "target": "O1",
+            "status": 200,
+            "version": 3
+          },
+          {
+            "key": "humidity",
+            "target": "O1",
+            "status": 200,
+            "version": 4
+          },
+          {
+            "key": "illuminance",
+            "target": "O1",
+            "status": 200,
+            "version": 5
+          }
+        ],
+        "sensorsAtO0": [
+          {
+            "sensors": [
+              "dev2_co2",
+              "dev2_temperature",
+              "dev2_humidity"
+            ],
+            "target": "O0",
+            "status": 200,
+            "version": 6
+          },
+          {
+            "sensors": [
+              "dev1_co2",
+              "dev1_temperature",
+              "dev1_humidity",
+              "dev1_illuminance"
+            ],
+            "target": "O0",
+            "status": 200,
+            "version": 7
+          }
+        ],
+        "conformance": {
+          "errors": [],
+          "warnings": [],
+          "projects": true
+        }
+      }
+    },
+    "m4": 730,
+    "notes": []
+  },
+  {
+    "step": 2,
+    "change": "plug soundPressure (decibel, untyped) on dev1; then both bricklets on dev2",
+    "runtime": {
+      "pass": true,
+      "observed": {
+        "keysObserved": [
+          "decibel"
+        ]
+      }
+    },
+    "proposal": {
+      "pass": true,
+      "observed": [
+        "A4:TYPES_MISSING_ABOVE",
+        "B2:SENSOR_TYPE_MISSING[decibel]",
+        "B3:KPI_TYPE_MISSING",
+        "A2:SENSOR_UNMODELLED (2 sensors on dev2)"
+      ],
+      "expected": [
+        "A4:TYPES_MISSING_ABOVE",
+        "B2:SENSOR_TYPE_MISSING[decibel]",
+        "A2:SENSOR_UNMODELLED",
+        "A2:SENSOR_UNMODELLED (2 sensors on dev2)"
+      ]
+    },
+    "commit": {
+      "pass": true,
+      "observed": {
+        "typeAtO1": {
+          "target": "O1",
+          "status": 200,
+          "version": 6
+        },
+        "sensorsAtO0": [
+          {
+            "sensors": [
+              "dev1_decibel"
+            ],
+            "target": "O0",
+            "status": 200,
+            "version": 9
+          },
+          {
+            "target": "O0",
+            "status": 200,
+            "version": 10
+          }
+        ],
+        "conformance": {
+          "errors": [],
+          "warnings": [],
+          "projects": true
+        }
+      }
+    },
+    "m4": 5030,
+    "notes": []
+  },
+  {
+    "step": 3,
+    "change": "model decibel.max (dev1+dev2), illuminance.avg (dev1) and the goal roomLight",
+    "runtime": {
+      "pass": true,
+      "observed": [
+        {
+          "id": "decibel.max",
+          "source": "model"
+        },
+        {
+          "id": "illuminance.avg",
+          "source": "model"
+        },
+        {
+          "id": "comfort-level",
+          "source": "local"
+        }
+      ]
+    },
+    "proposal": {
+      "pass": true,
+      "observed": [
+        "B3:KPI_TYPE_MISSING"
+      ],
+      "expected": [
+        "B3:KPI_TYPE_MISSING"
+      ]
+    },
+    "commit": {
+      "pass": true,
+      "observed": {
+        "kpiTypeAtO1": {
+          "target": "O1",
+          "status": 200,
+          "version": 7
+        },
+        "commit": 200,
+        "o1": null,
+        "conformance": {
+          "errors": [],
+          "warnings": [],
+          "projects": true
+        }
+      }
+    },
+    "m4": null,
+    "notes": []
+  },
+  {
+    "step": 4,
+    "change": "unplug dev2 ambient (used by nothing)",
+    "runtime": {
+      "pass": true,
+      "observed": {
+        "dev2_illuminance": {
+          "sensor": "dev2_illuminance",
+          "device": "dev2",
+          "fleetId": "acs2",
+          "key": "illuminance",
+          "unit": "lx",
+          "label": "Illuminance",
+          "online": false,
+          "value": null,
+          "observedAt": null
+        }
+      }
+    },
+    "proposal": {
+      "pass": true,
+      "observed": [],
+      "expected": []
+    },
+    "commit": {
+      "pass": true,
+      "observed": {
+        "deleteSensor": 200,
+        "conformance": {
+          "errors": [],
+          "warnings": [],
+          "projects": true
+        }
+      }
+    },
+    "m4": 5103,
+    "notes": [
+      "the model is cleaned by the operator, the assistant does not propose removals"
+    ]
+  },
+  {
+    "step": 5,
+    "change": "unplug dev2 soundPressure (one of two inputs of decibel.max)",
+    "runtime": {
+      "pass": true,
+      "observed": {
+        "disabled": {
+          "id": "decibel.max",
+          "label": "decibel.max",
+          "aggregation": "max",
+          "inputs": [
+            "decibel"
+          ],
+          "source": "model",
+          "sensors": [
+            {
+              "fleetId": "acs1",
+              "device": "dev1",
+              "sensor": "dev1_decibel",
+              "key": "decibel",
+              "online": true
+            },
+            {
+              "fleetId": "acs2",
+              "device": "dev2",
+              "sensor": "dev2_decibel",
+              "key": "decibel",
+              "online": false
+            }
+          ],
+          "disabled": true,
+          "disabledReason": "dev2_decibel offline",
+          "sampleCount": 0,
+          "unit": "dB",
+          "value": null,
+          "missing": true
+        },
+        "afterDelete": {
+          "id": "decibel.max",
+          "label": "decibel.max",
+          "aggregation": "max",
+          "inputs": [
+            "decibel"
+          ],
+          "source": "model",
+          "sensors": [
+            {
+              "fleetId": "acs1",
+              "device": "dev1",
+              "sensor": "dev1_decibel",
+              "key": "decibel",
+              "online": true
+            }
+          ],
+          "disabled": false,
+          "sampleCount": 1,
+          "unit": "dB",
+          "value": 58.1,
+          "missing": false
+        }
+      }
+    },
+    "proposal": {
+      "pass": true,
+      "observed": [],
+      "expected": []
+    },
+    "commit": {
+      "pass": true,
+      "observed": {
+        "deleteInput": 200,
+        "conformance": {
+          "errors": [],
+          "warnings": [],
+          "projects": true
+        }
+      }
+    },
+    "m4": 57710,
+    "notes": []
+  },
+  {
+    "step": 6,
+    "change": "unplug dev1 ambient (only input of illuminance.avg, measured by the goal)",
+    "runtime": {
+      "pass": true,
+      "observed": {
+        "disabled": {
+          "id": "illuminance.avg",
+          "label": "illuminance.avg",
+          "aggregation": "avg",
+          "inputs": [
+            "illuminance"
+          ],
+          "source": "model",
+          "sensors": [
+            {
+              "fleetId": "acs1",
+              "device": "dev1",
+              "sensor": "dev1_illuminance",
+              "key": "illuminance",
+              "online": false
+            }
+          ],
+          "disabled": true,
+          "disabledReason": "dev1_illuminance offline",
+          "sampleCount": 0,
+          "unit": "lx",
+          "value": null,
+          "missing": true
+        }
+      }
+    },
+    "proposal": {
+      "pass": true,
+      "observed": [],
+      "expected": []
+    },
+    "commit": {
+      "pass": true,
+      "observed": {
+        "status": 422,
+        "error": "not_conforming",
+        "diagnostics": [
+          "C8.TOO_FEW",
+          "P5.NO_INPUTS",
+          "P6.GOAL_OUT_OF_SCOPE"
+        ],
+        "versionUnchanged": true
+      }
+    },
+    "m4": 6539,
+    "notes": [
+      "the commit is blocked: the indicator would lose its inputs and the goal become unevaluable"
+    ]
+  },
+  {
+    "step": 7,
+    "change": "replace the controller of dev2 (new X-Device-Id)",
+    "runtime": {
+      "pass": true,
+      "observed": {
+        "spaceWhileUnmapped": null,
+        "mappedAgain": "room_b"
+      }
+    },
+    "proposal": {
+      "pass": true,
+      "observed": [
+        "A1:DEVICE_UNMODELLED"
+      ],
+      "expected": [
+        "A1:DEVICE_UNMODELLED (use dev2)"
+      ]
+    },
+    "commit": {
+      "pass": true,
+      "observed": {
+        "rebind": {
+          "target": "O0",
+          "status": 200,
+          "version": 15
+        },
+        "conformance": {
+          "errors": [],
+          "warnings": [],
+          "projects": true
+        }
+      }
+    },
+    "m4": 13064,
+    "notes": []
+  },
+  {
+    "step": 8,
+    "change": "re-plug dev2 ambient, then unplug it before accepting the proposal",
+    "runtime": {
+      "pass": true,
+      "observed": {
+        "proposalWhilePlugged": [
+          "A2:SENSOR_UNMODELLED"
+        ],
+        "proposalAfter": []
+      }
+    },
+    "proposal": {
+      "pass": true,
+      "observed": [
+        "A2:SENSOR_UNMODELLED",
+        "→"
+      ],
+      "expected": [
+        "A2:SENSOR_UNMODELLED",
+        "→",
+        "(none)"
+      ]
+    },
+    "commit": null,
+    "m4": 10730,
+    "notes": [
+      "nothing was committed"
+    ]
+  }
+]
